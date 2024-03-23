@@ -1,0 +1,22 @@
+{
+	"cars": [
+		{
+			"id": "1",
+			"name": "McLaren 570S 2019",
+			"price": 204999,
+			"image": "https://cdn0.riastatic.com/photosnew/auto/photo/mclaren_570s__504530260hd.webp"
+		},
+		{
+			"id": "fc53",
+			"name": "Porsche 991 Turbo S",
+			"price": "79999",
+			"image": "https://cdn.motor1.com/images/mgl/b3gBj/s1/4x3/porsche-911-turbo-s-by-manhart-is-an-850-horsepower-catapult.webp"
+		},
+		{
+			"id": "3bce",
+			"name": "Tesla Plaid Model S 2021",
+			"price": "86000",
+			"image": "https://cdn3.riastatic.com/photosnew/auto/photo/tesla_model-s__539939728hd.webp"
+		}
+	]
+}
