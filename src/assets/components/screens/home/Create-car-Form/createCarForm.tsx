@@ -19,6 +19,11 @@ const CreateCarForm = () => {
 			/>
 			{errors?.name?.message && <p style={{ color: '#f00' }}>Name is required</p>}
 			<input
+				{...register('model', { required: 'Model is required' })}
+				placeholder='Model'
+			/>
+			{errors?.model?.message && <p style={{ color: '#f00' }}>Model is required</p>}
+			<input
 				{...register('price', { required: 'Price is required' })}
 				placeholder='Price'
 			/>

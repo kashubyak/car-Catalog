@@ -10,12 +10,12 @@ export const useCreateCar = (reset: UseFormReset<ICarData>) => {
 		mutationFn: (data: ICarData) => CarService.create(data),
 		onSuccess: () => {
 			queryClient.invalidateQueries({ queryKey: ['cars'] })
-
 			reset()
 		},
 	})
 	const createCar: SubmitHandler<ICarData> = data => {
 		mutate(data)
+		console.log(data)
 	}
 	return { createCar }
 }

@@ -1,6 +1,7 @@
 export interface ICar {
 	id: number
 	name: string
+	model: string
 	image: string
 	price: string
 }

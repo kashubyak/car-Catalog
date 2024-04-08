@@ -14,7 +14,9 @@ const CarItem = ({ car }: { car: ICar }) => {
 				}}
 			></div>
 			<div className={homeStyle.info}>
-				<h2>{car.name}</h2>
+				<h2>
+					{car.name} {car.model}
+				</h2>
 				<CarItemPrice price={car.price} />
 				<Link to={`/car/${car.id}`} className='btn'>
 					Read more
