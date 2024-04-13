@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { ICar } from '../../../types/car.interface'
-import homeStyle from '../screens/home/carItem.module.css'
-import CarItem from '../screens/home/itemCar/carItem'
+import homeStyle from '../screens/home/itemCar/carItem.module.css'
+import CarItem from '../screens/home/itemCar/СarItem'
 interface iCatalog {
 	data?: ICar[]
 }

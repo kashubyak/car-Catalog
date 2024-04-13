@@ -15,7 +15,6 @@ export const useCreateCar = (reset: UseFormReset<ICarData>) => {
 	})
 	const createCar: SubmitHandler<ICarData> = data => {
 		mutate(data)
-		console.log(data)
 	}
 	return { createCar }
 }

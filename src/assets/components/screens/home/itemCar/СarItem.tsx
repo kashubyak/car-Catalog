@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { ICar } from '../../../../../types/car.interface'
-import homeStyle from '../carItem.module.css'
-import CarItemPrice from './carItemPrice.js'
+import homeStyle from './carItem.module.css'
+import CarItemPrice from './СarItemPrice.js'
 
 const CarItem = ({ car }: { car: ICar }) => {
 	return (

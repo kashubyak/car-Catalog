@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { CarService } from '../../../../services/car.service'
 import { ICar } from '../../../../types/car.interface'
-import CarItem from '../home/itemCar/carItem'
+import CarItem from '../home/itemCar/СarItem'
 
 const CarDetail = () => {
 	const { id } = useParams()
