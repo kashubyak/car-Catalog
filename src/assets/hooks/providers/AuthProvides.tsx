@@ -6,7 +6,7 @@ import {
 	createContext,
 	useState,
 } from 'react'
-import { TypeUser } from '../../types/user.interface'
+import { TypeUser } from '../../../types/user.interface'
 
 type TypeContext = {
 	user: TypeUser
