@@ -10,4 +10,4 @@ const CarItemPrice: FC<{ price: string }> = ({ price }) => {
 		</p>
 	)
 }
-export default CarItemPrice
+export { CarItemPrice }

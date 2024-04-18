@@ -3,7 +3,7 @@ import { FormData } from '../../../types/user.interface'
 import { useAuth } from '../../hooks/useAuth'
 import styles from '../screens/home/Create-car-Form/createCarForm.module.css'
 
-export const Header = () => {
+export const RegistrationMenu = () => {
 	const { user, setUser } = useAuth()
 
 	const {
@@ -22,15 +22,7 @@ export const Header = () => {
 		<form action='' className={styles.form} onSubmit={handleSubmit(handleLogin)}>
 			{user ? (
 				<>
-					<h2>You are logged in! {user?.name}</h2>
-					<button
-						className='btn'
-						onClick={() => {
-							setUser(null)
-						}}
-					>
-						Logout
-					</button>
+					
 				</>
 			) : (
 				<div>

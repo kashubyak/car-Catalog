@@ -3,7 +3,7 @@
 .lightTheme {
 	--body-color: #fff;
 	--white-color: #000;
-	--theme-color: #ff6431;
+	--theme-color: #003C43;
 	--black-color: #fff;
 	--search-color: #eeeeee;
 	--fire-bubble: #faf8f8;
@@ -13,7 +13,7 @@
 .darkTheme {
 	--body-color: #141217;
 	--white-color: #fff;
-	--theme-color: #ff6431;
+	--theme-color: #874CCC;
 	--black-color: #000;
 	--search-color: #272933;
 	--fire-bubble: rgba(59, 65, 79, 0.5);

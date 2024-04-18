@@ -3,7 +3,7 @@ import { SubmitHandler, UseFormReset } from 'react-hook-form'
 import { CarService } from '../../../../../services/car.service'
 import { ICarData } from '../../../../../types/car.interface'
 
-export const useCreateCar = (reset: UseFormReset<ICarData>) => {
+const useCreateCar = (reset: UseFormReset<ICarData>) => {
 	const queryClient = useQueryClient()
 	const { mutate } = useMutation({
 		mutationKey: ['create car'],
@@ -18,3 +18,4 @@ export const useCreateCar = (reset: UseFormReset<ICarData>) => {
 	}
 	return { createCar }
 }
+export { useCreateCar }

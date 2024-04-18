@@ -38,4 +38,4 @@ const CreateCarForm = () => {
 	)
 }
 
-export default CreateCarForm
+export { CreateCarForm }

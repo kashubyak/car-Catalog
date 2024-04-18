@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import CarDetail from '../screens/carDetail/CarDetail'
-import Home from '../screens/home/Home'
+import { Home } from '../screens/home/Home'
 
 const Router = () => {
 	return (
@@ -14,4 +14,4 @@ const Router = () => {
 		</BrowserRouter>
 	)
 }
-export default Router
+export { Router }

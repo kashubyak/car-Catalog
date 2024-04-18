@@ -1,0 +1,34 @@
+.hamburger-icon {
+	margin-left: 20px;
+	padding: 5px;
+	background: transparent;
+	flex-shrink: 0;
+	width: 35px;
+	border: transparent;
+	display: none;
+}
+.hamburger-icon span {
+	transform-origin: right;
+	-webkit-transform-origin: right;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	display: block;
+	width: 100%;
+	background: var(--white-color);
+	height: 2px;
+}
+.hamburger-icon span:nth-child(2) {
+	margin: 5px 0px;
+}
+.hamburger-icon.ham-style span:first-child {
+	transform: rotate(-45deg) translateX(2.4px);
+	-webkit-transform: rotate(-45deg) translateX(2.4px);
+}
+.hamburger-icon.ham-style span:nth-child(2) {
+	width: 8px;
+	opacity: 0;
+}
+.hamburger-icon.ham-style span:last-child {
+	transform: rotate(45deg) translateX(2.8px);
+	-webkit-transform: rotate(45deg) translateX(2.8px);
+}

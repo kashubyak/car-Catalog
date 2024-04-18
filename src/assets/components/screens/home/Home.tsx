@@ -1,17 +1,13 @@
 import { useQuery } from '@tanstack/react-query'
-import { useContext } from 'react'
 import { CarService } from '../../../../services/car.service'
-import { ThemeContext } from '../../../hooks/providers/ThemeProvides'
 import { useAuth } from '../../../hooks/useAuth'
+import { RegistrationMenu } from '../../ui/RegistrationMenu'
 import { Catalog } from '../../ui/catalog'
-import { Header } from '../../ui/header'
-import CreateCarForm from './Create-car-Form/createCarForm'
+import { CreateCarForm } from './Create-car-Form/createCarForm'
+import { Header } from './header/Header'
+import './media.css'
 
 const Home = () => {
-	const { theme, setTheme } = useContext(ThemeContext)
-	const changeTheme = () => {
-		setTheme(theme === 'darkTheme' ? 'lightTheme' : 'darkTheme')
-	}
 	const { data, isLoading } = useQuery({
 		queryKey: ['cars'],
 		queryFn: () => CarService.getAll(),
@@ -21,13 +17,11 @@ const Home = () => {
 	if (isLoading) return <p>Loading.....</p>
 
 	return (
-		<div>
-			<h1>Cars</h1>
-			<button onClick={changeTheme}>click</button>
-
-			<Header />
+		<div style={{ maxWidth: '1440px', margin: '0px auto', padding: '0px 5px' }}>
+			<RegistrationMenu />
 			{user && (
 				<>
+					<Header />
 					<CreateCarForm />
 					<Catalog data={data} />
 				</>
@@ -36,4 +30,4 @@ const Home = () => {
 	)
 }
 
-export default Home
+export { Home }

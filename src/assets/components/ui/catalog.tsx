@@ -1,11 +1,11 @@
 import { FC } from 'react'
 import { ICar } from '../../../types/car.interface'
-import homeStyle from '../screens/home/itemCar/carItem.module.css'
-import CarItem from '../screens/home/itemCar/СarItem'
+import homeStyle from '../screens/home/main/itemCar/carItem.module.css'
+import CarItem from '../screens/home/main/itemCar/СarItem'
 interface iCatalog {
 	data?: ICar[]
 }
-export const Catalog: FC<iCatalog> = ({ data = [] }) => {
+const Catalog: FC<iCatalog> = ({ data = [] }) => {
 	return (
 		<div className={homeStyle.flexParent}>
 			{data.length ? (
@@ -16,3 +16,4 @@ export const Catalog: FC<iCatalog> = ({ data = [] }) => {
 		</div>
 	)
 }
+export { Catalog }
