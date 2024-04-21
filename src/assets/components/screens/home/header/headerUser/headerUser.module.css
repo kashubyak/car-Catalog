@@ -23,12 +23,12 @@
 }
 .menu {
 	position: absolute;
-	top: calc(90%);
-	right: 15px;
+	top: calc(99%);
+	right: 0px;
 	max-width: 220px;
 	padding: 15px;
 	border-radius: 15px;
-	background-color: var(--white-color);
+	background-color: #A4907C;
 	text-align: center;
 	opacity: 0;
 	transform: translateY(-50px);

@@ -7,12 +7,9 @@ const SearchForm = () => {
 		setTheme(theme === 'darkTheme' ? 'lightTheme' : 'darkTheme')
 	}
 	return (
-		<form
-			className={`${styles.dFlex} ${styles.justifyContentEnd} ${styles.alignItemsCenter}`}
-		>
+		<form className={`${styles.dFlex}`}>
 			<i className='fi fi-rs-moon'></i>
 			<div className={styles.searchIcon}>
-				<i className={`${styles.fa} ${styles.faSearch}`} aria-hidden='true'></i>
 				<input
 					className={styles.formControl}
 					type='search'
@@ -20,7 +17,7 @@ const SearchForm = () => {
 					aria-label='Search'
 				/>
 			</div>
-			<label className={`${styles.switch} ${styles.flexShrink0} ${styles.mb0}`}>
+			<label className={`${styles.switch}`}>
 				<input id='checkbox' type='checkbox' onChange={changeTheme} />
 				<span className={`${styles.slider} ${styles.round}`}></span>
 			</label>
