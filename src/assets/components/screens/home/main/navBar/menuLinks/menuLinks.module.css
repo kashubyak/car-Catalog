@@ -1,0 +1,46 @@
+.menuLinks {
+	transition: all 0.8s;
+	-webkit-transition: all 0.5s;
+	border-right: 0.5px solid #464545;
+	padding: 0px 10px 5px 0px;
+	height: 100vh;
+}
+
+.menuLinks ul {
+	list-style: none;
+}
+
+.menuLinks ul li {
+	margin: 11px 5px;
+}
+
+.menuLinks ul li:last-child {
+	margin-bottom: 0px;
+}
+
+.menuLinks ul li a {
+	color: var(--white-color);
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	width: fit-content;
+	text-decoration: none;
+}
+
+.menuLinks ul li:not(.active) a:hover {
+	color: var(--theme-color);
+}
+
+.menuLinks ul li a i {
+	width: 32px;
+	height: 32px;
+	line-height: 20px;
+	margin-right: 12px;
+	padding: 6px 0px;
+	text-align: center;
+}
+
+.menuLinks ul li.active a i {
+	border-radius: 5px;
+	background-color: var(--theme-color);
+	margin-right: 12px;
+}

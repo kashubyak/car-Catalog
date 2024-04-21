@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form'
-import { ICarData } from '../../../../../types/car.interface'
+import { ICarData } from '../../../../../../../types/car.interface'
 import styles from './createCarForm.module.css'
 import { useCreateCar } from './useCreateCar'
 

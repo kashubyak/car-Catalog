@@ -1,7 +1,6 @@
 import { useForm } from 'react-hook-form'
 import { FormData } from '../../../types/user.interface'
 import { useAuth } from '../../hooks/useAuth'
-import styles from '../screens/home/Create-car-Form/createCarForm.module.css'
 
 export const RegistrationMenu = () => {
 	const { user, setUser } = useAuth()
@@ -19,7 +18,7 @@ export const RegistrationMenu = () => {
 	}
 
 	return (
-		<form action='' className={styles.form} onSubmit={handleSubmit(handleLogin)}>
+		<form action='' onSubmit={handleSubmit(handleLogin)}>
 			{user ? (
 				<>
 					

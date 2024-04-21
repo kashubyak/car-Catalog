@@ -5,18 +5,14 @@ import { SearchForm } from './searchForm/SearchForm'
 
 const Header = () => {
 	return (
-		<div className={styles.containerFluid}>
-			<nav className={`${styles.navbar} ${styles.navbarExpandLg} ${styles.navbarLight}`}>
-				<div className={`${styles.headerInner} ${styles.dFlex}`}>
-					<p className={`${styles.navbarBrand}`}>Car Catalog</p>
-					<div className={`${styles.headerContent} ${styles.dFlex}`}>
-						<SearchForm />
-						<HamburgerIcon />
-						<HeaderUser />
-					</div>
-				</div>
-			</nav>
-		</div>
+		<nav className={`${styles.navbar} ${styles.dFlex}`}>
+			<p className={`${styles.navbarBrand}`}>Car Catalog</p>
+			<div className={`${styles.headerContent}  ${styles.dFlex}`}>
+				<SearchForm />
+				<HamburgerIcon />
+				<HeaderUser />
+			</div>
+		</nav>
 	)
 }
 

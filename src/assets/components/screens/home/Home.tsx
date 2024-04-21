@@ -3,8 +3,8 @@ import { CarService } from '../../../../services/car.service'
 import { useAuth } from '../../../hooks/useAuth'
 import { RegistrationMenu } from '../../ui/RegistrationMenu'
 import { Catalog } from '../../ui/catalog'
-import { CreateCarForm } from './Create-car-Form/createCarForm'
 import { Header } from './header/Header'
+import { MenuLinks } from './main/navBar/menuLinks/MenuLinks'
 import './media.css'
 
 const Home = () => {
@@ -17,13 +17,15 @@ const Home = () => {
 	if (isLoading) return <p>Loading.....</p>
 
 	return (
-		<div style={{ maxWidth: '1440px', margin: '0px auto', padding: '0px 5px' }}>
+		<div style={{ maxWidth: '1980px', margin: '0px auto', padding: '0px 10px' }}>
 			<RegistrationMenu />
 			{user && (
 				<>
 					<Header />
-					<CreateCarForm />
-					<Catalog data={data} />
+					<div style={{ display: 'flex' }}>
+						<MenuLinks />
+						<Catalog data={data} />
+					</div>
 				</>
 			)}
 		</div>

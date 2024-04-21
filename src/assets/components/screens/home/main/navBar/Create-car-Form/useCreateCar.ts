@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { SubmitHandler, UseFormReset } from 'react-hook-form'
-import { CarService } from '../../../../../services/car.service'
-import { ICarData } from '../../../../../types/car.interface'
+import { CarService } from '../../../../../../../services/car.service'
+import { ICarData } from '../../../../../../../types/car.interface'
 
 const useCreateCar = (reset: UseFormReset<ICarData>) => {
 	const queryClient = useQueryClient()

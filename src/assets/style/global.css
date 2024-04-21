@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 .lightTheme {
-	--body-color: #fff;
-	--white-color: #000;
-	--theme-color: #003C43;
+	--body-color: #F9F9F9;
+	--white-color: hsl(0, 0%, 0%);
+	--theme-color: #AAC8A7;
 	--black-color: #fff;
 	--search-color: #eeeeee;
 	--fire-bubble: #faf8f8;
@@ -11,9 +11,9 @@
 	--deam-white: #000;
 }
 .darkTheme {
-	--body-color: #141217;
+	--body-color: #070f2b;
 	--white-color: #fff;
-	--theme-color: #874CCC;
+	--theme-color: #874ccc;
 	--black-color: #000;
 	--search-color: #272933;
 	--fire-bubble: rgba(59, 65, 79, 0.5);
