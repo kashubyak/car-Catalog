@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { BurgerContext } from '../../../../../hooks/providers/BurgerProvides'
 import './hamburgerIcon.modules.css'
 const HamburgerIcon = () => {
-	const [active, setActive] = useState(false)
-	const handleClick = () => {
-		setActive(!active)
-	}
+	const [active, setActive] = useState(true)
+	const { open, setOpen } = useContext(BurgerContext)
 	return (
-		<button className={`navTrigger ${active ? 'active' : ''}`} onClick={handleClick}>
+		<button
+			className={`navTrigger ${active ? 'active' : ''}`}
+			onClick={() => {
+				setActive(!active)
+				setOpen(!open)
+			}}
+		>
 			<svg viewBox='0 0 64 48'>
 				<path d='M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37'></path>
 				<path d='M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24'></path>

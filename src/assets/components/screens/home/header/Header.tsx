@@ -7,9 +7,9 @@ const Header = () => {
 	return (
 		<nav className={`${styles.navbar} ${styles.dFlex}`}>
 			<p className={`${styles.navbarBrand}`}>Car Catalog</p>
+			<HamburgerIcon />
 			<div className={`${styles.headerContent}  ${styles.dFlex}`}>
 				<SearchForm />
-				<HamburgerIcon />
 				<HeaderUser />
 			</div>
 		</nav>

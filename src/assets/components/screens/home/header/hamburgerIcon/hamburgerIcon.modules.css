@@ -3,7 +3,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 0px 5px;
+	margin: 0px 15px;
 	z-index: 1000;
 	width: 36px;
 	height: 36px;
@@ -49,7 +49,7 @@
 	--array-2: 107px;
 }
 .navTrigger.active svg {
-	stroke: #fff;
+	stroke: var(--white-color);
 }
 .navTrigger.active svg path {
 	--offset: 57px;

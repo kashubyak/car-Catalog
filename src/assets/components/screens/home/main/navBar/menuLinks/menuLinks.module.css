@@ -1,8 +1,7 @@
 .menuLinks {
 	transition: all 0.8s;
 	-webkit-transition: all 0.5s;
-	border-right: 0.5px solid #464545;
-	padding: 0px 10px 5px 0px;
+	padding-right: 10px;
 	height: 100vh;
 }
 
@@ -43,4 +42,12 @@
 	border-radius: 5px;
 	background-color: var(--theme-color);
 	margin-right: 12px;
+}
+.entering,
+.entered {
+	transform: translateX(200px);
+}
+.exiting,
+.exited {
+	transform: translateX(0);
 }
