@@ -1,3 +1,4 @@
+import { UseLocalStorage } from 'hooks/useLocalStorage'
 import {
 	Dispatch,
 	FC,
@@ -6,7 +7,6 @@ import {
 	createContext,
 	useEffect,
 } from 'react'
-import { UseLocalStorage } from '../useLocalStorage'
 
 type ThemeContextType = {
 	theme: string

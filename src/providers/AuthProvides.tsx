@@ -1,6 +1,6 @@
+import { UseLocalStorage } from 'hooks/useLocalStorage'
 import { Dispatch, FC, PropsWithChildren, SetStateAction, createContext } from 'react'
-import { TypeUser } from '../../../types/user.interface'
-import { UseLocalStorage } from '../useLocalStorage'
+import { TypeUser } from 'types/user.interface'
 
 type TypeContext = {
 	user: TypeUser

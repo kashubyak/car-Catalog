@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { CarService } from '../../../../services/car.service'
-import { ICar } from '../../../../types/car.interface'
-import CarItem from '../home/main/itemCar/СarItem'
+import { CarService } from 'services/car.service'
+import { ICar } from 'types/car.interface'
+import { CarItem } from '../home/main/ItemCar/СarItem'
 
 const CarDetail = () => {
 	const { id } = useParams()
@@ -20,8 +20,7 @@ const CarDetail = () => {
 	return (
 		<div>
 			<Link className='btn' to='/'>
-				{' '}
-				back{' '}
+				back
 			</Link>
 			<CarItem car={car} />
 		</div>

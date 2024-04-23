@@ -1,8 +1,7 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-import { ICar } from '../../../../../../types/car.interface'
+import { ICar } from 'types/car.interface'
 import homeStyle from './carItem.module.css'
-import { CarItemPrice } from './СarItemPrice.js'
+import { CarItemPrice } from './СarItemPrice'
 
 const CarItem = ({ car }: { car: ICar }) => {
 	return (
@@ -25,4 +24,4 @@ const CarItem = ({ car }: { car: ICar }) => {
 		</div>
 	)
 }
-export default React.memo(CarItem)
+export { CarItem }

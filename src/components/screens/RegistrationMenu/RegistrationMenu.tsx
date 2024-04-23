@@ -1,9 +1,9 @@
+import { AuthContext } from 'providers/AuthProvides'
 import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
-import { FormData } from '../../../types/user.interface'
-import { AuthContext } from '../../hooks/providers/AuthProvides'
+import { FormData } from 'types/user.interface'
 
-export const RegistrationMenu = () => {
+const RegistrationMenu = () => {
 	const { user, setUser } = useContext(AuthContext)
 
 	const {
@@ -46,3 +46,4 @@ export const RegistrationMenu = () => {
 		</form>
 	)
 }
+export { RegistrationMenu }

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Transition } from 'react-transition-group'
-import { BurgerContext } from '../../../../../../hooks/providers/BurgerProvides'
 import styles from './menuLinks.module.css'
+import { BurgerContext } from 'providers/BurgerProvides'
 
 const MenuLinks = () => {
 	const [activeItem, setActiveItem] = useState('home')

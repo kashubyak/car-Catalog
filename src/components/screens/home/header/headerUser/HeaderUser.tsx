@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { AuthContext } from '../../../../../hooks/providers/AuthProvides'
 import styles from './headerUser.module.css'
+import { AuthContext } from 'providers/AuthProvides'
 
 const HeaderUser = () => {
 	const { user, setUser } = useContext(AuthContext)
@@ -23,7 +23,7 @@ const HeaderUser = () => {
 	return (
 		<Link to='#' className={styles.profile}>
 			<img
-				src='src/img/user.jpg'
+				src='/public/img/user.jpg'
 				alt='user-image'
 				onClick={() => setActiveMenu(!activeMenu)}
 			/>

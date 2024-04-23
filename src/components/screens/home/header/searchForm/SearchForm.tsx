@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import { ThemeContext } from '../../../../../hooks/providers/ThemeProvides'
 import styles from './SearchForm.module.css'
+import { ThemeContext } from 'providers/ThemeProvides'
 const SearchForm = () => {
 	const { theme, setTheme } = useContext(ThemeContext)
 	const changeTheme = () => {

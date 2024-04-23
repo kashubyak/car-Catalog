@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
+import { RegistrationMenu } from 'components/screens/RegistrationMenu/RegistrationMenu'
+import { Catalog } from 'components/ui/catalog'
+import { AuthContext } from 'providers/AuthProvides'
 import { useContext } from 'react'
-import { CarService } from '../../../../services/car.service'
-import { AuthContext } from '../../../hooks/providers/AuthProvides'
-import { RegistrationMenu } from '../../ui/RegistrationMenu'
-import { Catalog } from '../../ui/catalog'
+import { CarService } from 'services/car.service'
 import { Header } from './header/Header'
 import { MenuLinks } from './main/navBar/menuLinks/MenuLinks'
 import './media.css'
@@ -32,5 +32,4 @@ const Home = () => {
 		</div>
 	)
 }
-
 export { Home }
