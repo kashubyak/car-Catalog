@@ -1,9 +1,10 @@
+import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { FormData } from '../../../types/user.interface'
-import { useAuth } from '../../hooks/useAuth'
+import { AuthContext } from '../../hooks/providers/AuthProvides'
 
 export const RegistrationMenu = () => {
-	const { user, setUser } = useAuth()
+	const { user, setUser } = useContext(AuthContext)
 
 	const {
 		register,
@@ -20,9 +21,7 @@ export const RegistrationMenu = () => {
 	return (
 		<form action='' onSubmit={handleSubmit(handleLogin)}>
 			{user ? (
-				<>
-					
-				</>
+				<></>
 			) : (
 				<div>
 					<h2>Please Login</h2>

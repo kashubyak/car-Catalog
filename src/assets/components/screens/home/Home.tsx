@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
+import { useContext } from 'react'
 import { CarService } from '../../../../services/car.service'
-import { useAuth } from '../../../hooks/useAuth'
+import { AuthContext } from '../../../hooks/providers/AuthProvides'
 import { RegistrationMenu } from '../../ui/RegistrationMenu'
 import { Catalog } from '../../ui/catalog'
 import { Header } from './header/Header'
@@ -12,7 +13,7 @@ const Home = () => {
 		queryKey: ['cars'],
 		queryFn: () => CarService.getAll(),
 	})
-	const { user } = useAuth()
+	const { user } = useContext(AuthContext)
 
 	if (isLoading) return <p>Loading.....</p>
 
