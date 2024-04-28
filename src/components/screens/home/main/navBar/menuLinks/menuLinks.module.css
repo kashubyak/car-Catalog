@@ -2,7 +2,8 @@
 	transition: all 0.8s;
 	-webkit-transition: all 0.5s;
 	padding-right: 10px;
-	height: 100vh;
+	max-height: 100vh;
+	transition: 2s;
 }
 
 .menuLinks ul {
@@ -50,4 +51,11 @@
 .exiting,
 .exited {
 	transform: translateX(0);
+}
+@media (max-width: 600px) {
+	.menuLinks {
+		position: absolute;
+		background-color: var(--body-color);
+		width: 40%;
+	}
 }

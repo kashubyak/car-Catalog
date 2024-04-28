@@ -1,7 +1,7 @@
+import { AuthContext } from 'providers/AuthProvides'
 import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './headerUser.module.css'
-import { AuthContext } from 'providers/AuthProvides'
 
 const HeaderUser = () => {
 	const { user, setUser } = useContext(AuthContext)

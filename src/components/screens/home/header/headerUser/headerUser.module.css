@@ -23,21 +23,20 @@
 }
 .menu {
 	position: absolute;
-	top: calc(100%);
-	right: 0px;
+	top: 100%;
 	max-width: 220px;
 	padding: 10px;
 	border-radius: 10px;
 	background-color: #31363f;
 	text-align: center;
 	opacity: 0;
-	transform: translateY(-50px);
+	transform: translateX(-50px);
 	visibility: hidden;
-	transition: 0.3s;
+	transition: 0.1s;
 }
 .menu._active {
 	opacity: 1;
-	transform: translateY(0px);
+	transform: translateX(0px);
 	visibility: visible;
 }
 .profileName {

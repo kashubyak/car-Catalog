@@ -1,17 +1,19 @@
+import { AuthContext } from 'providers/AuthProvides'
+import { BurgerContext } from 'providers/BurgerProvides'
 import React, { useContext, useState } from 'react'
 import { Transition } from 'react-transition-group'
 import styles from './menuLinks.module.css'
-import { BurgerContext } from 'providers/BurgerProvides'
 
 const MenuLinks = () => {
 	const [activeItem, setActiveItem] = useState('home')
 	const handleItemClick = (item: React.SetStateAction<string>) => {
 		setActiveItem(item)
 	}
-
 	const { open } = useContext(BurgerContext)
+	const { user, setUser } = useContext(AuthContext)
+
 	return (
-		<Transition in={open} timeout={300} unmountOnExit={true}>
+		<Transition in={open} timeout={0} unmountOnExit={true}>
 			{state => (
 				<div className={`${styles.menuLinks} ${state}`}>
 					<ul>
@@ -28,8 +30,7 @@ const MenuLinks = () => {
 							onClick={() => handleItemClick('favourite')}
 						>
 							<a href='#'>
-								<i className='fa fa-heart' aria-hidden='true'></i>
-								<span>Favourite</span>
+								<i className='fa fa-heart' aria-hidden='true'></i> <span>Favourite</span>
 							</a>
 						</li>
 						<li
@@ -38,6 +39,17 @@ const MenuLinks = () => {
 						>
 							<a href='#'>
 								<i className='fa fa-star' aria-hidden='true'></i> <span>Create Car</span>
+							</a>
+						</li>
+						<li
+							className={`navItem ${activeItem === 'logOut' ? styles.active : ''}`}
+							onClick={() => {
+								handleItemClick('logOut')
+								setUser(null)
+							}}
+						>
+							<a href='#'>
+								<i className='fa fa-sign-out' aria-hidden='true'></i> <span>Log Out</span>
 							</a>
 						</li>
 					</ul>

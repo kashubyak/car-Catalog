@@ -13,7 +13,7 @@ type BurgerType = {
 }
 export const BurgerContext = createContext<BurgerType>({ open: false, setOpen: () => {} })
 export const BurgerProvides: FC<PropsWithChildren<unknown>> = ({ children }) => {
-	const [open, setOpen] = useState(true)
+	const [open, setOpen] = useState(false)
 	return (
 		<BurgerContext.Provider value={{ open, setOpen }}>{children}</BurgerContext.Provider>
 	)
