@@ -1,3 +1,4 @@
+import { Switch } from 'components/screens/home/header/searchForm/switcher/Switch'
 import { AuthContext } from 'providers/AuthProvides'
 import { BurgerContext } from 'providers/BurgerProvides'
 import React, { useContext, useState } from 'react'
@@ -10,12 +11,15 @@ const MenuLinks = () => {
 		setActiveItem(item)
 	}
 	const { open } = useContext(BurgerContext)
-	const { user, setUser } = useContext(AuthContext)
+	const { setUser } = useContext(AuthContext)
 
 	return (
 		<Transition in={open} timeout={0} unmountOnExit={true}>
 			{state => (
 				<div className={`${styles.menuLinks} ${state}`}>
+					<div className={styles.switchTheme}>
+						<Switch />
+					</div>
 					<ul>
 						<li
 							className={`navItem ${activeItem === 'home' ? styles.active : ''}`}

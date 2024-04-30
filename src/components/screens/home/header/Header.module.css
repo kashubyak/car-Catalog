@@ -22,27 +22,4 @@
 .headerContent form {
 	width: 85%;
 }
-.headerContent form input[type='search']::-webkit-input-placeholder {
-	color: var(--white-color);
-}
-.headerContent form input[type='search'] {
-	color: var(--white-color);
-	height: 42px;
-	padding: 10px 20px;
-	border-radius: 50px;
-	border: none;
-}
-.searchIcon {
-	position: relative;
-	width: 85%;
-}
-.searchIcon i {
-	position: absolute;
-	top: 50%;
-	right: 10px;
-	width: 20px;
-	height: 20px;
-	line-height: 20px;
-	color: var(--white-color);
-	transform: translateY(-50%);
-}
+

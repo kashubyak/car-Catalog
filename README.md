@@ -11,7 +11,7 @@
 2. Install package manager Yarn:
 
    ```bash
-   npm install --global yarn
+   npm install --local yarn
    ```
 
 ## Usage

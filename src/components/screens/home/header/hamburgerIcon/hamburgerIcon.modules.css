@@ -67,3 +67,8 @@
 .navTrigger.active svg path:nth-child(3) {
 	--offset: 58px;
 }
+@media (max-width: 600px) {
+	.navTrigger {
+		margin-right: auto;
+	}
+}
