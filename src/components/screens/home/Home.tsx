@@ -18,7 +18,7 @@ const Home = () => {
 	if (isLoading) return <p>Loading.....</p>
 
 	return (
-		<div style={{ maxWidth: '1920px', margin: '0px auto', padding: '0px 15px' }}>
+		<div style={{ maxWidth: '1920px', margin: '0px auto', marginBottom: '30px' }}>
 			<RegistrationMenu />
 			{user && (
 				<>

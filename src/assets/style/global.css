@@ -1,24 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 .lightTheme {
-	--body-color: #f9f9f9;
-	--white-color: #000;
-	--theme-color: #aac8a7;
-	--black-color: #fff;
-	--search-color: #eeeeee;
-	--fire-bubble: #faf8f8;
-	--light-grey: #f2f2f2;
-	--deam-white: #000;
+	--body-color: #f7f7f7;
+	--white-color: #0f0f0f;
+	--theme-color: #607274;
+	--card-back: #f6f5f2;
+	--deam-white: #0f0f0f;
 }
 .darkTheme {
-	--body-color: #070f2b;
-	--white-color: #fff;
-	--theme-color: #874ccc;
-	--black-color: #000;
-	--search-color: #272933;
-	--fire-bubble: rgba(59, 65, 79, 0.5);
-	--light-grey: rgba(90, 94, 104, 0.5);
-	--deam-white: rgba(255, 255, 255, 0.5);
+	--body-color: #0f0f0f;
+	--white-color: #f7f7f7;
+	--theme-color: #008170;
+	--card-back: #222831;
+	--deam-white: #f7f7f7;
 }
 * {
 	margin: 0px;
@@ -35,7 +29,7 @@ body {
 h1 {
 	font-size: 32px;
 	line-height: 40px;
-	color: #fff;
+	color: var(--white-color);
 }
 h2 {
 	font-size: 26px;

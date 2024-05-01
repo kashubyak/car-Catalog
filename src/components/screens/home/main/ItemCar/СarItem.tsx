@@ -5,21 +5,19 @@ import { CarItemPrice } from './СarItemPrice'
 
 const CarItem = ({ car }: { car: ICar }) => {
 	return (
-		<div key={car.id} className={homeStyle.borBlock}>
-			<div
-				className={homeStyle.image}
-				style={{
-					backgroundImage: `url(${car.image})`,
-				}}
-			></div>
+		<div key={car.id} className={homeStyle.card}>
+			<img src={car.image} alt='Car Image' className={homeStyle.imgFluid} />
+
 			<div className={homeStyle.info}>
-				<h2>
+				<h4 className={homeStyle.carTitle}>
 					{car.name} {car.model}
-				</h2>
-				<CarItemPrice price={car.price} />
-				<Link to={`/car/${car.id}`} className='btn'>
-					Read more
-				</Link>
+				</h4>
+				<div className={`${homeStyle.otherInfoCard} ${homeStyle.dFlex}`}>
+					<Link to={`/car/${car.id}`} className='btn'>
+						Read more
+					</Link>
+					<CarItemPrice price={car.price} />
+				</div>
 			</div>
 		</div>
 	)

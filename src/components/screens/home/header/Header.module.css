@@ -4,8 +4,11 @@
 	justify-content: space-between;
 }
 .navbar {
-	padding: 15px 0px;
+	padding: 15px;
 	width: 100%;
+	position: fixed;
+	background-color: var(--body-color);
+	margin: 0px auto;
 }
 .navbar .navbarBrand {
 	font-size: 26px;
@@ -22,4 +25,3 @@
 .headerContent form {
 	width: 85%;
 }
-

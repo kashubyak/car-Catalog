@@ -16,47 +16,49 @@ const MenuLinks = () => {
 	return (
 		<Transition in={open} timeout={0} unmountOnExit={true}>
 			{state => (
-				<div className={`${styles.menuLinks} ${state}`}>
-					<div className={styles.switchTheme}>
-						<Switch />
+				<div className={styles.containerLinks}>
+					<div className={`${styles.menuLinks} ${state}`}>
+						<ul>
+							<li
+								className={`navItem ${activeItem === 'home' ? styles.active : ''}`}
+								onClick={() => handleItemClick('home')}
+							>
+								<a href='#'>
+									<i className='fa fa-home' aria-hidden='true'></i> <span>Home</span>
+								</a>
+							</li>
+							<li
+								className={`navItem ${activeItem === 'favourite' ? styles.active : ''}`}
+								onClick={() => handleItemClick('favourite')}
+							>
+								<a href='#'>
+									<i className='fa fa-heart' aria-hidden='true'></i> <span>Favourite</span>
+								</a>
+							</li>
+							<li
+								className={`navItem ${activeItem === 'createCar' ? styles.active : ''}`}
+								onClick={() => handleItemClick('createCar')}
+							>
+								<a href='#'>
+									<i className='fa fa-star' aria-hidden='true'></i> <span>Create Car</span>
+								</a>
+							</li>
+							<li
+								className={`navItem ${activeItem === 'logOut' ? styles.active : ''}`}
+								onClick={() => {
+									handleItemClick('logOut')
+									setUser(null)
+								}}
+							>
+								<a href='#'>
+									<i className='fa fa-sign-out' aria-hidden='true'></i> <span>Log Out</span>
+								</a>
+							</li>
+						</ul>
+						<div className={styles.switchTheme}>
+							<Switch />
+						</div>
 					</div>
-					<ul>
-						<li
-							className={`navItem ${activeItem === 'home' ? styles.active : ''}`}
-							onClick={() => handleItemClick('home')}
-						>
-							<a href='#'>
-								<i className='fa fa-home' aria-hidden='true'></i> <span>Home</span>
-							</a>
-						</li>
-						<li
-							className={`navItem ${activeItem === 'favourite' ? styles.active : ''}`}
-							onClick={() => handleItemClick('favourite')}
-						>
-							<a href='#'>
-								<i className='fa fa-heart' aria-hidden='true'></i> <span>Favourite</span>
-							</a>
-						</li>
-						<li
-							className={`navItem ${activeItem === 'createCar' ? styles.active : ''}`}
-							onClick={() => handleItemClick('createCar')}
-						>
-							<a href='#'>
-								<i className='fa fa-star' aria-hidden='true'></i> <span>Create Car</span>
-							</a>
-						</li>
-						<li
-							className={`navItem ${activeItem === 'logOut' ? styles.active : ''}`}
-							onClick={() => {
-								handleItemClick('logOut')
-								setUser(null)
-							}}
-						>
-							<a href='#'>
-								<i className='fa fa-sign-out' aria-hidden='true'></i> <span>Log Out</span>
-							</a>
-						</li>
-					</ul>
 				</div>
 			)}
 		</Transition>
