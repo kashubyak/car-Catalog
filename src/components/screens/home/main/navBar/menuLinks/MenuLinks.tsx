@@ -2,6 +2,7 @@ import { Switch } from 'components/screens/home/header/searchForm/switcher/Switc
 import { AuthContext } from 'providers/AuthProvides'
 import { BurgerContext } from 'providers/BurgerProvides'
 import React, { useContext, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Transition } from 'react-transition-group'
 import styles from './menuLinks.module.css'
 
@@ -23,25 +24,27 @@ const MenuLinks = () => {
 								className={`navItem ${activeItem === 'home' ? styles.active : ''}`}
 								onClick={() => handleItemClick('home')}
 							>
-								<a href='#'>
+								<Link to='#'>
 									<i className='fa fa-home' aria-hidden='true'></i> <span>Home</span>
-								</a>
+								</Link>
 							</li>
 							<li
 								className={`navItem ${activeItem === 'favourite' ? styles.active : ''}`}
 								onClick={() => handleItemClick('favourite')}
 							>
-								<a href='#'>
-									<i className='fa fa-heart' aria-hidden='true'></i> <span>Favourite</span>
-								</a>
+								<Link to='#'>
+									<i className='fa fa-heart' aria-hidden='true'></i>{' '}
+									<span>Favourite</span>
+								</Link>
 							</li>
 							<li
 								className={`navItem ${activeItem === 'createCar' ? styles.active : ''}`}
 								onClick={() => handleItemClick('createCar')}
 							>
-								<a href='#'>
-									<i className='fa fa-star' aria-hidden='true'></i> <span>Create Car</span>
-								</a>
+								<Link to='#'>
+									<i className='fa fa-star' aria-hidden='true'></i>{' '}
+									<span>Create Car</span>
+								</Link>
 							</li>
 							<li
 								className={`navItem ${activeItem === 'logOut' ? styles.active : ''}`}
@@ -50,9 +53,10 @@ const MenuLinks = () => {
 									setUser(null)
 								}}
 							>
-								<a href='#'>
-									<i className='fa fa-sign-out' aria-hidden='true'></i> <span>Log Out</span>
-								</a>
+								<Link to='#'>
+									<i className='fa fa-sign-out' aria-hidden='true'></i>{' '}
+									<span>Log Out</span>
+								</Link>
 							</li>
 						</ul>
 						<div className={styles.switchTheme}>

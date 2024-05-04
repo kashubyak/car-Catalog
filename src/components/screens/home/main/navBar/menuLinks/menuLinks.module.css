@@ -54,6 +54,7 @@
 @media (max-width: 600px) {
 	.containerLinks {
 		position: fixed;
+		background-color: var(--body-color);
 	}
 	.menuLinks {
 		position: absolute;

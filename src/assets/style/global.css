@@ -5,6 +5,7 @@
 	--white-color: #0f0f0f;
 	--theme-color: #607274;
 	--card-back: #f6f5f2;
+	--card-header: #eeeeee;
 	--deam-white: #0f0f0f;
 }
 .darkTheme {
@@ -12,6 +13,7 @@
 	--white-color: #f7f7f7;
 	--theme-color: #008170;
 	--card-back: #222831;
+	--card-header: #222831;
 	--deam-white: #f7f7f7;
 }
 * {
@@ -46,4 +48,17 @@ h4 {
 h5 {
 	font-size: 12px;
 	line-height: 20px;
+}
+.btn {
+	text-wrap: nowrap;
+	text-decoration: none;
+	color: var(--body-color);
+	padding: 5px 15px;
+	background-color: var(--deam-white);
+	border-radius: 5px;
+	font-weight: bolder;
+	transition: 0.1;
+}
+.btn:hover {
+	opacity: 0.8;
 }

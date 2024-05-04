@@ -29,14 +29,15 @@ const HeaderUser = () => {
 			/>
 			<div className={`${styles.menu} ${activeMenu ? styles._active : ''}`}>
 				<p className={styles.profileName}>{user?.name}</p>
-				<button
-					className={styles.headerBtn}
+				<Link
+					className={`btn ${styles.btnUser}`}
 					onClick={() => {
 						setUser(null)
 					}}
+					to={''}
 				>
-					Logout
-				</button>
+					Log Out
+				</Link>
 			</div>
 		</Link>
 	)

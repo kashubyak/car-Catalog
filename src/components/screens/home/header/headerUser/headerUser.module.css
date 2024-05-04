@@ -1,6 +1,5 @@
 .profile {
 	position: relative;
-	color: var(--white-color);
 	font-size: 18px;
 	text-decoration: none;
 	top: 0;
@@ -24,10 +23,11 @@
 .menu {
 	position: absolute;
 	top: 100%;
-	max-width: 220px;
+	max-width: 315px;
 	padding: 10px;
 	border-radius: 10px;
-	background-color: #31363f;
+	color: var(--white-color);
+	background-color: var(--card-header);
 	text-align: center;
 	opacity: 0;
 	transform: translateX(-50px);
@@ -41,9 +41,9 @@
 }
 .profileName {
 	color: var(--search-color);
+	margin-bottom: 5px;
 }
-/* @media (max-width: 600px) {
-	.profile {
-		padding-right: 15px;
-	}
-} */
+.btnUser {
+	padding: 2px 5px;
+	font-size: 15px;
+}
