@@ -52,15 +52,10 @@
 		font-size: 15px;
 		line-height: 22px;
 	}
-	.themeBtn {
-		font-size: 14px;
-		line-height: 22px;
-		padding: 6px 0px;
-	}
 	.navbar {
 		padding: 16px;
 	}
-	.navbarLight .navbarBrand {
+	.navbarBrand {
 		font-size: 18px;
 		line-height: 26px;
 		margin: 0px;
@@ -90,19 +85,6 @@
 	.headerContent .profile {
 		margin: 0px 10px 0px 20px;
 	}
-	.trendingTitle {
-		margin: 22px 0px;
-	}
-	.trendingDesc {
-		padding: 12px;
-	}
-	.trendingDesc .bid h5 {
-		margin-bottom: 4px;
-	}
-	.trendingDesc .bid span {
-		font-size: 18px;
-		line-height: 26px;
-	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
 	h1 {
@@ -129,17 +111,12 @@
 		font-size: 14px;
 		line-height: 22px;
 	}
-	.theme-btn {
-		font-size: 14px;
-		line-height: 22px;
-		padding: 6px 0px;
-	}
 	.navbar {
 		padding: 16px 0px;
 		flex-wrap: nowrap;
 		-webkit-flex-wrap: nowrap;
 	}
-	.navbarLight .navbarBrand {
+	.navbarBrand {
 		font-size: 18px;
 		line-height: 26px;
 		margin: 0px;
@@ -189,29 +166,6 @@
 	.headerContent .profile {
 		margin: 0px 10px 0px 20px;
 	}
-	.trendingTitle {
-		margin: 22px 0px;
-	}
-	.trendingDesc {
-		padding: 12px;
-	}
-	.trendingDesc .user-image {
-		width: 35px;
-		top: -20px;
-		right: 14px;
-	}
-	.trendingDesc .user-position {
-		font-size: 15px;
-		line-height: 24px;
-		margin: 4px 0px 10px;
-	}
-	.trendingDesc .bid h5 {
-		margin-bottom: 4px;
-	}
-	.trendingDesc .bid span {
-		font-size: 16px;
-		line-height: 24px;
-	}
 }
 
 @media (max-width: 767px) {
@@ -239,22 +193,17 @@
 		font-size: 14px;
 		line-height: 22px;
 	}
-	.theme-btn {
-		font-size: 14px;
-		line-height: 22px;
-		padding: 6px 0px;
-	}
 	.navbar {
 		padding: 16px 0px;
 		flex-wrap: nowrap;
 		-webkit-flex-wrap: nowrap;
 	}
-	.navbarLight .navbarBrand {
+	.navbarBrand {
 		font-size: 18px;
 		line-height: 26px;
 		margin: 0px;
 	}
-	.navbarLight .navbarBrand img {
+	.navbarBrand img {
 		width: 50px;
 	}
 	.menuLinks {
@@ -303,39 +252,7 @@
 		width: fit-content;
 		margin-right: 10px;
 	}
-	.search-icon {
-		display: none;
-	}
 	.headerContent .profile {
 		display: none;
-	}
-	.trendingTitle {
-		margin: 25px 0px;
-	}
-	.trendingDesc {
-		padding: 12px;
-	}
-	.trending-content {
-		margin-bottom: 25px;
-	}
-	.trending-grid .col-md-4:last-child .trending-content {
-		margin-bottom: 0px;
-	}
-	.trendingDesc .user-image {
-		width: 35px;
-		top: -20px;
-		right: 14px;
-	}
-	.trendingDesc .user-position {
-		font-size: 15px;
-		line-height: 24px;
-		margin: 4px 0px 10px;
-	}
-	.trendingDesc .bid h5 {
-		margin-bottom: 4px;
-	}
-	.trendingDesc .bid span {
-		font-size: 16px;
-		line-height: 24px;
 	}
 }
