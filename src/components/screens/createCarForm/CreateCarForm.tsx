@@ -1,17 +1,13 @@
-import React from 'react'
+import { FC } from 'react'
 import { useForm } from 'react-hook-form'
 import { ICarData } from 'types/car.interface'
+import { ISideBarState } from 'types/content.interface'
 import { Header } from '../home/header/Header'
 import { MenuLinks } from '../home/main/navBar/menuLinks/MenuLinks'
 import styles from './createCarForm.module.css'
 import { useCreateCar } from './useCreateCar'
 
-interface Props {
-	setActiveMenuItem: React.Dispatch<React.SetStateAction<string>>
-	activeMenuItem: string
-}
-
-const CreateCarForm: React.FC<Props> = ({ setActiveMenuItem, activeMenuItem }) => {
+const CreateCarForm: FC<ISideBarState> = ({ setActiveMenuItem, activeMenuItem }) => {
 	const {
 		reset,
 		register,

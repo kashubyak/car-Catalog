@@ -38,7 +38,7 @@ const MenuLinks: React.FC<Props> = ({ activeMenuItem }) => {
 								className={`navItem ${activeItem === 'favourite' ? styles.active : ''}`}
 								onClick={() => handleItemClick('favourite')}
 							>
-								<Link to='#'>
+								<Link to='/Favourite'>
 									<i className='fa fa-heart' aria-hidden='true'></i>
 									<span>Favourite</span>
 								</Link>
