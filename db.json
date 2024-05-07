@@ -1,32 +1,46 @@
 {
-	"cars": [
-		{
-			"id": "1",
-			"name": "McLaren",
-			"model": "570S 2019",
-			"price": "204999",
-			"image": "https://cdn0.riastatic.com/photosnew/auto/photo/mclaren_570s__504530260hd.webp"
-		},
-		{
-			"id": "fc53",
-			"name": "Porsche",
-			"model": "991 Turbo S",
-			"price": "79999",
-			"image": "https://cdn.motor1.com/images/mgl/b3gBj/s1/4x3/porsche-911-turbo-s-by-manhart-is-an-850-horsepower-catapult.webp"
-		},
-		{
-			"id": "3bce",
-			"name": "Tesla",
-			"model": "Plaid Model S 2021",
-			"price": "86000",
-			"image": "https://cdn3.riastatic.com/photosnew/auto/photo/tesla_model-s__539939728hd.webp"
-		},
-		{
-			"id": "8fd3",
-			"name": "Porche",
-			"model": "Taycan",
-			"price": "15000",
-			"image": "https://www.razaoautomovel.com/wp-content/uploads/2019/09/2019_porsche_taycan_15_925x520_acf_cropped.jpg"
-		}
-	]
+  "cars": [
+    {
+      "id": "1",
+      "name": "McLaren",
+      "model": "570S 2019",
+      "price": "204999",
+      "image": "https://cdn0.riastatic.com/photosnew/auto/photo/mclaren_570s__504530260hd.webp"
+    },
+    {
+      "id": "fc53",
+      "name": "Porsche",
+      "model": "991 Turbo S",
+      "price": "79999",
+      "image": "https://cdn.motor1.com/images/mgl/b3gBj/s1/4x3/porsche-911-turbo-s-by-manhart-is-an-850-horsepower-catapult.webp"
+    },
+    {
+      "id": "3bce",
+      "name": "Tesla",
+      "model": "Plaid Model S 2021",
+      "price": "86000",
+      "image": "https://cdn3.riastatic.com/photosnew/auto/photo/tesla_model-s__539939728hd.webp"
+    },
+    {
+      "id": "8fd3",
+      "name": "Porche",
+      "model": "Taycan",
+      "price": "15000",
+      "image": "https://www.razaoautomovel.com/wp-content/uploads/2019/09/2019_porsche_taycan_15_925x520_acf_cropped.jpg"
+    },
+    {
+      "id": "d33a",
+      "name": "Ferrari",
+      "model": "SF90 2022",
+      "price": "649000",
+      "image": "https://cdn0.riastatic.com/photosnew/auto/photo/ferrari_sf90__512275335hd.webp"
+    },
+    {
+      "id": "4dbf",
+      "name": "Lamborghini",
+      "model": "Huracan 2020",
+      "price": "380000",
+      "image": "https://cdn4.riastatic.com/photosnew/auto/photo/lamborghini_huracan__549077629hd.webp"
+    }
+  ]
 }

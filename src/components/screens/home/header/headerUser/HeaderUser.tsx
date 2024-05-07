@@ -23,7 +23,7 @@ const HeaderUser = () => {
 	return (
 		<Link to='#' className={styles.profile}>
 			<img
-				src='/public/img/user.jpg'
+				src='./public/img/user.jpg'
 				alt='user-image'
 				onClick={() => setActiveMenu(!activeMenu)}
 			/>

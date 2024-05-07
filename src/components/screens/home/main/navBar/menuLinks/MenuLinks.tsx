@@ -6,11 +6,17 @@ import { Link } from 'react-router-dom'
 import { Transition } from 'react-transition-group'
 import styles from './menuLinks.module.css'
 
-const MenuLinks = () => {
-	const [activeItem, setActiveItem] = useState('home')
-	const handleItemClick = (item: React.SetStateAction<string>) => {
+interface Props {
+	activeMenuItem: string
+}
+
+const MenuLinks: React.FC<Props> = ({ activeMenuItem }) => {
+	const [activeItem, setActiveItem] = useState<string>(activeMenuItem)
+
+	const handleItemClick = (item: string) => {
 		setActiveItem(item)
 	}
+
 	const { open } = useContext(BurgerContext)
 	const { setUser } = useContext(AuthContext)
 
@@ -24,7 +30,7 @@ const MenuLinks = () => {
 								className={`navItem ${activeItem === 'home' ? styles.active : ''}`}
 								onClick={() => handleItemClick('home')}
 							>
-								<Link to='#'>
+								<Link to='/'>
 									<i className='fa fa-home' aria-hidden='true'></i> <span>Home</span>
 								</Link>
 							</li>
@@ -33,7 +39,7 @@ const MenuLinks = () => {
 								onClick={() => handleItemClick('favourite')}
 							>
 								<Link to='#'>
-									<i className='fa fa-heart' aria-hidden='true'></i>{' '}
+									<i className='fa fa-heart' aria-hidden='true'></i>
 									<span>Favourite</span>
 								</Link>
 							</li>
@@ -41,8 +47,8 @@ const MenuLinks = () => {
 								className={`navItem ${activeItem === 'createCar' ? styles.active : ''}`}
 								onClick={() => handleItemClick('createCar')}
 							>
-								<Link to='#'>
-									<i className='fa fa-star' aria-hidden='true'></i>{' '}
+								<Link to='/create-car'>
+									<i className='fa fa-star' aria-hidden='true'></i>
 									<span>Create Car</span>
 								</Link>
 							</li>
@@ -54,7 +60,7 @@ const MenuLinks = () => {
 								}}
 							>
 								<Link to='#'>
-									<i className='fa fa-sign-out' aria-hidden='true'></i>{' '}
+									<i className='fa fa-sign-out' aria-hidden='true'></i>
 									<span>Log Out</span>
 								</Link>
 							</li>

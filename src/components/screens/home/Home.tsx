@@ -24,7 +24,7 @@ const Home = () => {
 				<>
 					<Header />
 					<div style={{ display: 'flex' }}>
-						<MenuLinks />
+						<MenuLinks activeMenuItem={'home'} />
 						<Catalog data={data} />
 					</div>
 				</>
