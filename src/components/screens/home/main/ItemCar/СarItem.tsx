@@ -10,7 +10,7 @@ const CarItem = ({ car }: { car: ICar }) => {
 
 			<div className={homeStyle.info}>
 				<h4 className={homeStyle.carTitle}>
-					{car.name} {car.model}
+					{car.name ? `${car.name} ${car.model}` : 'There is no name'}
 				</h4>
 				<div className={`${homeStyle.otherInfoCard} ${homeStyle.dFlex}`}>
 					<Link to={`/car/${car.id}`} className='btn'>

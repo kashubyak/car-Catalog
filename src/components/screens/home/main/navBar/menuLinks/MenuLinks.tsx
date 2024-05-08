@@ -4,19 +4,14 @@ import { BurgerContext } from 'providers/BurgerProvides'
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Transition } from 'react-transition-group'
+import { ISideBarState } from 'types/content.interface'
 import styles from './menuLinks.module.css'
 
-interface Props {
-	activeMenuItem: string
-}
-
-const MenuLinks: React.FC<Props> = ({ activeMenuItem }) => {
+const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 	const [activeItem, setActiveItem] = useState<string>(activeMenuItem)
-
 	const handleItemClick = (item: string) => {
 		setActiveItem(item)
 	}
-
 	const { open } = useContext(BurgerContext)
 	const { setUser } = useContext(AuthContext)
 

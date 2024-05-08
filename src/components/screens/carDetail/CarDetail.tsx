@@ -15,7 +15,7 @@ const CarDetail = () => {
 		}
 		fetchData()
 	}, [id])
-	if (!car?.name) return <p>Loading....</p>
+	if (!car?.name) return <p>Car Not Found....</p>
 
 	return (
 		<div>

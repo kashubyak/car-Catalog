@@ -1,6 +1,17 @@
 .dFlex {
 	display: flex;
+	align-items: start;
 }
-.form {
+.containerContent {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	margin-top: 100px;
+}
+.form,
+.card {
+	padding: 0px 10px 10px 10px;
+}
+.card img {
+	min-height: 200px;
 }
