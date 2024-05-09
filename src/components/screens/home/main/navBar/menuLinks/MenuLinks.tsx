@@ -2,7 +2,7 @@ import { Switch } from 'components/screens/home/header/searchForm/switcher/Switc
 import { AuthContext } from 'providers/AuthProvides'
 import { BurgerContext } from 'providers/BurgerProvides'
 import React, { useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Transition } from 'react-transition-group'
 import { ISideBarState } from 'types/content.interface'
 import styles from './menuLinks.module.css'
@@ -14,6 +14,7 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 	}
 	const { open } = useContext(BurgerContext)
 	const { setUser } = useContext(AuthContext)
+	const navigate = useNavigate()
 
 	return (
 		<Transition in={open} timeout={0} unmountOnExit={true}>
@@ -52,12 +53,13 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 								onClick={() => {
 									handleItemClick('logOut')
 									setUser(null)
+									navigate('/')
 								}}
 							>
-								<Link to='#'>
+								<a>
 									<i className='fa fa-sign-out' aria-hidden='true'></i>
 									<span>Log Out</span>
-								</Link>
+								</a>
 							</li>
 						</ul>
 						<div className={styles.switchTheme}>
