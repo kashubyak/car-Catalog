@@ -41,6 +41,13 @@
 			"model": "Huracan 2020",
 			"price": "380000",
 			"image": "https://cdn4.riastatic.com/photosnew/auto/photo/lamborghini_huracan__549077629hd.webp"
+		},
+		{
+			"id": "c390",
+			"name": "Mersedes",
+			"model": "Benz 2021",
+			"price": "140000",
+			"image": "https://cdn2.riastatic.com/photosnew/auto/photo/mercedes-benz_g-class__491283587f.jpg"
 		}
 	]
 }

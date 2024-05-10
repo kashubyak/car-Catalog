@@ -35,26 +35,44 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 				/>
 				<div className={styles.containerContent}>
 					<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-						<input
-							{...register('name', { required: 'Name is required' })}
-							placeholder='Name car'
-						/>
-						{errors?.name?.message && <p style={{ color: '#f00' }}>Name is required</p>}
-						<input
-							{...register('model', { required: 'Model is required' })}
-							placeholder='Model'
-						/>
-						{errors?.model?.message && <p style={{ color: '#f00' }}>Model is required</p>}
-						<input
-							{...register('price', { required: 'Price is required' })}
-							placeholder='Price'
-						/>
-						{errors?.price?.message && <p style={{ color: '#f00' }}>Price is required</p>}
-						<input
-							{...register('image', { required: 'Image is required' })}
-							placeholder='Image'
-						/>
-						{errors?.image?.message && <p style={{ color: '#f00' }}>Image is required</p>}
+						<span className={styles.inputCon}>
+							<input
+								className='BaseInput'
+								{...register('name', { required: 'Name is required' })}
+								placeholder='Name car'
+							/>
+							{errors?.name?.message && <p style={{ color: '#f00' }}>Name is required</p>}
+						</span>
+						<span className={styles.inputCon}>
+							<input
+								className='BaseInput'
+								{...register('model', { required: 'Model is required' })}
+								placeholder='Model'
+							/>
+							{errors?.model?.message && (
+								<p style={{ color: '#f00' }}>Model is required</p>
+							)}
+						</span>
+						<span className={styles.inputCon}>
+							<input
+								className='BaseInput'
+								{...register('price', { required: 'Price is required' })}
+								placeholder='Price'
+							/>
+							{errors?.price?.message && (
+								<p style={{ color: '#f00' }}>Price is required</p>
+							)}
+						</span>
+						<span className={styles.inputCon}>
+							<input
+								className='BaseInput'
+								{...register('image', { required: 'Image is required' })}
+								placeholder='Image'
+							/>
+							{errors?.image?.message && (
+								<p style={{ color: '#f00' }}>Image is required</p>
+							)}
+						</span>
 						<button className='btn'>Create</button>
 					</form>
 					<div className={styles.card}>

@@ -29,7 +29,7 @@
 .carTitle {
 	font-size: 21px;
 	text-transform: capitalize;
-	color: var(--deam-white);
+	color: var(--white-color);
 	padding: 5px 10px;
 }
 

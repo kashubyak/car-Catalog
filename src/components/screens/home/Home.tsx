@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import { RegistrationMenu } from 'components/screens/RegistrationMenu/RegistrationMenu'
 import { Catalog } from 'components/ui/catalog'
 import { AuthContext } from 'providers/AuthProvides'
-import { useContext } from 'react'
+import { SetStateAction, useContext } from 'react'
 import { CarService } from 'services/car.service'
 import { Header } from './header/Header'
 import { MenuLinks } from './main/navBar/menuLinks/MenuLinks'
@@ -18,13 +18,18 @@ const Home = () => {
 	if (isLoading) return <p>Loading.....</p>
 
 	return (
-		<div style={{ maxWidth: '1920px', margin: '0px auto', marginBottom: '30px' }}>
+		<div>
 			<RegistrationMenu />
 			{user && (
 				<>
 					<Header />
 					<div style={{ display: 'flex' }}>
-						<MenuLinks activeMenuItem={'home'} />
+						<MenuLinks
+							activeMenuItem={'home'}
+							setActiveMenuItem={function (value: SetStateAction<string>): void {
+								throw new Error('Function not implemented.')
+							}}
+						/>
 						<Catalog data={data} />
 					</div>
 				</>

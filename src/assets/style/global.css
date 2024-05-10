@@ -5,16 +5,14 @@
 	--white-color: #0f0f0f;
 	--theme-color: #607274;
 	--card-back: #f6f5f2;
-	--card-header: #eeeeee;
-	--deam-white: #0f0f0f;
+	--input-back: #505761;
 }
 .darkTheme {
 	--body-color: #0f0f0f;
 	--white-color: #f7f7f7;
 	--theme-color: #008170;
 	--card-back: #222831;
-	--card-header: #222831;
-	--deam-white: #f7f7f7;
+	--input-back: #f6f5f2;
 }
 * {
 	margin: 0px;
@@ -27,6 +25,9 @@ body {
 	font-family: 'Manrope', sans-serif;
 	font-size: 16px;
 	line-height: 24px;
+	max-width: 1920px;
+	margin: 0px auto;
+	margin-bottom: 30px;
 }
 h1 {
 	font-size: 32px;
@@ -54,11 +55,28 @@ h5 {
 	text-decoration: none;
 	color: var(--body-color);
 	padding: 5px 15px;
-	background-color: var(--deam-white);
+	background-color: var(--white-color);
 	border-radius: 5px;
 	font-weight: bolder;
 	transition: 0.1;
+	border: 0;
+	outline: 0;
+	font-size: 16px;
 }
 .btn:hover {
 	opacity: 0.8;
+}
+.BaseInput {
+	padding: 5px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 0;
+	outline: 0;
+	margin: 3px;
+	background-color: var(--input-back);
+	color: var(--card-back);
+}
+.BaseInput::placeholder {
+	color: var(--card-back);
+	font-weight: bold;
 }

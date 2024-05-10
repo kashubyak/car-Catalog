@@ -14,7 +14,7 @@
 }
 
 .menuLinks ul li a {
-	color: var(--deam-white);
+	color: var(--white-color);
 	transition: all 0.2s;
 	-webkit-transition: all 0.2s;
 	width: fit-content;

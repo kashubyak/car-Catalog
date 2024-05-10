@@ -23,7 +23,7 @@
 	height: 48px;
 	top: -6px;
 	left: -14px;
-	stroke: var(--deam-white);
+	stroke: var(--white-color);
 	stroke-width: 4px;
 	stroke-linecap: round;
 	stroke-linejoin: round;
@@ -49,7 +49,7 @@
 	--array-2: 107px;
 }
 .navTrigger.active svg {
-	stroke: var(--deam-white);
+	stroke: var(--white-color);
 }
 .navTrigger.active svg path {
 	--offset: 57px;
