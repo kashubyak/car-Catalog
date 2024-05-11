@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
 import { RegistrationMenu } from 'components/screens/RegistrationMenu/RegistrationMenu'
 import { Catalog } from 'components/ui/catalog'
+import { Header } from 'components/ui/header/Header'
 import { AuthContext } from 'providers/AuthProvides'
 import { SetStateAction, useContext } from 'react'
 import { CarService } from 'services/car.service'
-import { Header } from '../../ui/header/Header'
 import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
 import './media.css'
 

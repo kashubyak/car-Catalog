@@ -9,6 +9,7 @@
 	position: fixed;
 	background-color: var(--body-color);
 	margin: 0px auto;
+	z-index: 3;
 }
 .navbar .navbarBrand {
 	font-size: 26px;

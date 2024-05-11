@@ -34,7 +34,7 @@
 	visibility: hidden;
 	transition: 0.1s;
 }
-.menu._active {
+.menu.active {
 	opacity: 1;
 	transform: translateX(0px);
 	visibility: visible;

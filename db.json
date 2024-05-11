@@ -22,13 +22,6 @@
 			"image": "https://cdn3.riastatic.com/photosnew/auto/photo/tesla_model-s__539939728hd.webp"
 		},
 		{
-			"id": "8fd3",
-			"name": "Porche",
-			"model": "Taycan",
-			"price": "15000",
-			"image": "https://www.razaoautomovel.com/wp-content/uploads/2019/09/2019_porsche_taycan_15_925x520_acf_cropped.jpg"
-		},
-		{
 			"id": "d33a",
 			"name": "Ferrari",
 			"model": "SF90 2022",

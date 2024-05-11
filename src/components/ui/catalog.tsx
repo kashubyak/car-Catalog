@@ -1,15 +1,24 @@
 import { CarItem } from 'components/screens/home/main/ItemCar/СarItem'
-import { FC } from 'react'
-import { ICar } from 'types/car.interface'
+import { FC, useState } from 'react'
+import { ICatalog } from 'types/content.interface'
 import homeStyle from '../screens/home/main/ItemCar/carItem.module.css'
-interface iCatalog {
-	data?: ICar[]
-}
-const Catalog: FC<iCatalog> = ({ data = [] }) => {
+
+const Catalog: FC<ICatalog> = ({ data = [] }) => {
+	const [activeMenuIndex, setActiveMenuIndex] = useState<number | null>(null)
+	const handleMenuIndex = (index: number) => {
+		setActiveMenuIndex(prevIndex => (prevIndex === index ? null : index))
+	}
 	return (
-		<div className={homeStyle.container} style={{ padding: '0px 15px' }}>
+		<div className={homeStyle.container}>
 			{data.length ? (
-				data.map(car => <CarItem key={car.id} car={car} />)
+				data.map((car, index) => (
+					<CarItem
+						key={car.id}
+						car={car}
+						active={activeMenuIndex === index}
+						onToggle={() => handleMenuIndex(index)}
+					/>
+				))
 			) : (
 				<p>There are no cars</p>
 			)}

@@ -27,7 +27,7 @@ const HeaderUser = () => {
 				alt='user-image'
 				onClick={() => setActiveMenu(!activeMenu)}
 			/>
-			<div className={`${styles.menu} ${activeMenu ? styles._active : ''}`}>
+			<div className={`${styles.menu} ${activeMenu ? styles.active : ''}`}>
 				<p className={styles.profileName}>{user?.name}</p>
 				<Link
 					className={`btn ${styles.btnUser}`}
