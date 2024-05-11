@@ -1,10 +1,10 @@
+import { Header } from 'components/ui/header/Header'
 import { FC, SetStateAction } from 'react'
 import { useForm } from 'react-hook-form'
 import { ICar, ICarData } from 'types/car.interface'
 import { ISideBarState } from 'types/content.interface'
-import { Header } from '../home/header/Header'
+import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
 import { CarItem } from '../home/main/ItemCar/СarItem'
-import { MenuLinks } from '../home/main/navBar/menuLinks/MenuLinks'
 import styles from './createCarForm.module.css'
 import { useCreateCar } from './useCreateCar'
 
@@ -21,7 +21,6 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 	const onSubmit = (data: ICarData) => {
 		createCar(data)
 	}
-
 	const car = watch()
 	return (
 		<div className={styles.container}>

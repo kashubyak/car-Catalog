@@ -4,8 +4,8 @@ import { Catalog } from 'components/ui/catalog'
 import { AuthContext } from 'providers/AuthProvides'
 import { SetStateAction, useContext } from 'react'
 import { CarService } from 'services/car.service'
-import { Header } from './header/Header'
-import { MenuLinks } from './main/navBar/menuLinks/MenuLinks'
+import { Header } from '../../ui/header/Header'
+import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
 import './media.css'
 
 const Home = () => {

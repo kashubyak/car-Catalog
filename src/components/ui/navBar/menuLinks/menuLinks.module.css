@@ -13,7 +13,7 @@
 	list-style: none;
 }
 
-.menuLinks ul li a {
+.menuLinks ul a li {
 	color: var(--white-color);
 	transition: all 0.2s;
 	-webkit-transition: all 0.2s;
@@ -21,11 +21,11 @@
 	text-decoration: none;
 }
 
-.menuLinks ul li:not(.active) a:hover {
+.menuLinks ul a:hover li:not(.active) {
 	color: var(--theme-color);
 }
 
-.menuLinks ul li a i {
+.menuLinks ul a li i {
 	width: 32px;
 	height: 32px;
 	line-height: 20px;
@@ -34,7 +34,7 @@
 	text-align: center;
 }
 
-.menuLinks ul li.active a i {
+.menuLinks ul a li.active i {
 	border-radius: 5px;
 	background-color: var(--theme-color);
 	margin-right: 12px;

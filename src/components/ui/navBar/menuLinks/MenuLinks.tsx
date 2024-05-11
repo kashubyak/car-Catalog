@@ -1,4 +1,4 @@
-import { Switch } from 'components/screens/home/header/searchForm/switcher/Switch'
+import { Switch } from 'components/ui/header/searchForm/switcher/Switch'
 import { AuthContext } from 'providers/AuthProvides'
 import { BurgerContext } from 'providers/BurgerProvides'
 import React, { useContext, useState } from 'react'
@@ -22,45 +22,45 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 				<div className={styles.containerLinks}>
 					<div className={`${styles.menuLinks} ${state}`}>
 						<ul>
-							<li
-								className={`navItem ${activeItem === 'home' ? styles.active : ''}`}
-								onClick={() => handleItemClick('home')}
-							>
-								<Link to='/'>
+							<Link to='/'>
+								<li
+									className={`navItem ${activeItem === 'home' ? styles.active : ''}`}
+									onClick={() => handleItemClick('home')}
+								>
 									<i className='fa fa-home' aria-hidden='true'></i> <span>Home</span>
-								</Link>
-							</li>
-							<li
-								className={`navItem ${activeItem === 'favourite' ? styles.active : ''}`}
-								onClick={() => handleItemClick('favourite')}
-							>
-								<Link to='/Favourite'>
+								</li>
+							</Link>
+							<Link to='/Favourite'>
+								<li
+									className={`navItem ${activeItem === 'favourite' ? styles.active : ''}`}
+									onClick={() => handleItemClick('favourite')}
+								>
 									<i className='fa fa-heart' aria-hidden='true'></i>
 									<span>Favourite</span>
-								</Link>
-							</li>
-							<li
-								className={`navItem ${activeItem === 'createCar' ? styles.active : ''}`}
-								onClick={() => handleItemClick('createCar')}
-							>
-								<Link to='/create-car'>
+								</li>
+							</Link>
+							<Link to='/create-car'>
+								<li
+									className={`navItem ${activeItem === 'createCar' ? styles.active : ''}`}
+									onClick={() => handleItemClick('createCar')}
+								>
 									<i className='fa fa-star' aria-hidden='true'></i>
 									<span>Create Car</span>
-								</Link>
-							</li>
-							<li
-								className={`navItem ${activeItem === 'logOut' ? styles.active : ''}`}
-								onClick={() => {
-									handleItemClick('logOut')
-									setUser(null)
-									navigate('/')
-								}}
-							>
-								<a>
+								</li>
+							</Link>
+							<a>
+								<li
+									className={`navItem ${activeItem === 'logOut' ? styles.active : ''}`}
+									onClick={() => {
+										handleItemClick('logOut')
+										setUser(null)
+										navigate('/')
+									}}
+								>
 									<i className='fa fa-sign-out' aria-hidden='true'></i>
 									<span>Log Out</span>
-								</a>
-							</li>
+								</li>
+							</a>
 						</ul>
 						<div className={styles.switchTheme}>
 							<Switch />
