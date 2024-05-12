@@ -33,6 +33,11 @@
 	color: var(--white-color);
 	padding: 5px 0px;
 }
+.card .info .topContentCard i {
+	font-size: 25px;
+	cursor: pointer;
+	padding: 10px;
+}
 .topContentCard {
 	padding: 5px 15px;
 }
@@ -40,31 +45,7 @@
 	position: relative;
 	z-index: 1;
 }
-.card .info i {
-	font-size: 25px;
-	cursor: pointer;
-	padding: 10px;
-}
-.card .info .menu {
-	position: absolute;
-	top: 40px;
-	left: 70%;
-	max-width: 315px;
-	padding: 10px;
-	border-radius: 3px;
-	color: var(--card-back);
-	background-color: var(--input-back);
-	text-align: center;
-	opacity: 0;
-	transform: translateY(10px);
-	visibility: hidden;
-	transition: 0.1s;
-}
-.card .info .menu.active {
-	opacity: 1;
-	transform: translateX(0px);
-	visibility: visible;
-}
+
 .downInfoCard {
 	padding: 24px;
 }

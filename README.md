@@ -5,13 +5,19 @@
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/kashubyak/car-Catalog.git
+   git clone https://github.com/kashubyak/car-Catalog.git && cd car-Catalog
    ```
 
-2. Install package manager Yarn:
+2. Enabling Corepack, if it isn't already. This will add the yarn
 
    ```bash
-   npm install --local yarn
+   corepack enable
+   ```
+
+3. Running is enough to run an install!
+
+   ```bash
+   yarn
    ```
 
 ## Usage

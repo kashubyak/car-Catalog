@@ -75,7 +75,13 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 						<button className='btn'>Create</button>
 					</form>
 					<div className={styles.card}>
-						<CarItem car={car as ICar} />
+						<CarItem
+							car={car as ICar}
+							active={false}
+							onToggle={function (): void {
+								throw new Error('Function not implemented.')
+							}}
+						/>
 					</div>
 				</div>
 			</div>
