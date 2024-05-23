@@ -3,7 +3,7 @@ import { FC, SetStateAction } from 'react'
 import { ISideBarState } from 'types/content.interface'
 import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
 import styles from './favorites.module.css'
-const Favourite: FC<ISideBarState> = ({ setActiveMenuItem, activeMenuItem }) => {
+const Favorites: FC<ISideBarState> = ({ setActiveMenuItem, activeMenuItem }) => {
 	return (
 		<div className={styles.container}>
 			<Header />
@@ -19,4 +19,4 @@ const Favourite: FC<ISideBarState> = ({ setActiveMenuItem, activeMenuItem }) => 
 		</div>
 	)
 }
-export { Favourite }
+export { Favorites }

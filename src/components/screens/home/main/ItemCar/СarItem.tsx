@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { ICarItem } from 'types/car.interface'
 import homeStyle from './carItem.module.css'
@@ -6,6 +7,8 @@ import { MenuCar } from './menuCar/MenuCar'
 import { CarItemPrice } from './СarItemPrice'
 
 const CarItem: FC<ICarItem> = ({ car, active, onToggle }) => {
+	const { favorites } = useSelector(state => state)
+	const dispatch = useDispatch()
 	const handleMenuToggle = (event: React.MouseEvent<HTMLDivElement>) => {
 		event.stopPropagation()
 		onToggle()

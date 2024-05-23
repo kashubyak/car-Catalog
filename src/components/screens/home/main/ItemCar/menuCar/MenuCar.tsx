@@ -20,6 +20,7 @@ const MenuCar: FC<{ active: boolean }> = ({ active }) => {
 			document.removeEventListener('click', handleClickOutside)
 		}
 	}, [menuActive])
+
 	return (
 		<div ref={menuRef} className={`${styles.menu} ${menuActive ? styles.active : ''}`}>
 			<div className={styles.activeMenu}>
