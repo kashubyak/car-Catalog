@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { ICarItem } from 'types/car.interface'
 import homeStyle from './carItem.module.css'
@@ -7,8 +6,6 @@ import { MenuCar } from './menuCar/MenuCar'
 import { CarItemPrice } from './СarItemPrice'
 
 const CarItem: FC<ICarItem> = ({ car, active, onToggle }) => {
-	const { favorites } = useSelector(state => state)
-	const dispatch = useDispatch()
 	const handleMenuToggle = (event: React.MouseEvent<HTMLDivElement>) => {
 		event.stopPropagation()
 		onToggle()
@@ -27,8 +24,7 @@ const CarItem: FC<ICarItem> = ({ car, active, onToggle }) => {
 						className='fa fa-ellipsis-horizontal'
 						aria-hidden='true'
 					></i>
-
-					<MenuCar active={active} />
+					<MenuCar active={active} car={car} />
 				</div>
 				<div className={`${homeStyle.downInfoCard} ${homeStyle.dFlex}`}>
 					<Link to={`/car/${car.id}`} className='btn'>

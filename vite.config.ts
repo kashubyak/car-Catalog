@@ -11,6 +11,7 @@ export default defineConfig({
 			providers: '/src/providers/',
 			services: '/src/services/',
 			types: '/src/types/',
+			store: '/src/store/',
 		},
 	},
 })
