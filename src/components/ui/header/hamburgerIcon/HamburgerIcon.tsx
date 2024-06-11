@@ -1,6 +1,6 @@
 import { BurgerContext } from 'providers/BurgerProvides'
 import { useContext, useState } from 'react'
-import './hamburgerIcon.modules.css'
+import './HamburgerIcon.modules.css'
 const HamburgerIcon = () => {
 	const [active, setActive] = useState(false)
 	const { open, setOpen } = useContext(BurgerContext)

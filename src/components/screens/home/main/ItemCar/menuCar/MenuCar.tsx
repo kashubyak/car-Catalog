@@ -1,9 +1,8 @@
 import { useActions } from 'hooks/useActions'
-import { useTypedSelector } from 'hooks/useTypedSelector'
+import { useFavorites } from 'hooks/useFavorites'
 import { FC, useEffect, useRef, useState } from 'react'
-import { RootState } from 'store/Store'
 import { ICar } from 'types/car.interface'
-import styles from './menuCar.module.css'
+import styles from './MenuCar.module.css'
 
 const MenuCar: FC<{ active: boolean; car: ICar }> = ({ active, car }) => {
 	const [menuActive, setMenuActive] = useState(false)
@@ -26,7 +25,7 @@ const MenuCar: FC<{ active: boolean; car: ICar }> = ({ active, car }) => {
 		}
 	}, [menuActive])
 
-	const favorites = useTypedSelector((state: RootState) => state.favorites)
+	const { favorites } = useFavorites()
 	const { toggleFavorites } = useActions()
 	const isExist = favorites.some((c: ICar) => c.id === car.id)
 

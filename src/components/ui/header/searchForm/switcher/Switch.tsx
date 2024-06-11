@@ -1,6 +1,6 @@
 import { ThemeContext } from 'providers/ThemeProvides'
 import { useContext } from 'react'
-import styles from './switsh.module.css'
+import styles from './Switsh.module.css'
 
 const Switch = () => {
 	const { theme, setTheme } = useContext(ThemeContext)

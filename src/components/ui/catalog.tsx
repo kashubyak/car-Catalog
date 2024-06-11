@@ -1,7 +1,7 @@
 import { CarItem } from 'components/screens/home/main/ItemCar/СarItem'
 import { FC, useState } from 'react'
 import { ICatalog } from 'types/content.interface'
-import homeStyle from '../screens/home/main/ItemCar/carItem.module.css'
+import homeStyle from '../screens/home/main/ItemCar/CarItem.module.css'
 
 const Catalog: FC<ICatalog> = ({ data = [] }) => {
 	const [activeMenuIndex, setActiveMenuIndex] = useState<number | null>(null)

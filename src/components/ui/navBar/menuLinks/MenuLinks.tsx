@@ -5,7 +5,7 @@ import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Transition } from 'react-transition-group'
 import { ISideBarState } from 'types/content.interface'
-import styles from './menuLinks.module.css'
+import styles from './MenuLinks.module.css'
 
 const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 	const [activeItem, setActiveItem] = useState<string>(activeMenuItem)
@@ -36,7 +36,7 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 									onClick={() => handleItemClick('favourite')}
 								>
 									<i className='fa fa-heart' aria-hidden='true'></i>
-									<span>Favourite</span>
+									<span>Favorite</span>
 								</li>
 							</Link>
 							<Link to='/create-car'>

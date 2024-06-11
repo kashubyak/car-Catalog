@@ -2,8 +2,8 @@ import { Header } from 'components/ui/header/Header'
 import { FC, SetStateAction } from 'react'
 import { ISideBarState } from 'types/content.interface'
 import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
-import styles from './favorites.module.css'
-const Favorites: FC<ISideBarState> = ({ setActiveMenuItem, activeMenuItem }) => {
+import styles from './Favorites.module.css'
+const Favorites: FC<ISideBarState> = ({ activeMenuItem }) => {
 	return (
 		<div className={styles.container}>
 			<Header />
