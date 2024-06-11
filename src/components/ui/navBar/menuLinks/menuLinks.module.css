@@ -52,6 +52,18 @@
 .switchTheme {
 	display: none;
 }
+.scoreFaiv {
+	position: absolute;
+	color: var(--white-color);
+	margin: 0px 3px;
+	width: 10px;
+	height: 10px;
+	top: 0;
+	left: 20px;
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+}
 @media (max-width: 600px) {
 	.containerLinks {
 		position: fixed;

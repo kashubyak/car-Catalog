@@ -1,4 +1,5 @@
 import { Switch } from 'components/ui/header/searchForm/switcher/Switch'
+import { useFavorites } from 'hooks/useFavorites'
 import { AuthContext } from 'providers/AuthProvides'
 import { BurgerContext } from 'providers/BurgerProvides'
 import React, { useContext, useState } from 'react'
@@ -16,6 +17,8 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 	const { setUser } = useContext(AuthContext)
 	const navigate = useNavigate()
 
+	const { favorites } = useFavorites()
+
 	return (
 		<Transition in={open} timeout={0} unmountOnExit={true}>
 			{state => (
@@ -32,11 +35,13 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 							</Link>
 							<Link to='/Favourite'>
 								<li
+									style={{ position: 'relative' }}
 									className={`navItem ${activeItem === 'favourite' ? styles.active : ''}`}
 									onClick={() => handleItemClick('favourite')}
 								>
 									<i className='fa fa-heart' aria-hidden='true'></i>
 									<span>Favorite</span>
+									<span className={styles.scoreFaiv}>{favorites.length}</span>
 								</li>
 							</Link>
 							<Link to='/create-car'>

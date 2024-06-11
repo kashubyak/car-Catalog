@@ -1,4 +1,5 @@
 import { Header } from 'components/ui/header/Header'
+import { useFavorites } from 'hooks/useFavorites'
 import { FC, SetStateAction } from 'react'
 import { ISideBarState } from 'types/content.interface'
 import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
