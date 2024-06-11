@@ -58,8 +58,9 @@
 	margin: 0px 3px;
 	width: 10px;
 	height: 10px;
-	top: 0;
-	left: 20px;
+	font-size: 13px;
+	top: 19px;
+	left: 19px;
 	display: flex;
 	align-items: center;
 	border-radius: 5px;
