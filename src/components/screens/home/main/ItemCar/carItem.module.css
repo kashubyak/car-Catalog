@@ -17,6 +17,7 @@
 	background: var(--card-back);
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 	width: 100%;
+	max-width: 800px;
 }
 
 .card img {

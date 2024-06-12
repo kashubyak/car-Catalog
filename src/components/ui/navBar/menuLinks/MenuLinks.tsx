@@ -41,7 +41,7 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 								>
 									<i className='fa fa-heart' aria-hidden='true'></i>
 									<span>Favorite</span>
-									<span className={styles.scoreFaiv}>{favorites.length}</span>
+									<span className={styles.scoreFav}>{favorites.length}</span>
 								</li>
 							</Link>
 							<Link to='/create-car'>
