@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Router } from 'components/ui/Router'
+import { Notification } from 'components/ui/notafication/Notification'
 import { AuthProvider } from 'providers/AuthProvides'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
@@ -25,6 +26,7 @@ if (rootElement) {
 					<ThemeProvider>
 						<BurgerProvides>
 							<Router />
+							<Notification />
 						</BurgerProvides>
 					</ThemeProvider>
 				</AuthProvider>
