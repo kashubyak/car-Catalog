@@ -1,15 +1,12 @@
-import { useActionsFav } from 'hooks/useActionsFav'
-import { useNotificationActions } from 'hooks/useActionsNot'
+import { useActions } from 'hooks/useActions'
 import { useFavorites } from 'hooks/useFavorites'
 import { FC, useEffect, useRef, useState } from 'react'
-import { useDispatch } from 'react-redux'
 import { ICar } from 'types/car.interface'
 import styles from './MenuCar.module.css'
 
 const MenuCar: FC<{ active: boolean; car: ICar }> = ({ active, car }) => {
 	const [menuActive, setMenuActive] = useState(false)
 	const menuRef = useRef<HTMLDivElement>(null)
-	const dispatch = useDispatch()
 
 	useEffect(() => {
 		setMenuActive(active)
@@ -29,18 +26,16 @@ const MenuCar: FC<{ active: boolean; car: ICar }> = ({ active, car }) => {
 	}, [menuActive])
 
 	const { favorites } = useFavorites()
-	const { toggleFavorites } = useActionsFav()
+	const { toggleFavorites } = useActions()
 	const isExist = favorites.some((c: ICar) => c.id === car.id)
-	const { showNotification } = useNotificationActions()
+	const { addNotification } = useActions()
 
 	const handleToogleFavorite = () => {
 		toggleFavorites(car)
-		dispatch(
-			showNotification({
-				message: isExist ? 'Removed from favorites!' : 'Added to favorites!',
-				backgroundColor: isExist ? 'red' : 'green',
-			}),
-		)
+		addNotification({
+			message: isExist ? 'Removed from favorites!' : 'Added to favorites!',
+			backgroundColor: isExist ? '#C80036' : '#365E32',
+		})
 	}
 
 	return (

@@ -1,26 +1,24 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit'
-import { INotificationState } from 'types/slice.interface'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { INotification } from 'types/slice.interface'
 
-const initialState: INotificationState = {
-	message: '',
-	backgroundColor: '',
-	visible: false,
-}
+const initialState: INotification[] = []
+
 const notificationSlice = createSlice({
 	name: 'notification',
 	initialState,
 	reducers: {
-		showNotification: (
+		addNotification: (
 			state,
 			action: PayloadAction<{ message: string; backgroundColor: string }>,
 		) => {
-			state.message = action.payload.message
-			state.backgroundColor = action.payload.backgroundColor
-			state.visible = true
+			const id = new Date().getTime()
+
+			state.push({ id, ...action.payload })
 		},
-		hideNotification: state => {
-			state.visible = false
+		removeNotification: (state, action: PayloadAction<number>) => {
+			return state.filter(notification => notification.id !== action.payload)
 		},
 	},
 })
+
 export const { actions, reducer } = notificationSlice

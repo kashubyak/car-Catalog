@@ -1,30 +1,35 @@
-import { useNotificationActions } from 'hooks/useActionsNot'
-import { useTypedSelector } from 'hooks/useTypedSelector'
+import { useActions } from 'hooks/useActions'
 import { FC, useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { RootState } from 'store/Store'
 import styles from './Notification.module.css'
+
 const Notification: FC = () => {
-	const dispatch = useDispatch()
-	const { message, backgroundColor, visible } = useTypedSelector(
-		(state: RootState) => state.notification,
-	)
-	const { hideNotification } = useNotificationActions()
+	const notifications = useSelector((state: RootState) => state.notification)
+	const { removeNotification } = useActions()
+
 	useEffect(() => {
-		if (visible) {
+		notifications.forEach(notification => {
 			const timer = setTimeout(() => {
-				dispatch(hideNotification())
+				removeNotification(notification.id)
 			}, 3000)
-
 			return () => clearTimeout(timer)
-		}
-	}, [visible, dispatch])
+		})
+	}, [notifications])
 
-	if (!visible) return null
 	return (
-		<div className={styles.notification} style={{ backgroundColor }}>
-			{message}
+		<div className={styles.notificationContainer}>
+			{notifications.map(notification => (
+				<div
+					key={notification.id}
+					className={styles.notification}
+					style={{ backgroundColor: notification.backgroundColor }}
+				>
+					{notification.message}
+				</div>
+			))}
 		</div>
 	)
 }
+
 export { Notification }

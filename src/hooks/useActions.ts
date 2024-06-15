@@ -1,13 +1,13 @@
 import { bindActionCreators } from '@reduxjs/toolkit'
 import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
-import { actions } from 'store/notaficatoinsSlice/notificationSlice'
-
+import { actions as favoritesActions } from 'store/favoriteSlice/Favorites.slice'
+import { actions as notificationActions } from 'store/notaficatoinsSlice/notificationSlice'
 const rootActions = {
-	...actions,
+	...favoritesActions,
+	...notificationActions,
 }
-
-export const useNotificationActions = () => {
+export const useActions = () => {
 	const dispatch = useDispatch()
 	return useMemo(() => bindActionCreators(rootActions, dispatch), [dispatch])
 }

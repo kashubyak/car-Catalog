@@ -1,5 +1,5 @@
-export interface INotificationState {
+export interface INotification {
+	id: number
 	message: string
 	backgroundColor: string
-	visible: boolean
 }
