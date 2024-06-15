@@ -34,7 +34,7 @@ const MenuCar: FC<{ active: boolean; car: ICar }> = ({ active, car }) => {
 		toggleFavorites(car)
 		addNotification({
 			message: isExist ? 'Removed from favorites!' : 'Added to favorites!',
-			backgroundColor: isExist ? '#C80036' : '#365E32',
+			backgroundColor: isExist ? 'var(--col-popup-re)' : 'var(--col-popup-gr)',
 		})
 	}
 

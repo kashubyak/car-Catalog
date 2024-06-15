@@ -1,4 +1,5 @@
 import { Header } from 'components/ui/header/Header'
+import { useActions } from 'hooks/useActions'
 import { FC, SetStateAction } from 'react'
 import { useForm } from 'react-hook-form'
 import { ICar, ICarData } from 'types/car.interface'
@@ -17,9 +18,13 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 		watch,
 	} = useForm<ICarData>({ mode: 'onChange' })
 	const { createCar } = useCreateCar(reset)
-
+	const { addNotification } = useActions()
 	const onSubmit = (data: ICarData) => {
 		createCar(data)
+		addNotification({
+			message: 'The car is created!',
+			backgroundColor: 'var(--col-popup-gr)',
+		})
 	}
 	const car = watch()
 	return (
