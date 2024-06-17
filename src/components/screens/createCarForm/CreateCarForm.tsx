@@ -6,7 +6,7 @@ import { ICar, ICarData } from 'types/car.interface'
 import { ISideBarState } from 'types/content.interface'
 import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
 import { CarItem } from '../home/main/ItemCar/СarItem'
-import styles from './CreateCarForm.module.css'
+import styles from './СreateCarForm.module.css'
 import { useCreateCar } from './useCreateCar'
 
 const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
