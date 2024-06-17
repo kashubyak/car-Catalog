@@ -1,18 +1,42 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import { preloadedState, saveState } from 'components/ui/localStorage/LocalStorage'
+import {
+	FLUSH,
+	PAUSE,
+	PERSIST,
+	PURGE,
+	REGISTER,
+	REHYDRATE,
+	persistReducer,
+	persistStore,
+} from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 import { reducer as favoritesReducer } from './favoriteSlice/Favorites.slice'
 import { reducer as notificationReducer } from './notaficatoinsSlice/notificationSlice'
 
-const reducers = combineReducers({
+const rootReducer = combineReducers({
 	favorites: favoritesReducer,
 	notification: notificationReducer,
 })
-export const Store = configureStore({
-	reducer: reducers,
-	preloadedState,
+
+const persistConfig = {
+	key: 'root',
+	storage,
+	whitelist: ['favorites'],
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+const Store = configureStore({
+	reducer: persistedReducer,
+	middleware: getDefaultMiddleware =>
+		getDefaultMiddleware({
+			serializableCheck: {
+				ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+			},
+		}),
 })
 
-Store.subscribe(() => {
-	saveState(Store.getState())
-})
+const persistor = persistStore(Store)
+
+export { Store, persistor }
 export type RootState = ReturnType<typeof Store.getState>

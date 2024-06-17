@@ -12,7 +12,6 @@ const notificationSlice = createSlice({
 			action: PayloadAction<{ message: string; backgroundColor: string }>,
 		) => {
 			const id = new Date().getTime()
-
 			state.push({ id, ...action.payload })
 		},
 		removeNotification: (state, action: PayloadAction<number>) => {
