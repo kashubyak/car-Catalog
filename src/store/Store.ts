@@ -11,17 +11,19 @@ import {
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { reducer as favoritesReducer } from './favoriteSlice/Favorites.slice'
-import { reducer as notificationReducer } from './notaficatoinsSlice/notificationSlice'
+import { reducer as notificationReducer } from './notaficatoinsSlice/Notification.Slice'
+import { reducer as themeReducer } from './themeSlice/Theme.Slice'
 
 const rootReducer = combineReducers({
 	favorites: favoritesReducer,
 	notification: notificationReducer,
+	theme: themeReducer,
 })
 
 const persistConfig = {
 	key: 'root',
 	storage,
-	whitelist: ['favorites'],
+	whitelist: ['favorites', 'theme'],
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

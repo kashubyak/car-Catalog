@@ -3,7 +3,7 @@ import { INotification } from 'types/slice.interface'
 
 const initialState: INotification[] = []
 
-const notificationSlice = createSlice({
+const NotificationSlice = createSlice({
 	name: 'notification',
 	initialState,
 	reducers: {
@@ -20,4 +20,4 @@ const notificationSlice = createSlice({
 	},
 })
 
-export const { actions, reducer } = notificationSlice
+export const { actions, reducer } = NotificationSlice

@@ -3,3 +3,6 @@ export interface INotification {
 	message: string
 	backgroundColor: string
 }
+export interface IThemeState {
+	theme: string
+}

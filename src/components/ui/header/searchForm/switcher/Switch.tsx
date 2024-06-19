@@ -1,9 +1,11 @@
-import { ThemeContext } from 'providers/ThemeProvides'
-import { useContext } from 'react'
+import { useActions } from 'hooks/useActions'
+import { useTypedSelector } from 'hooks/useTypedSelector'
 import styles from './Switsh.module.css'
 
 const Switch = () => {
-	const { theme, setTheme } = useContext(ThemeContext)
+	const { setTheme } = useActions()
+	const theme = useTypedSelector(state => state.theme.theme)
+
 	const changeTheme = () => {
 		setTheme(theme === 'darkTheme' ? 'lightTheme' : 'darkTheme')
 	}

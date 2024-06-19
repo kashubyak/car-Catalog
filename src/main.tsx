@@ -5,9 +5,9 @@ import { AuthProvider } from 'providers/AuthProvides'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
+import { ThemeInitializer } from 'store/themeSlice/ThemeInitializer'
 import './assets/style/global.css'
 import { BurgerProvides } from './providers/BurgerProvides'
-import { ThemeProvider } from './providers/ThemeProvides'
 import { Store, persistor } from './store/Store'
 
 const queryClient = new QueryClient({
@@ -25,12 +25,11 @@ if (rootElement) {
 			<Provider store={Store}>
 				<PersistGate loading={null} persistor={persistor}>
 					<AuthProvider>
-						<ThemeProvider>
-							<BurgerProvides>
-								<Router />
-								<Notification />
-							</BurgerProvides>
-						</ThemeProvider>
+						<BurgerProvides>
+							<Router />
+							<Notification />
+							<ThemeInitializer />
+						</BurgerProvides>
 					</AuthProvider>
 				</PersistGate>
 			</Provider>

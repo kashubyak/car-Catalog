@@ -1,11 +1,10 @@
 import { useActions } from 'hooks/useActions'
+import { useTypedSelector } from 'hooks/useTypedSelector'
 import { FC, useEffect } from 'react'
-import { useSelector } from 'react-redux'
-import { RootState } from 'store/Store'
 import styles from './Notification.module.css'
 
 const Notification: FC = () => {
-	const notifications = useSelector((state: RootState) => state.notification)
+	const notifications = useTypedSelector(state => state.notification)
 	const { removeNotification } = useActions()
 
 	useEffect(() => {
