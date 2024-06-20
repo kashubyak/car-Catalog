@@ -1,7 +1,7 @@
 import { Switch } from 'components/ui/header/searchForm/switcher/Switch'
+import { useBurger } from 'hooks/useBurger'
 import { useFavorites } from 'hooks/useFavorites'
 import { AuthContext } from 'providers/AuthProvides'
-import { BurgerContext } from 'providers/BurgerProvides'
 import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Transition } from 'react-transition-group'
@@ -13,7 +13,7 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 	const handleItemClick = (item: string) => {
 		setActiveItem(item)
 	}
-	const { open } = useContext(BurgerContext)
+	const open = useBurger()
 	const { setUser } = useContext(AuthContext)
 	const navigate = useNavigate()
 

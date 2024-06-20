@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { ICar } from 'types/car.interface'
 
-export const favoritesSlice = createSlice({
+const FavoritesSlice = createSlice({
 	name: 'favorites',
 	initialState: [] as ICar[],
 	reducers: {
@@ -17,4 +17,4 @@ export const favoritesSlice = createSlice({
 	},
 })
 
-export const { actions, reducer } = favoritesSlice
+export const { actions, reducer } = FavoritesSlice

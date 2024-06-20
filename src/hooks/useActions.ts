@@ -1,6 +1,7 @@
 import { bindActionCreators } from '@reduxjs/toolkit'
 import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
+import { actions as burgerActions } from 'store/burgerSlice/Burger.Slice'
 import { actions as favoritesActions } from 'store/favoriteSlice/Favorites.slice'
 import { actions as notificationActions } from 'store/notaficatoinsSlice/Notification.Slice'
 import { actions as themeActions } from 'store/themeSlice/Theme.Slice'
@@ -9,6 +10,7 @@ const rootActions = {
 	...favoritesActions,
 	...notificationActions,
 	...themeActions,
+	...burgerActions,
 }
 export const useActions = () => {
 	const dispatch = useDispatch()
