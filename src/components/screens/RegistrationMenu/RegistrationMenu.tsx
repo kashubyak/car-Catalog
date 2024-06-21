@@ -1,10 +1,11 @@
-import { AuthContext } from 'providers/AuthProvides'
-import { useContext } from 'react'
+import { useActions } from 'hooks/useActions'
+import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useForm } from 'react-hook-form'
 import { FormData } from 'types/user.interface'
 
 const RegistrationMenu = () => {
-	const { user, setUser } = useContext(AuthContext)
+	const { setUser } = useActions()
+	const user = useTypedSelector(state => state.user.user)
 
 	const {
 		register,

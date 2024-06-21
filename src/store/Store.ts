@@ -14,18 +14,20 @@ import { reducer as burgerReducer } from './burgerSlice/Burger.Slice'
 import { reducer as favoritesReducer } from './favoriteSlice/Favorites.slice'
 import { reducer as notificationReducer } from './notaficatoinsSlice/Notification.Slice'
 import { reducer as themeReducer } from './themeSlice/Theme.Slice'
+import { reducer as userReducer } from './userSlice/User.Slice'
 
 const rootReducer = combineReducers({
 	favorites: favoritesReducer,
 	notification: notificationReducer,
 	theme: themeReducer,
 	burger: burgerReducer,
+	user: userReducer,
 })
 
 const persistConfig = {
 	key: 'root',
 	storage,
-	whitelist: ['favorites', 'theme', 'burger'],
+	whitelist: ['favorites', 'theme', 'burger', 'user'],
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

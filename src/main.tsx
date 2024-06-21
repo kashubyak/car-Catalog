@@ -1,7 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Router } from 'components/ui/Router'
 import { Notification } from 'components/ui/notafication/Notification'
-import { AuthProvider } from 'providers/AuthProvides'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
@@ -23,11 +22,9 @@ if (rootElement) {
 		<QueryClientProvider client={queryClient}>
 			<Provider store={Store}>
 				<PersistGate loading={null} persistor={persistor}>
-					<AuthProvider>
-						<Router />
-						<Notification />
-						<ThemeInitializer />
-					</AuthProvider>
+					<Router />
+					<Notification />
+					<ThemeInitializer />
 				</PersistGate>
 			</Provider>
 		</QueryClientProvider>,

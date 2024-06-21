@@ -1,10 +1,12 @@
-import { AuthContext } from 'providers/AuthProvides'
-import { useContext, useEffect, useState } from 'react'
+import { useActions } from 'hooks/useActions'
+import { useTypedSelector } from 'hooks/useTypedSelector'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './HeaderUser.module.css'
 
 const HeaderUser = () => {
-	const { user, setUser } = useContext(AuthContext)
+	const { setUser } = useActions()
+	const user = useTypedSelector(state => state.user.user)
 	const [activeMenu, setActiveMenu] = useState(false)
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {

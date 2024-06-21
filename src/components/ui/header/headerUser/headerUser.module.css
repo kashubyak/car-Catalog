@@ -41,9 +41,5 @@
 }
 .profileName {
 	color: var(--search-color);
-	margin-bottom: 5px;
-}
-.btnUser {
-	padding: 2px 5px;
-	font-size: 15px;
+	margin-bottom: 10px;
 }

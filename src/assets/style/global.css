@@ -64,12 +64,14 @@ a {
 	background-color: var(--white-color);
 	border-radius: 5px;
 	font-weight: bolder;
-	transition: 0.1;
+	transition: 0.3s;
 	border: 0;
 	outline: 0;
 	font-size: 16px;
 }
 .btn:hover {
+	transition: 0.3s;
+
 	opacity: 0.8;
 }
 .BaseInput {
