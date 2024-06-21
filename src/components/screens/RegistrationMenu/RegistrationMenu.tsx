@@ -1,7 +1,9 @@
+import { Switch } from 'components/ui/header/searchForm/switcher/Switch'
 import { useActions } from 'hooks/useActions'
 import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useForm } from 'react-hook-form'
 import { FormData } from 'types/user.interface'
+import './RegistrationMenu.css'
 
 const RegistrationMenu = () => {
 	const { setUser } = useActions()
@@ -20,31 +22,49 @@ const RegistrationMenu = () => {
 	}
 
 	return (
-		<form action='' onSubmit={handleSubmit(handleLogin)}>
-			{user ? (
-				<></>
-			) : (
-				<div>
-					<h2>Please Login</h2>
-					<input
-						{...register('name', {
-							required: 'Please enter your name',
-							pattern: {
-								value:
-									/^[А-ЯІЇЄҐа-яіїєґA-Za-z]+(['’][А-ЯІЇЄҐа-яіїєґA-Za-z]+)?([-][|{ А-ЯІЇЄҐа-яіїєґA-Za-z]+(['’][А-ЯІЇЄҐа-яіїєґA-Za-z]+)?)?$/,
-								message: 'Please enter a valid name',
-							},
-						})}
-						placeholder={'Input your name'}
-					/>
-					{errors?.name?.message && (
-						<div style={{ color: '#f00', fontSize: '20px' }}>{errors?.name?.message}</div>
-					)}
-					<br />
-					<button className='btn'>Login</button>
-				</div>
-			)}
-		</form>
+		<>
+			<div className='switch'>
+				<Switch />
+			</div>
+			<form className='formCon' onSubmit={handleSubmit(handleLogin)}>
+				{user ? null : (
+					<div className='ring'>
+						<i></i>
+						<i></i>
+						<i></i>
+						<div className='login'>
+							<h2>Login</h2>
+							<div className='inputBx'>
+								<input
+									type='text'
+									placeholder='Username'
+									{...register('name', {
+										required: 'Please enter your name',
+										pattern: {
+											value:
+												/^[А-ЯІЇЄҐа-яіїєґA-Za-z]+(['’][А-ЯІЇЄҐа-яіїєґA-Za-z]+)?([-][|{ А-ЯІЇЄҐа-яіїєґA-Za-z]+(['’][А-ЯІЇЄҐа-яіїєґA-Za-z]+)?)?$/,
+											message: 'Please enter a valid name',
+										},
+									})}
+								/>
+								{errors?.name?.message && (
+									<div style={{ color: '#f00', fontSize: '20px' }}>
+										{errors?.name?.message}
+									</div>
+								)}
+							</div>
+							<div className='inputBx'>
+								<input type='submit' value='Sign in' />
+							</div>
+							{/* <div className='links'>
+							<a href='#'>Forget Password</a>
+							<a href='#'>Signup</a>
+						</div> */}
+						</div>
+					</div>
+				)}
+			</form>
+		</>
 	)
 }
 export { RegistrationMenu }

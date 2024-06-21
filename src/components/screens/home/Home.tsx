@@ -18,8 +18,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<RegistrationMenu />
-			{user && (
+			{user ? (
 				<>
 					<Header />
 					<div style={{ display: 'flex' }}>
@@ -32,6 +31,8 @@ const Home = () => {
 						<Catalog data={data} />
 					</div>
 				</>
+			) : (
+				<RegistrationMenu />
 			)}
 		</div>
 	)
