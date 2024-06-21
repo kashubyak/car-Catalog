@@ -52,7 +52,12 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 								})}
 								placeholder='Name car'
 							/>
-							{errors?.name && <p style={{ color: '#f00' }}>{errors?.name?.message}</p>}
+							{errors?.name && (
+								<div className={styles.errorMessage}>
+									<i className='fa fa-ban' aria-hidden='true'></i>
+									<p>{errors?.name?.message}</p>
+								</div>
+							)}
 						</span>
 						<span className={styles.inputCon}>
 							<input
@@ -67,7 +72,10 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 								placeholder='Model'
 							/>
 							{errors?.model?.message && (
-								<p style={{ color: '#f00' }}>Model is required</p>
+								<div className={styles.errorMessage}>
+									<i className='fa fa-ban' aria-hidden='true'></i>
+									<p>{errors?.model?.message}</p>
+								</div>
 							)}
 						</span>
 						<span className={styles.inputCon}>
@@ -76,14 +84,17 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 								{...register('price', {
 									required: 'Please enter a valid price',
 									pattern: {
-										value: /^\d+(\.\d{0,12})?$/,
+										value: /^[0-9]+(\.[0-9]{1,2})?$/,
 										message: '',
 									},
 								})}
 								placeholder='Price'
 							/>
 							{errors?.price?.message && (
-								<p style={{ color: '#f00' }}>Price is required</p>
+								<div className={styles.errorMessage}>
+									<i className='fa fa-ban' aria-hidden='true'></i>
+									<p>{errors?.price?.message}</p>
+								</div>
 							)}
 						</span>
 						<span className={styles.inputCon}>
@@ -99,7 +110,10 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 								placeholder='Image (URL)'
 							/>
 							{errors?.image?.message && (
-								<p style={{ color: '#f00' }}>Image is required</p>
+								<div className={styles.errorMessage}>
+									<i className='fa fa-ban' aria-hidden='true'></i>
+									<p>{errors?.image?.message}</p>
+								</div>
 							)}
 						</span>
 						<button className='btn'>Create</button>
