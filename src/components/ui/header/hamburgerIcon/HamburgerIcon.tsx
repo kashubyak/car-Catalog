@@ -1,11 +1,11 @@
 import { useActions } from 'hooks/useActions'
-import { useBurger } from 'hooks/useBurger'
+import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useState } from 'react'
 import './HamburgerIcon.modules.css'
 const HamburgerIcon = () => {
 	const [active, setActive] = useState(false)
 	const { toggleOpen } = useActions()
-	const open = useBurger()
+	const open = useTypedSelector(state => state.burger.open)
 
 	const handleActive = () => {
 		setActive(!active)
