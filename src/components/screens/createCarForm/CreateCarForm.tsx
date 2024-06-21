@@ -6,8 +6,8 @@ import { ICar, ICarData } from 'types/car.interface'
 import { ISideBarState } from 'types/content.interface'
 import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
 import { CarItem } from '../home/main/ItemCar/СarItem'
-import styles from './СreateCarForm.module.css'
 import { useCreateCar } from './useCreateCar'
+import styles from './СreateCarForm.module.css'
 
 const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 	const {
@@ -42,15 +42,28 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 						<span className={styles.inputCon}>
 							<input
 								className='BaseInput'
-								{...register('name', { required: 'Name is required' })}
+								{...register('name', {
+									required: 'Please enter a valid name',
+									pattern: {
+										value:
+											/^[А-ЯІЇЄҐа-яіїєґA-Za-z0-9\s-]+(['’][А-ЯІЇЄҐа-яіїєґA-Za-z0-9\s-]+)?$/,
+										message: '',
+									},
+								})}
 								placeholder='Name car'
 							/>
-							{errors?.name?.message && <p style={{ color: '#f00' }}>Name is required</p>}
+							{errors?.name && <p style={{ color: '#f00' }}>{errors?.name?.message}</p>}
 						</span>
 						<span className={styles.inputCon}>
 							<input
 								className='BaseInput'
-								{...register('model', { required: 'Model is required' })}
+								{...register('model', {
+									required: 'Please enter a valid model',
+									pattern: {
+										value: /^[A-Za-z0-9\s-]+$/,
+										message: '',
+									},
+								})}
 								placeholder='Model'
 							/>
 							{errors?.model?.message && (
@@ -60,7 +73,13 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 						<span className={styles.inputCon}>
 							<input
 								className='BaseInput'
-								{...register('price', { required: 'Price is required' })}
+								{...register('price', {
+									required: 'Please enter a valid price',
+									pattern: {
+										value: /^\d+(\.\d{0,12})?$/,
+										message: '',
+									},
+								})}
 								placeholder='Price'
 							/>
 							{errors?.price?.message && (
@@ -70,8 +89,14 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 						<span className={styles.inputCon}>
 							<input
 								className='BaseInput'
-								{...register('image', { required: 'Image is required' })}
-								placeholder='Image'
+								{...register('image', {
+									required: 'Please enter a valid URL',
+									pattern: {
+										value: /^(https?:\/\/)([\w-]+(\.[\w-]+)+)(\/[\w-./?%&=]*)?$/,
+										message: '',
+									},
+								})}
+								placeholder='Image (URL)'
 							/>
 							{errors?.image?.message && (
 								<p style={{ color: '#f00' }}>Image is required</p>

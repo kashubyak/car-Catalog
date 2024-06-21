@@ -41,6 +41,9 @@
 	margin-right: 12px;
 	color: var(--body-color);
 }
+.menuLinks ul a li.active .scoreFav {
+	color: var(--body-color);
+}
 .entering,
 .entered {
 	transform: translateX(200px);
@@ -54,7 +57,7 @@
 }
 .scoreFav {
 	position: absolute;
-	color: #f7f7f7;
+	color: var();
 	margin: 0px 3px;
 	width: 10px;
 	height: 10px;
