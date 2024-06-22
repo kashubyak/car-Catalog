@@ -1,4 +1,5 @@
 import { useActions } from 'hooks/useActions'
+import { useDeleteCar } from 'hooks/useDeleteCar'
 import { useFavorites } from 'hooks/useFavorites'
 import { FC, useEffect, useRef, useState } from 'react'
 import { ICar } from 'types/car.interface'
@@ -37,7 +38,14 @@ const MenuCar: FC<{ active: boolean; car: ICar }> = ({ active, car }) => {
 			backgroundColor: isExist ? 'var(--col-popup-re)' : 'var(--col-popup-gr)',
 		})
 	}
-
+	const { deleteCar } = useDeleteCar()
+	const handleDelete = () => {
+		deleteCar(car.id)
+		addNotification({
+			message: 'Your car is delete!',
+			backgroundColor: 'var(--col-popup-re)',
+		})
+	}
 	return (
 		<div ref={menuRef} className={`${styles.menu} ${menuActive ? styles.active : ''}`}>
 			<div className={styles.activeMenu}>
@@ -48,7 +56,7 @@ const MenuCar: FC<{ active: boolean; car: ICar }> = ({ active, car }) => {
 							{isExist ? 'Remove favorite' : 'Add favorite'}
 						</p>
 					</li>
-					<li>
+					<li onClick={() => handleDelete()}>
 						<i className='fa fa-trash-o' aria-hidden='true'></i>
 						<p className={styles.delete}>Delete</p>
 					</li>

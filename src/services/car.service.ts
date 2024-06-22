@@ -12,4 +12,7 @@ export const CarService = {
 	async create(data: ICarData) {
 		return await axios.post('http://localhost:4200/cars', data)
 	},
+	async delete(id: string) {
+		return await axios.delete(`http://localhost:4200/cars/${id}`)
+	},
 }
