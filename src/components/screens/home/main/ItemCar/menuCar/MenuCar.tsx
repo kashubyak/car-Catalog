@@ -40,11 +40,14 @@ const MenuCar: FC<{ active: boolean; car: ICar }> = ({ active, car }) => {
 	}
 	const { deleteCar } = useDeleteCar()
 	const handleDelete = () => {
-		deleteCar(car.id)
-		addNotification({
-			message: 'Your car is delete!',
-			backgroundColor: 'var(--col-popup-re)',
-		})
+		const result = confirm('Ви впевнені в своїх діях?')
+		if (result) {
+			deleteCar(car.id)
+			addNotification({
+				message: 'Your car is delete!',
+				backgroundColor: 'var(--col-popup-re)',
+			})
+		}
 	}
 	return (
 		<div ref={menuRef} className={`${styles.menu} ${menuActive ? styles.active : ''}`}>
