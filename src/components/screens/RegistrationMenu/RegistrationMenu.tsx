@@ -3,7 +3,7 @@ import { useActions } from 'hooks/useActions'
 import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useForm } from 'react-hook-form'
 import { FormData } from 'types/user.interface'
-import './RegistrationMenu.css'
+import styles from './RegistrationMenu.module.css'
 
 const RegistrationMenu = () => {
 	const { setUser } = useActions()
@@ -23,18 +23,18 @@ const RegistrationMenu = () => {
 
 	return (
 		<>
-			<div className='switch'>
+			<div className={styles.switch}>
 				<Switch />
 			</div>
-			<form className='formCon' onSubmit={handleSubmit(handleLogin)}>
+			<form className={styles.formCon} onSubmit={handleSubmit(handleLogin)}>
 				{user ? null : (
-					<div className='ring'>
+					<div className={styles.ring}>
 						<i></i>
 						<i></i>
 						<i></i>
-						<div className='login'>
+						<div className={styles.login}>
 							<h2>Login</h2>
-							<div className='inputBx'>
+							<div className={styles.inputBx}>
 								<input
 									type='text'
 									placeholder='Username'
@@ -53,13 +53,9 @@ const RegistrationMenu = () => {
 									</div>
 								)}
 							</div>
-							<div className='inputBx'>
+							<div className={styles.inputBx}>
 								<input type='submit' value='Sign in' />
 							</div>
-							{/* <div className='links'>
-							<a href='#'>Forget Password</a>
-							<a href='#'>Signup</a>
-						</div> */}
 						</div>
 					</div>
 				)}
