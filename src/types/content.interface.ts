@@ -7,3 +7,11 @@ export interface ISideBarState {
 export interface ICatalog {
 	data?: ICar[]
 }
+export interface IOption {
+	value: string
+	label: string
+}
+export interface ISearchFormProps {
+	onFilter: (filteredData: ICar[]) => void
+	data: ICar[]
+}

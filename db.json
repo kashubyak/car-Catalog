@@ -11,7 +11,7 @@
       "id": "fc53",
       "name": "Porsche",
       "model": "991 Turbo S",
-      "price": "79999",
+      "price": "320000",
       "image": "https://cdn.motor1.com/images/mgl/b3gBj/s1/4x3/porsche-911-turbo-s-by-manhart-is-an-850-horsepower-catapult.webp"
     },
     {
@@ -41,6 +41,13 @@
       "model": "Benz 2021",
       "price": "140000",
       "image": "https://cdn2.riastatic.com/photosnew/auto/photo/mercedes-benz_g-class__491283587f.jpg"
+    },
+    {
+      "id": "0f88",
+      "name": "Porsche",
+      "model": "Taycan 2024",
+      "price": "144119",
+      "image": "https://cdn.riastatic.com/photosnewr/auto/new_auto_storage/porsche-taycan__2582398-1280x960x90.webp"
     }
   ]
 }

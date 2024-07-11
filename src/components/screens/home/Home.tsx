@@ -3,7 +3,7 @@ import { RegistrationMenu } from 'components/screens/RegistrationMenu/Registrati
 import { Catalog } from 'components/ui/catalog'
 import { Header } from 'components/ui/header/Header'
 import { useTypedSelector } from 'hooks/useTypedSelector'
-import { SetStateAction } from 'react'
+import { SetStateAction, useEffect, useState } from 'react'
 import { CarService } from 'services/car.service'
 import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
 import './media.css'
@@ -14,13 +14,17 @@ const Home = () => {
 		queryFn: () => CarService.getAll(),
 	})
 	const user = useTypedSelector(state => state.user.user)
+	const [filteredData, setFilteredData] = useState(data || [])
+	useEffect(() => {
+		if (data) setFilteredData(data)
+	}, [data])
 	if (isLoading) return <p>Loading.....</p>
 
 	return (
 		<div>
 			{user ? (
 				<>
-					<Header />
+					<Header onFilter={setFilteredData} data={data || []} />
 					<div style={{ display: 'flex' }}>
 						<MenuLinks
 							activeMenuItem={'home'}
@@ -28,7 +32,7 @@ const Home = () => {
 								throw new Error('Function not implemented.')
 							}}
 						/>
-						<Catalog data={data} />
+						<Catalog data={filteredData} />
 					</div>
 				</>
 			) : (

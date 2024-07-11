@@ -1,6 +1,6 @@
 import { useActions } from 'hooks/useActions'
 import { useTypedSelector } from 'hooks/useTypedSelector'
-import styles from './Switsh.module.css'
+import styles from './Switch.module.css'
 
 const Switch = () => {
 	const { setTheme } = useActions()
