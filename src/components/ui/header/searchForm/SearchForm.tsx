@@ -1,8 +1,10 @@
 import { FC, useState } from 'react'
-import Select, { MultiValue } from 'react-select'
+import Select, { ActionMeta, MultiValue } from 'react-select'
+import makeAnimated from 'react-select/animated'
 import { IOption, ISearchFormProps } from 'types/content.interface'
-import styles from './SearchForm.module.css'
+import './SearchForm.css'
 import { Switch } from './switcher/Switch'
+
 const SearchForm: FC<ISearchFormProps> = ({ onFilter, data }) => {
 	const [selectedOptions, setSelectedOptions] = useState<MultiValue<IOption>>([])
 	const options: IOption[] = data
@@ -12,10 +14,14 @@ const SearchForm: FC<ISearchFormProps> = ({ onFilter, data }) => {
 		  }))
 		: []
 
-	const handleChange = (selectedOptions: MultiValue<IOption>) => {
-		setSelectedOptions(selectedOptions)
-		if (selectedOptions && selectedOptions.length > 0) {
-			const selectedValues = selectedOptions.map(option => option.value)
+	const animatedComponents = makeAnimated()
+	const handleChange = (
+		newValue: MultiValue<IOption>,
+		actionMeta: ActionMeta<IOption>,
+	) => {
+		setSelectedOptions(newValue)
+		if (newValue && newValue.length > 0) {
+			const selectedValues = newValue.map(option => option.value)
 			onFilter(data.filter(item => selectedValues.includes(item.name)))
 		} else {
 			onFilter(data)
@@ -23,12 +29,20 @@ const SearchForm: FC<ISearchFormProps> = ({ onFilter, data }) => {
 	}
 
 	return (
-		<form className={`${styles.dFlex}`}>
-			<Select isMulti onChange={handleChange} options={options} />
-			<div className={styles.switchTheme}>
+		<form className='dFlex'>
+			<Select
+				components={animatedComponents}
+				classNamePrefix='custom-styles'
+				onChange={handleChange}
+				options={options}
+				placeholder='Find cars'
+				isMulti
+			/>
+			<div className='switchTheme'>
 				<Switch />
 			</div>
 		</form>
 	)
 }
+
 export { SearchForm }

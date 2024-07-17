@@ -1,0 +1,68 @@
+.dFlex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.dFlex .custom-styles__control {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border-radius: 0;
+	border-bottom: 1px solid #504f52;
+	box-shadow: none;
+	margin: 0px 10px;
+}
+.dFlex .custom-styles__value-container {
+	cursor: text;
+	padding: 0;
+}
+.dFlex .custom-styles__input-container {
+	color: var(--white-color);
+}
+.dFlex .custom-styles__indicator-separator {
+	display: none;
+}
+.dFlex .custom-styles__indicators {
+	cursor: pointer;
+}
+.dFlex .custom-styles__indicator {
+	color: #504f52;
+}
+.dFlex .custom-styles__multi-value {
+	background-color: var(--card-back);
+	border-radius: 0.5rem;
+}
+.dFlex .custom-styles__multi-value__label {
+	color: var(--white-color);
+}
+.dFlex .custom-styles__menu {
+	background-color: var(--body-color);
+	border-radius: 0.5rem;
+	animation: animationScaleIn 0.2s ease-in-out;
+}
+@keyframes animationScaleIn {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	50% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.dFlex .custom-styles__option {
+	cursor: pointer;
+}
+.dFlex .custom-styles__option--is-focused {
+	background-color: var(--card-back);
+	opacity: 0.5;
+}
+@media (max-width: 600px) {
+	.switchTheme {
+		display: none;
+	}
+}
