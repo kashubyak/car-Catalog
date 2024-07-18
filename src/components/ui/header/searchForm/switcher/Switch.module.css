@@ -3,8 +3,8 @@
 	display: inline-block;
 	width: 60px;
 	height: 34px;
-	margin-right: 10px;
-	padding: 0px 15px;
+	margin: 0px 15px;
+	padding: 0px 10px;
 }
 .switch input {
 	opacity: 0;
