@@ -24,15 +24,11 @@
 .activeMenu ul li:last-child {
 	border-bottom: none;
 }
-.activeMenu ul li:hover p {
+.activeMenu ul li:hover {
 	opacity: 0.5;
 }
 .menu.active {
 	opacity: 1;
 	transform: translateX(0px);
 	visibility: visible;
-}
-.bgColGr {
-}
-.bgColRd {
 }
