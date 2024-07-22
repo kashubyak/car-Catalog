@@ -4,6 +4,7 @@ export interface ICar {
 	model: string
 	image: string
 	price: string
+	description: string
 }
 export interface ICarData extends Omit<ICar, 'id'> {}
 

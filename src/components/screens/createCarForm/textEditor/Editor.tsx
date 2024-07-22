@@ -1,8 +1,11 @@
-import { useRef, useState } from 'react'
+import { FC, useRef, useState } from 'react'
 import styles from './Editor.module.css'
 import { applyStyle, TStyle } from './email-style'
-const Editor = () => {
-	const [text, setText] = useState('')
+interface IEditorProps {
+	text: string
+	setText: (text: string) => void
+}
+const Editor: FC<IEditorProps> = ({ text, setText }) => {
 	const textRef = useRef<HTMLTextAreaElement | null>(null)
 	const [selectionStart, setSelectionStart] = useState(0)
 	const [selectionEnd, setSelectionEnd] = useState(0)
@@ -18,6 +21,10 @@ const Editor = () => {
 		const after = text.substring(selectionEnd)
 		setText(before + applyStyle(type, selectedText) + after)
 	}
+	const handleButtonClick = (event: React.MouseEvent, callback: () => void) => {
+		event.preventDefault()
+		callback()
+	}
 	return (
 		<div className={styles.editor}>
 			<textarea
@@ -30,16 +37,16 @@ const Editor = () => {
 				onChange={e => setText(e.target.value)}
 			/>
 			<div className={styles.tools}>
-				<button onClick={() => setText('')}>
+				<button onClick={e => handleButtonClick(e, () => setText(''))}>
 					<i className='fa fa-eraser' aria-hidden='true'></i>
 				</button>
-				<button onClick={() => applyFormat('bold')}>
+				<button onClick={e => handleButtonClick(e, () => applyFormat('bold'))}>
 					<i className='fa fa-bold' aria-hidden='true'></i>
 				</button>
-				<button onClick={() => applyFormat('italic')}>
+				<button onClick={e => handleButtonClick(e, () => applyFormat('italic'))}>
 					<i className='fa fa-italic' aria-hidden='true'></i>
 				</button>
-				<button onClick={() => applyFormat('underline')}>
+				<button onClick={e => handleButtonClick(e, () => applyFormat('underline'))}>
 					<i className='fa fa-underline' aria-hidden='true'></i>
 				</button>
 			</div>

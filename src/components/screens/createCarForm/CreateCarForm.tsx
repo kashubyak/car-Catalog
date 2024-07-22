@@ -15,6 +15,7 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 		reset,
 		register,
 		handleSubmit,
+		setValue,
 		formState: { errors },
 		watch,
 	} = useForm<ICarData>({ mode: 'onChange' })
@@ -124,7 +125,10 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 						</span>
 						<br />
 						<span className={styles.inputCon}>
-							<Editor />
+							<Editor
+								text={car.description || ''}
+								setText={text => setValue('description', text)}
+							/>
 						</span>
 						<button className='btn'>Create</button>
 					</form>
