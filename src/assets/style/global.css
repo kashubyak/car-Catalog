@@ -8,7 +8,8 @@
 	--white-color: #0f0f0f;
 	--theme-color: #607274;
 	--card-back: #ebebe7;
-	--input-back: #505761;
+	--input-back: #bab9b997;
+	--input-color: #1c1d1d;
 }
 .darkTheme {
 	--body-color: #0f0f0f;
@@ -16,6 +17,7 @@
 	--theme-color: #008170;
 	--card-back: #222831;
 	--input-back: #f6f5f2;
+	--input-color: #1c1d1d;
 }
 * {
 	margin: 0px;
@@ -59,9 +61,9 @@ a {
 .btn {
 	text-wrap: nowrap;
 	text-decoration: none;
-	color: var(--body-color);
+	color: var(--input-color);
 	padding: 5px 15px;
-	background-color: var(--white-color);
+	background-color: var(--input-back);
 	border-radius: 5px;
 	font-weight: bolder;
 	transition: 0.3s;
@@ -71,20 +73,19 @@ a {
 }
 .btn:hover {
 	transition: 0.3s;
-
-	opacity: 0.8;
+	color: 1;
 }
 .BaseInput {
-	padding: 5px;
+	padding: 0.3em;
 	font-size: 16px;
 	border-radius: 5px;
 	border: 0;
 	outline: 0;
 	margin: 3px;
 	background-color: var(--input-back);
-	color: var(--card-back);
+	color: var(--input-color);
+	max-width: 100%;
 }
 .BaseInput::placeholder {
-	color: var(--card-back);
-	font-weight: bold;
+	color: var(--input-color);
 }

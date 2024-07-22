@@ -4,9 +4,10 @@ import { FC, SetStateAction } from 'react'
 import { useForm } from 'react-hook-form'
 import { ICar, ICarData } from 'types/car.interface'
 import { ISideBarState } from 'types/content.interface'
+import { useCreateCar } from '../../../hooks/useCreateCar'
 import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
 import { CarItem } from '../home/main/ItemCar/СarItem'
-import { useCreateCar } from '../../../hooks/useCreateCar'
+import { Editor } from './textEditor/Editor'
 import styles from './СreateCarForm.module.css'
 
 const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
@@ -29,7 +30,12 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 	const car = watch()
 	return (
 		<div className={styles.container}>
-			<Header />
+			<Header
+				data={[]}
+				onFilter={function (filteredData: ICar[]): void {
+					throw new Error('Function not implemented.')
+				}}
+			/>
 			<div className={styles.dFlex}>
 				<MenuLinks
 					activeMenuItem={activeMenuItem}
@@ -115,6 +121,10 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 									<p>{errors?.image?.message}</p>
 								</div>
 							)}
+						</span>
+						<br />
+						<span className={styles.inputCon}>
+							<Editor />
 						</span>
 						<button className='btn'>Create</button>
 					</form>

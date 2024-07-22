@@ -6,7 +6,7 @@
 }
 
 .searchContainer {
-	width: 100%;
+	width: 90%;
 	transition: all 0.3s ease;
 	margin: 0px 10px;
 	display: block;
@@ -52,7 +52,7 @@
 	box-shadow: none;
 }
 .dFlex .custom-styles__placeholder {
-	font-size: 22px;
+	font-size: 20px;
 	color: #504f52;
 }
 .dFlex .custom-styles__value-container {
