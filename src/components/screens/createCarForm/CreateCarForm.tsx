@@ -1,6 +1,6 @@
 import { Header } from 'components/ui/header/Header'
 import { useActions } from 'hooks/useActions'
-import { FC, SetStateAction } from 'react'
+import { FC } from 'react'
 import { useForm } from 'react-hook-form'
 import { ICar, ICarData } from 'types/car.interface'
 import { ISideBarState } from 'types/content.interface'
@@ -31,19 +31,11 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 	const car = watch()
 	return (
 		<div className={styles.container}>
-			<Header
-				data={[]}
-				onFilter={function (filteredData: ICar[]): void {
-					throw new Error('Function not implemented.')
-				}}
-			/>
+			{/* @ts-ignore */}
+			<Header />
 			<div className={styles.dFlex}>
-				<MenuLinks
-					activeMenuItem={activeMenuItem}
-					setActiveMenuItem={function (value: SetStateAction<string>): void {
-						throw new Error('Function not implemented.')
-					}}
-				/>
+				{/* @ts-ignore */}
+				<MenuLinks activeMenuItem={activeMenuItem} />
 				<div className={styles.containerContent}>
 					<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 						<span className={styles.inputCon}>
@@ -133,13 +125,8 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 						<button className='btn'>Create</button>
 					</form>
 					<div className={styles.card}>
-						<CarItem
-							car={car as ICar}
-							active={false}
-							onToggle={function (): void {
-								throw new Error('Function not implemented.')
-							}}
-						/>
+						{/* @ts-ignore */}
+						<CarItem car={car as ICar} />
 					</div>
 				</div>
 			</div>

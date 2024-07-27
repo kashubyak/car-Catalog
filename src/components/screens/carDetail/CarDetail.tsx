@@ -22,13 +22,8 @@ const CarDetail = () => {
 			<Link className='btn' to='/'>
 				back
 			</Link>
-			<CarItem
-				car={car}
-				active={false}
-				onToggle={function (): void {
-					throw new Error('Function not implemented.')
-				}}
-			/>
+			{/* @ts-ignore */}
+			<CarItem car={car} />
 		</div>
 	)
 }

@@ -3,7 +3,7 @@ import { RegistrationMenu } from 'components/screens/RegistrationMenu/Registrati
 import { Catalog } from 'components/ui/catalog'
 import { Header } from 'components/ui/header/Header'
 import { useTypedSelector } from 'hooks/useTypedSelector'
-import { SetStateAction, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CarService } from 'services/car.service'
 import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
 import './media.css'
@@ -26,12 +26,8 @@ const Home = () => {
 				<>
 					<Header onFilter={setFilteredData} data={data || []} />
 					<div style={{ display: 'flex' }}>
-						<MenuLinks
-							activeMenuItem={'home'}
-							setActiveMenuItem={function (value: SetStateAction<string>): void {
-								throw new Error('Function not implemented.')
-							}}
-						/>
+						{/* @ts-ignore */}
+						<MenuLinks activeMenuItem={'home'} />
 						<Catalog data={filteredData} />
 					</div>
 				</>
