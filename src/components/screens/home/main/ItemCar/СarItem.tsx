@@ -1,3 +1,4 @@
+import parce from 'html-react-parser'
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
 import { ICarItem } from 'types/car.interface'
@@ -9,6 +10,10 @@ const CarItem: FC<ICarItem> = ({ car, active, onToggle }) => {
 	const handleMenuToggle = (event: React.MouseEvent<HTMLDivElement>) => {
 		event.stopPropagation()
 		onToggle()
+	}
+	const truncateText = (text: string, maxLen: number) => {
+		if (text?.length <= maxLen) return text
+		return text?.substring(0, maxLen) + '...'
 	}
 
 	return (
@@ -26,7 +31,12 @@ const CarItem: FC<ICarItem> = ({ car, active, onToggle }) => {
 					></i>
 					<MenuCar active={active} car={car} />
 				</div>
-				<div className={`${homeStyle.downInfoCard} ${homeStyle.dFlex}`}>
+				<div className={homeStyle.averageContentCard}>
+					<p className={homeStyle.descriptionCar}>
+						{parce(truncateText(car.description, 100))}
+					</p>
+				</div>
+				<div className={`${homeStyle.bottomContentCard} ${homeStyle.dFlex}`}>
 					<Link to={`/car/${car.id}`} className='btn'>
 						Read more
 					</Link>

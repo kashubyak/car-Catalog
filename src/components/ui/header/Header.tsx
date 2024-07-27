@@ -8,7 +8,7 @@ import { SearchForm } from './searchForm/SearchForm'
 const Header: FC<ISearchFormProps> = ({ onFilter, data }) => {
 	return (
 		<nav className={`${styles.navbar} ${styles.dFlex}`}>
-			<p className={`${styles.navbarBrand}`}>Car Catalog</p>
+			<h1 className={`${styles.navbarBrand}`}>Car Catalog</h1>
 			<HamburgerIcon />
 			<div className={`${styles.headerContent}  ${styles.dFlex}`}>
 				<SearchForm onFilter={onFilter} data={data} />

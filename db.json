@@ -12,7 +12,8 @@
 			"name": "Porsche",
 			"model": "991 Turbo S",
 			"price": "320000",
-			"image": "https://cdn.motor1.com/images/mgl/b3gBj/s1/4x3/porsche-911-turbo-s-by-manhart-is-an-850-horsepower-catapult.webp"
+			"image": "https://cdn.motor1.com/images/mgl/b3gBj/s1/4x3/porsche-911-turbo-s-by-manhart-is-an-850-horsepower-catapult.webp",
+			"description": "Porsche is a renowned German automobile manufacturer with an emphasis in high-performance luxury sports cars, SUVs and sedans.sche"
 		},
 		{
 			"id": "3bce",
