@@ -10,8 +10,8 @@
 .ring {
 	font-family: 'Quicksand', sans-serif;
 	position: relative;
-	width: 500px;
-	height: 500px;
+	width: 31.25rem;
+	height: 31.25rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,7 +20,7 @@
 .ring i {
 	position: absolute;
 	inset: 0;
-	border: 2px solid var(--white-color);
+	border: 0.125rem solid var(--white-color);
 	transition: 0.5s;
 }
 
@@ -40,18 +40,18 @@
 }
 
 .ring:hover i:nth-child(1) {
-	border: 6px solid #00ff0a;
-	filter: drop-shadow(0 0 20px #00ff0a);
+	border: 0.375rem solid #00ff0a;
+	filter: drop-shadow(0 0 1.25rem #00ff0a);
 }
 
 .ring:hover i:nth-child(2) {
-	border: 6px solid #ff0057;
-	filter: drop-shadow(0 0 20px #ff0057);
+	border: 0.375rem solid #ff0057;
+	filter: drop-shadow(0 0 1.25rem #ff0057);
 }
 
 .ring:hover i:nth-child(3) {
-	border: 6px solid #fffd44;
-	filter: drop-shadow(0 0 20px #fffd44);
+	border: 0.375rem solid #fffd44;
+	filter: drop-shadow(0 0 1.25rem #fffd44);
 }
 
 @keyframes animate {
@@ -74,13 +74,13 @@
 
 .login {
 	position: absolute;
-	width: 300px;
+	width: 18.75rem;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	gap: 20px;
+	gap: 1.25rem;
 }
 
 .login h2 {
@@ -96,10 +96,10 @@
 .login .inputBx input {
 	position: relative;
 	width: 100%;
-	padding: 12px 20px;
+	padding: 0.75rem 1.25rem;
 	background: transparent;
-	border: 2px solid var(--white-color);
-	border-radius: 40px;
+	border: 0.125rem solid var(--white-color);
+	border-radius: 2.5rem;
 	font-size: 1.2em;
 	color: var(--white-color);
 	box-shadow: none;
@@ -119,14 +119,14 @@
 
 .switch {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 0.625rem;
+	right: 0.625rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
 	.ring {
-		width: 350px;
-		height: 350px;
+		width: 21.875rem;
+		height: 21.875rem;
 	}
 
 	.login {
@@ -139,19 +139,19 @@
 
 	.login .inputBx input {
 		font-size: 1em;
-		padding: 10px 15px;
+		padding: 0.625rem 0.9375rem;
 	}
 
 	.login .inputBx input[type='submit'] {
 		font-size: 1em;
-		padding: 10px 15px;
+		padding: 0.625rem 0.9375rem;
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
 	.ring {
-		width: 250px;
-		height: 250px;
+		width: 15.625rem;
+		height: 15.625rem;
 	}
 
 	.login {
@@ -164,11 +164,11 @@
 
 	.login .inputBx input {
 		font-size: 0.9em;
-		padding: 8px 12px;
+		padding: 0.5rem 0.75rem;
 	}
 
 	.login .inputBx input[type='submit'] {
 		font-size: 0.9em;
-		padding: 8px 12px;
+		padding: 0.5rem 0.75rem;
 	}
 }

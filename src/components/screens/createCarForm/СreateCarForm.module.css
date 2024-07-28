@@ -5,47 +5,47 @@
 .containerContent {
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-	margin-top: 100px;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	margin-top: 6.25rem;
 }
 .form,
 .card {
-	padding: 0px 10px 10px 10px;
+	padding: 0rem 0.625rem 0.625rem 0.625rem;
 }
 .form button {
-	margin-left: 3px;
+	margin-left: 0.1875rem;
 }
 .inputCon {
 	position: relative;
-	margin-bottom: 40px;
+	margin-bottom: 2.5rem;
 }
 
 .errorMessage {
 	position: absolute;
 	right: 0;
-	top: 0px;
+	top: 0rem;
 	display: flex;
 	align-items: center;
 	cursor: pointer;
 	color: #db1212;
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 	white-space: nowrap;
 	z-index: 10;
 }
 
 .errorMessage i {
-	margin-right: 5px;
-	font-size: 25px;
+	margin-right: 0.3125rem;
+	font-size: 1.5625rem;
 }
 .errorMessage p {
 	display: none;
 	background-color: #f00;
 	color: #fff;
-	padding: 5px;
-	border-radius: 5px;
+	padding: 0.3125rem;
+	border-radius: 0.3125rem;
 	white-space: nowrap;
 	position: absolute;
-	top: -40px;
+	top: -2.5rem;
 	left: 0;
 	z-index: 11;
 }
@@ -56,5 +56,5 @@
 
 .BaseInput {
 	width: 100%;
-	padding: 10px;
+	padding: 0.625rem;
 }

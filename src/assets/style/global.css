@@ -20,39 +20,39 @@
 	--input-color: #1c1d1d;
 }
 * {
-	margin: 0px;
-	padding: 0px;
+	margin: 0rem;
+	padding: 0rem;
 	box-sizing: border-box;
 }
 body {
 	background-color: var(--body-color);
 	color: var(--white-color);
 	font-family: 'Manrope', sans-serif;
-	font-size: 16px;
-	line-height: 24px;
-	max-width: 1920px;
-	margin: 0px auto;
-	margin-bottom: 30px;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	max-width: 120rem;
+	margin: 0rem auto;
+	margin-bottom: 1.875rem;
 }
 h1 {
-	font-size: 32px;
-	line-height: 40px;
+	font-size: 2rem;
+	line-height: 2.5rem;
 }
 h2 {
-	font-size: 26px;
-	line-height: 34px;
+	font-size: 1.625rem;
+	line-height: 2.125rem;
 }
 h3 {
-	font-size: 24px;
-	line-height: 32px;
+	font-size: 1.5rem;
+	line-height: 2rem;
 }
 h4 {
-	font-size: 14px;
-	line-height: 22px;
+	font-size: 0.875rem;
+	line-height: 1.375rem;
 }
 h5 {
-	font-size: 12px;
-	line-height: 20px;
+	font-size: 0.75rem;
+	line-height: 1.25rem;
 }
 a {
 	text-decoration: none;
@@ -61,14 +61,14 @@ a {
 	text-wrap: nowrap;
 	text-decoration: none;
 	color: var(--input-color);
-	padding: 5px 15px;
+	padding: 0.3125rem 0.9375rem;
 	background-color: var(--input-back);
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 	font-weight: bolder;
 	transition: 0.3s;
 	border: 0;
 	outline: 0;
-	font-size: 16px;
+	font-size: 1rem;
 }
 .btn:hover {
 	transition: 0.3s;
@@ -76,11 +76,11 @@ a {
 }
 .BaseInput {
 	padding: 0.3em;
-	font-size: 16px;
-	border-radius: 5px;
+	font-size: 1rem;
+	border-radius: 0.3125rem;
 	border: 0;
 	outline: 0;
-	margin: 3px;
+	margin: 0.1875rem;
 	background-color: var(--input-back);
 	color: var(--input-color);
 	max-width: 100%;

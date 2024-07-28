@@ -8,7 +8,7 @@
 .searchContainer {
 	width: 90%;
 	transition: all 0.3s ease;
-	margin: 0px 10px;
+	margin: 0rem 0.625rem;
 	display: block;
 }
 
@@ -17,18 +17,18 @@
 	background: none;
 	border: none;
 	cursor: pointer;
-	font-size: 1.8rem;
-	margin: 0px 30px;
+	font-size: 28.8px;
+	margin: 0rem 1.875rem;
 }
 
 .searchContainer.active {
 	position: absolute;
-	top: 90px;
+	top: 5.625rem;
 	left: 0;
 	width: 100%;
 	background-color: var(--body-color);
 	z-index: 1000;
-	padding: 1rem;
+	padding: 16px;
 	animation: slideIn 0.3s ease forwards;
 }
 
@@ -48,11 +48,11 @@
 	border: none;
 	outline: none;
 	border-radius: 0;
-	border-bottom: 1px solid #504f52;
+	border-bottom: 0.0625rem solid #504f52;
 	box-shadow: none;
 }
 .dFlex .custom-styles__placeholder {
-	font-size: 20px;
+	font-size: 1.25rem;
 	color: #504f52;
 }
 .dFlex .custom-styles__value-container {
@@ -78,7 +78,7 @@
 
 .dFlex .custom-styles__multi-value {
 	background-color: var(--card-back);
-	border-radius: 0.5rem;
+	border-radius: 8px;
 }
 
 .dFlex .custom-styles__multi-value__label {
@@ -87,14 +87,14 @@
 
 .dFlex .custom-styles__menu {
 	background-color: var(--body-color);
-	border-radius: 0.5rem;
+	border-radius: 8px;
 	animation: animationScaleIn 0.2s ease-in-out;
 }
 
 @keyframes animationScaleIn {
 	0% {
 		opacity: 0;
-		transform: translateY(-50px);
+		transform: translateY(-3.125rem);
 	}
 	50% {
 		opacity: 0.3;
@@ -114,7 +114,7 @@
 	opacity: 0.7;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
 	.dFlex {
 		justify-content: flex-end;
 	}

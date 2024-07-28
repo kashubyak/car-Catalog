@@ -1,10 +1,10 @@
 .container {
-	margin-top: 100px;
+	margin-top: 6.25rem;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-	gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	gap: 0.625rem;
 	width: 100%;
-	padding: 0px 15px;
+	padding: 0rem 0.9375rem;
 }
 .dFlex {
 	display: flex;
@@ -12,51 +12,51 @@
 	align-items: center;
 }
 .card {
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
+	border-top-left-radius: 0.9375rem;
+	border-top-right-radius: 0.9375rem;
 	background: var(--card-back);
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0rem 0rem 0.3125rem rgba(0, 0, 0, 0.2);
 	width: 100%;
-	max-width: 840px;
+	max-width: 52.5rem;
 }
 .card img {
 	max-width: 100%;
 	max-height: 100%;
 	aspect-ratio: 16 / 10;
 	object-fit: cover;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
+	border-top-left-radius: 0.9375rem;
+	border-top-right-radius: 0.9375rem;
 }
 .carTitle {
-	font-size: 21px;
+	font-size: 1.3125rem;
 	text-transform: capitalize;
 	color: var(--white-color);
 }
 .card .info .topContentCard i {
-	font-size: 25px;
+	font-size: 1.5625rem;
 	cursor: pointer;
-	padding: 10px;
+	padding: 0.625rem;
 }
 .topContentCard {
-	padding: 5px 15px;
+	padding: 0.3125rem 0.9375rem;
 }
 .card .info {
 	position: relative;
 	z-index: 1;
 }
 .bottomContentCard {
-	padding: 24px;
+	padding: 1.5rem;
 }
 .descriptionCar {
-	font-size: 1rem;
-	padding: 0px 15px;
-	word-spacing: 1px;
-	letter-spacing: 0.4px;
-	line-height: 20px;
+	font-size: 0.9375rem;
+	padding: 0rem 0.9375rem;
+	word-spacing: 0.0625rem;
+	letter-spacing: 0.025rem;
+	line-height: 1.25rem;
 	font-weight: lighter;
 }
-@media (max-width: 400px) {
+@media (max-width: 25rem) {
 	.container {
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
 	}
 }

@@ -1,6 +1,6 @@
 .profile {
 	position: relative;
-	font-size: 18px;
+	font-size: 1.125rem;
 	text-decoration: none;
 	top: 0;
 	left: 0;
@@ -8,15 +8,15 @@
 	align-items: center;
 	justify-content: end;
 	max-width: 100%;
-	margin-left: 10px;
+	margin-left: 0.625rem;
 }
 
 .profile img {
 	margin-left: auto;
-	width: 70px;
-	height: 70px;
+	width: 4.375rem;
+	height: 4.375rem;
 	cursor: pointer;
-	border-radius: 4px;
+	border-radius: 0.25rem;
 }
 .headerBtn {
 	cursor: pointer;
@@ -24,23 +24,23 @@
 .menu {
 	position: absolute;
 	top: 100%;
-	max-width: 315px;
-	padding: 10px;
-	border-radius: 10px;
+	max-width: 19.6875rem;
+	padding: 0.625rem;
+	border-radius: 0.625rem;
 	color: var(--white-color);
 	background-color: var(--card-back);
 	text-align: center;
 	opacity: 0;
-	transform: translateX(-50px);
+	transform: translateX(-3.125rem);
 	visibility: hidden;
 	transition: 0.1s;
 }
 .menu.active {
 	opacity: 1;
-	transform: translateX(0px);
+	transform: translateX(0rem);
 	visibility: visible;
 }
 .profileName {
 	color: var(--search-color);
-	margin-bottom: 10px;
+	margin-bottom: 0.625rem;
 }
