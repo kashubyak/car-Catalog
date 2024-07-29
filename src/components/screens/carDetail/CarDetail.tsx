@@ -1,8 +1,10 @@
+import parce from 'html-react-parser'
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { CarService } from 'services/car.service'
 import { ICar } from 'types/car.interface'
-import { CarItem } from '../home/main/ItemCar/СarItem'
+import { CarItemPrice } from '../home/main/ItemCar/СarItemPrice'
+import styles from './carDetail.module.css'
 
 const CarDetail = () => {
 	const { id } = useParams()
@@ -15,16 +17,28 @@ const CarDetail = () => {
 		}
 		fetchData()
 	}, [id])
-	if (!car?.name) return <p>Car Not Found....</p>
+	if (!car?.id) return <p>Car Not Found....</p>
 
 	return (
-		<div>
-			<Link className='btn' to='/'>
-				back
+		<>
+			<Link className={styles.backLink} to='/'>
+				<i className='fa fa-angle-left' aria-hidden='true' /> <span>Back</span>
 			</Link>
-			{/* @ts-ignore */}
-			<CarItem car={car} />
-		</div>
+			<div className={styles.contentCar}>
+				<div className={styles.imageCar}>
+					<img src={car.image} alt='Image Car' />
+				</div>
+				<div className={styles.textCar}>
+					<div className={styles.textCarHeader}>
+						<h3 className={styles.nameCar}>{car.name + ' ' + car.model}</h3>
+						<h3 className={styles.priceCar}>
+							<CarItemPrice price={car.price} />
+						</h3>
+					</div>
+					<p className={styles.descriptionCar}>{parce(car.description)}</p>
+				</div>
+			</div>
+		</>
 	)
 }
-export default CarDetail
+export { CarDetail }

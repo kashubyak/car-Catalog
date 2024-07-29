@@ -83,7 +83,6 @@ a {
 	margin: 0.1875rem;
 	background-color: var(--input-back);
 	color: var(--input-color);
-	max-width: 100%;
 }
 .BaseInput::placeholder {
 	color: var(--input-color);

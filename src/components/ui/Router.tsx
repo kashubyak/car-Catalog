@@ -1,5 +1,5 @@
 import { Favorites } from 'components/screens/Favorites/Favorites'
-import CarDetail from 'components/screens/carDetail/CarDetail'
+import { CarDetail } from 'components/screens/carDetail/CarDetail'
 import { CreateCarForm } from 'components/screens/createCarForm/CreateCarForm'
 import { Home } from 'components/screens/home/Home'
 import React, { useState } from 'react'

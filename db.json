@@ -33,14 +33,6 @@
 			"description": "<b>Ferrari S.p.A.</b> is an Italian luxury sports car manufacturer based in Maranello. Founded in 1939 by Enzo Ferrari (1898–1988), the company built its first car in 1940, adopted its current name in 1945, and began to produce its current line of road cars in 1947. Ferrari became a public company in 1960, and from 1963 to 2014 it was a subsidiary of Fiat S.p.A. It was spun off from Fiat's successor entity, Fiat Chrysler Automobiles, in 2016. The company currently offers a large model range which includes several supercars, grand tourers, and one SUV. Many early Ferraris, dating to the 1950s and 1960s, count among the most expensive cars ever sold at auction. Throughout its history, the company has been noted for its continued participation in racing, especially in Formula One, where its team, Scuderia Ferrari, is the series' single oldest and most successful. Scuderia Ferrari has raced since 1929, first in Grand Prix events and later in Formula One, where since 1952 it has fielded fifteen champion drivers, won sixteen Constructors' Championships, and accumulated more race victories, 1–2 finishes, podiums, pole positions, fastest laps and points than any other team in F1 history.[6][7] Historically, Ferrari was also highly active in sports car racing, where its cars took many wins in races such as the Mille Miglia, Targa Florio and 24 Hours of Le Mans, as well as several overall victories in the World Sportscar Championship. Scuderia Ferrari fans, commonly called tifosi, are known for their passion and loyalty to the team."
 		},
 		{
-			"id": "4dbf",
-			"name": "Lamborghini",
-			"model": "Huracan 2020",
-			"price": "380000",
-			"image": "https://cdn4.riastatic.com/photosnew/auto/photo/lamborghini_huracan__549077629hd.webp",
-			"description": "<b>Ferruccio Lamborghini</b> (1916–1993), an Italian manufacturing magnate, founded Automobili Ferruccio Lamborghini S.p.A. in 1963 to compete with Ferrari. The company was noted for using a rear mid-engine, rear-wheel drive layout. Lamborghini grew rapidly during its first decade, but sales plunged in the wake of the 1973 worldwide financial downturn and the oil crisis. The firm's ownership changed three times after 1973, including a bankruptcy in 1978. American Chrysler Corporation took control of Lamborghini in 1987 and sold it to Malaysian investment group Mycom Setdco and Indonesian group V'Power Corporation in 1994. In 1998, Mycom Setdco and V'Power sold Lamborghini to the Volkswagen Group where it was placed under the control of the group's Audi division."
-		},
-		{
 			"id": "c390",
 			"name": "Mersedes",
 			"model": "Benz 2021",

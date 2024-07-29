@@ -14,7 +14,7 @@ const Favorites: FC<ISideBarState> = ({ activeMenuItem }) => {
 		setActiveMenuIndex(prevIndex => (prevIndex === index ? null : index))
 	}
 	return (
-		<div className={styles.container}>
+		<div>
 			{/* @ts-ignore */}
 			<Header />
 			<div className={styles.dFlex}>
