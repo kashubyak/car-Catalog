@@ -53,6 +53,17 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 									<span>Create Car</span>
 								</li>
 							</Link>
+							<Link to='/promotion-video'>
+								<li
+									className={`navItem ${
+										activeItem === 'promotionVideo' ? styles.active : ''
+									}`}
+									onClick={() => handleItemClick('promotionVideo')}
+								>
+									<i className='fa fa-video-camera' aria-hidden='true'></i>
+									<span>Promotion</span>
+								</li>
+							</Link>
 							<a>
 								<li
 									className={`navItem ${activeItem === 'logOut' ? styles.active : ''}`}
