@@ -15,3 +15,8 @@ export interface ISearchFormProps {
 	onFilter: (filteredData: ICar[]) => void
 	data: ICar[]
 }
+export interface IVideoElement extends HTMLVideoElement {
+	msRequestFullscreen?: () => void
+	mozRequestFullscreen?: () => void
+	webkitRequestFullscreen?: () => void
+}
