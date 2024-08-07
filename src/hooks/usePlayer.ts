@@ -37,13 +37,13 @@ export const usePlayer = () => {
 		const video = videoRef.current
 		if (!video) return
 		if (video.requestFullscreen) {
-			video.requestFullscreen
+			video.requestFullscreen()
 		} else if (video.msRequestFullscreen) {
-			video.msRequestFullscreen
+			video.msRequestFullscreen()
 		} else if (video.mozRequestFullscreen) {
-			video.mozRequestFullscreen
+			video.mozRequestFullscreen()
 		} else if (video.webkitRequestFullscreen) {
-			video.webkitRequestFullscreen
+			video.webkitRequestFullscreen()
 		}
 	}
 
@@ -65,18 +65,18 @@ export const usePlayer = () => {
 
 	useEffect(() => {
 		const handleKeyDown = (e: KeyboardEvent) => {
-			switch (e.key) {
-				case 'ArrowRigth':
+			switch (e.code) {
+				case 'ArrowRight':
 					forward()
 					break
 				case 'ArrowLeft':
 					revert()
 					break
-				case ' ':
+				case 'Space':
 					e.preventDefault()
 					toggleVideo()
 					break
-				case 'f':
+				case 'KeyF':
 					fullscreen()
 					break
 				default:
@@ -89,5 +89,10 @@ export const usePlayer = () => {
 		}
 	}, [toggleVideo])
 
-	return { videoRef, toggleVideo, fullscreen, videoTools }
+	return {
+		videoRef,
+		toggleVideo,
+		fullscreen,
+		videoTools,
+	}
 }
