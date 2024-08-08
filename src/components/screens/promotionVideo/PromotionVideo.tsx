@@ -25,7 +25,6 @@ const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
 							src={videoPorsche}
 							ref={videoRef}
 							className={styles.player}
-							preload='metadata'
 							onClick={toggleVideo}
 							poster={prewPorsche}
 						/>

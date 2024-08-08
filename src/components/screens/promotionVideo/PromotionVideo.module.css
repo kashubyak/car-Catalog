@@ -6,6 +6,7 @@
 	position: relative;
 	color: #eee;
 	font-size: 14px;
+	overflow: hidden;
 }
 .wrapperVideo video {
 	width: 100%;
