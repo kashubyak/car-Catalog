@@ -12,25 +12,25 @@
 	width: 100%;
 	height: 9.375rem;
 	border-radius: 0.3125rem;
-}
-.editorArea::placeholder {
-	color: var(--input-color);
+	&::placeholder {
+		color: var(--input-color);
+	}
 }
 .tools {
 	padding: 4.8px 12.8px;
-}
-.tools > button {
-	margin-right: 6.4px;
-	background-color: transparent;
-	color: var(--white-color);
-	border: none;
-	outline: none;
-	transition: opacity 0.2s ease-in-out;
-}
-.tools > button:hover {
-	opacity: 0.8;
-}
-.tools i {
-	font-size: 1.0625rem;
-	padding: 0.3125rem;
+	i {
+		font-size: 1.0625rem;
+		padding: 0.3125rem;
+	}
+	button {
+		margin-right: 6.4px;
+		background-color: transparent;
+		color: var(--white-color);
+		border: none;
+		outline: none;
+		transition: opacity 0.2s ease-in-out;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
 }

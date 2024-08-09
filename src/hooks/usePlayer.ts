@@ -66,13 +66,13 @@ export const usePlayer = () => {
 	useEffect(() => {
 		const handleKeyDown = (e: KeyboardEvent) => {
 			switch (e.code) {
-				case 'ArrowRight' && 'KeyL':
+				case 'ArrowRight':
 					forward()
 					break
-				case 'ArrowLeft' && 'KeyJ':
+				case 'ArrowLeft':
 					revert()
 					break
-				case 'Space' && 'KeyK':
+				case 'Space':
 					e.preventDefault()
 					toggleVideo()
 					break

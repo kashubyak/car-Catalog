@@ -1,9 +1,9 @@
+import { CarItemPrice } from 'components/screens/home/main/ItemCar/СarItemPrice'
 import parce from 'html-react-parser'
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { CarService } from 'services/car.service'
 import { ICar } from 'types/car.interface'
-import { CarItemPrice } from '../home/main/ItemCar/СarItemPrice'
 import styles from './carDetail.module.css'
 
 const CarDetail = () => {

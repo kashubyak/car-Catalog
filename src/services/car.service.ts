@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { ICar, ICarData } from '../types/car.interface'
+import { ICar, ICarData } from 'types/car.interface'
 export const CarService = {
 	async getAll() {
 		const response = await axios.get<ICar[]>('http://localhost:4200/cars')

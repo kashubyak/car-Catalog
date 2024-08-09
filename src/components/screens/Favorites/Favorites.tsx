@@ -1,10 +1,10 @@
 import homeStyle from 'components/screens/home/main/ItemCar/CarItem.module.css'
+import { CarItem } from 'components/screens/home/main/ItemCar/СarItem'
 import { Header } from 'components/ui/header/Header'
+import { MenuLinks } from 'components/ui/navBar/menuLinks/MenuLinks'
 import { useFavorites } from 'hooks/useFavorites'
 import { FC, useState } from 'react'
 import { ISideBarState } from 'types/content.interface'
-import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
-import { CarItem } from '../home/main/ItemCar/СarItem'
 import styles from './Favorites.module.css'
 
 const Favorites: FC<ISideBarState> = ({ activeMenuItem }) => {

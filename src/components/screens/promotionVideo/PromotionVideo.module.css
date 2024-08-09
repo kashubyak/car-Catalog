@@ -5,14 +5,14 @@
 	margin: 0.625rem 0.3125rem;
 	position: relative;
 	color: #eee;
-	font-size: 14px;
+	font-size: 0.875rem;
 	overflow: hidden;
-}
-.wrapperVideo video {
-	width: 100%;
+	video {
+		width: 100%;
+	}
 }
 .playerControlls {
-	padding: 5px 8px;
+	padding: 0.3125rem 0.5rem;
 	position: absolute;
 	bottom: 1.25rem;
 	left: 1.25rem;
@@ -22,13 +22,13 @@
 	width: calc(100% - 2.5rem);
 	background-color: #222831;
 	transition: all 0.5s ease-in-out;
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 	transition-delay: 0s;
-}
-.playerControlls.hide {
-	bottom: 0;
-	opacity: 0;
-	transition-delay: 2s;
+	&.hide {
+		bottom: 0;
+		opacity: 0;
+		transition-delay: 2s;
+	}
 }
 .controlsButton {
 	background-color: transparent;
@@ -40,23 +40,23 @@
 	align-items: center;
 }
 .progressBarPlayer {
-	border-radius: 5px;
-	height: 4px;
+	border-radius: 0.3125rem;
+	height: 0.25rem;
 	width: 90%;
 	overflow: hidden;
 	background-color: #3c3f43;
-	margin: 0px 10px;
-}
-.progressBarPlayer .progressBar {
-	height: 4px;
-	width: 100%;
-	background-color: var(--theme-color);
+	margin: 0rem 0.625rem;
+	.progressBar {
+		height: 100%;
+		width: 100%;
+		background-color: var(--theme-color);
+	}
 }
 .timeControls {
 	display: flex;
 	align-items: center;
-	padding: 0px 10px;
+	padding: 0rem 0.625rem;
 }
 .timeControls p {
-	padding: 0px 3px;
+	padding: 0rem 0.1875rem;
 }
