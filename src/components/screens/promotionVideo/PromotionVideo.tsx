@@ -11,7 +11,7 @@ import videoPorsche from '/public/img/PromotionPorsche.mp4'
 import prewPorsche from '/public/img/PromotionPorschePrew.jpg'
 
 const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
-	const { videoRef, toggleVideo, fullscreen, videoTools } = usePlayer()
+	const { videoRef, toggleVideo, toggleFullscreen, videoTools } = usePlayer()
 	return (
 		<div>
 			{/* @ts-ignore */}
@@ -20,18 +20,24 @@ const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
 				{/* @ts-ignore */}
 				<MenuLinks activeMenuItem={activeMenuItem} />
 				<div className={homeStyle.container}>
-					<div className={styles.wrapperVideo}>
+					<div
+						className={`${styles.wrapperVideo} ${
+							videoTools.isFullscreen ? styles.fullscreenWrapper : ''
+						}`}
+					>
 						<video
 							src={videoPorsche}
 							ref={videoRef}
-							className={styles.player}
+							className={`${styles.player} ${
+								videoTools.isFullscreen ? styles.fullscreen : ''
+							}`}
 							onClick={toggleVideo}
 							poster={prewPorsche}
 						/>
 						<div
 							className={`${styles.playerControlls} ${
 								videoTools.isPlaying ? styles.hide : ''
-							}`}
+							} ${videoTools.isFullscreen ? styles.fullscreenControls : ''}`}
 						>
 							<button
 								style={{ paddingLeft: '10px' }}
@@ -62,7 +68,7 @@ const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
 							<button
 								style={{ paddingRight: '10px' }}
 								className={styles.controlsButton}
-								onClick={fullscreen}
+								onClick={toggleFullscreen}
 							>
 								<AiOutlineFullscreen />
 							</button>

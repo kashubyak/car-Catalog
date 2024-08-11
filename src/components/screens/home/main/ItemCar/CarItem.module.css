@@ -4,7 +4,7 @@
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 	gap: 0.625rem;
 	width: 100%;
-	padding: 0rem 0.9375rem;
+	padding: 0rem 0.625rem;
 }
 .dFlex {
 	display: flex;

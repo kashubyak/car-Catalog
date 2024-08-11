@@ -142,7 +142,6 @@
 		background: var(--body-color);
 		width: 30%;
 		padding: 3.125rem 0rem 0rem 1.25rem;
-		z-index: 10;
 	}
 	.switch {
 		width: 3.125rem;
@@ -214,7 +213,6 @@
 		background: var(--body-color);
 		width: 70%;
 		padding: 3.125rem 0rem 0rem 1.25rem;
-		z-index: 10;
 	}
 	.lightTheme .menuLinks {
 		box-shadow: 0rem 0rem 0.3125rem rgba(0, 0, 0, 0.2);

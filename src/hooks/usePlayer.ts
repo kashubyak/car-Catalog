@@ -8,6 +8,7 @@ export const usePlayer = () => {
 		currentTime: 0,
 		videoTime: 0,
 		progress: 0,
+		isFullscreen: false,
 	})
 
 	useEffect(() => {
@@ -27,24 +28,14 @@ export const usePlayer = () => {
 	}, [videoTools.isPlaying])
 
 	const forward = () => {
-		if (videoRef.current) videoRef.current.currentTime += 10
+		if (videoRef.current) videoRef.current.currentTime += 5
 	}
 	const revert = () => {
-		if (videoRef.current) videoRef.current.currentTime -= 10
+		if (videoRef.current) videoRef.current.currentTime -= 5
 	}
 
-	const fullscreen = () => {
-		const video = videoRef.current
-		if (!video) return
-		if (video.requestFullscreen) {
-			video.requestFullscreen()
-		} else if (video.msRequestFullscreen) {
-			video.msRequestFullscreen()
-		} else if (video.mozRequestFullscreen) {
-			video.mozRequestFullscreen()
-		} else if (video.webkitRequestFullscreen) {
-			video.webkitRequestFullscreen()
-		}
+	const toggleFullscreen = () => {
+		setVideoTools(prev => ({ ...prev, isFullscreen: !prev.isFullscreen }))
 	}
 
 	useEffect(() => {
@@ -77,7 +68,7 @@ export const usePlayer = () => {
 					toggleVideo()
 					break
 				case 'KeyF':
-					fullscreen()
+					toggleFullscreen()
 					break
 				default:
 					return
@@ -92,7 +83,7 @@ export const usePlayer = () => {
 	return {
 		videoRef,
 		toggleVideo,
-		fullscreen,
+		toggleFullscreen,
 		videoTools,
 	}
 }

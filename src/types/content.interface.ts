@@ -17,6 +17,6 @@ export interface ISearchFormProps {
 }
 export interface IVideoElement extends HTMLVideoElement {
 	msRequestFullscreen?: () => void
-	mozRequestFullscreen?: () => void
+	mozRequestFullScreen?: () => void
 	webkitRequestFullscreen?: () => void
 }

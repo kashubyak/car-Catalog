@@ -6,7 +6,6 @@ import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useEffect, useState } from 'react'
 import { CarService } from 'services/car.service'
 import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
-import './media.css'
 
 const Home = () => {
 	const { data, isLoading } = useQuery({
