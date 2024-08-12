@@ -37,6 +37,15 @@ export const usePlayer = () => {
 	const toggleFullscreen = () => {
 		setVideoTools(prev => ({ ...prev, isFullscreen: !prev.isFullscreen }))
 	}
+	const handleProgressClick = (e: React.MouseEvent) => {
+		const video = videoRef.current
+		if (!video) return
+		const progressBar = e.currentTarget as HTMLElement
+		const rect = progressBar.getBoundingClientRect()
+		const clickX = e.clientX - rect.left
+		const newTime = (clickX / progressBar.offsetWidth) * video.duration
+		video.currentTime = newTime
+	}
 
 	useEffect(() => {
 		const video = videoRef.current
@@ -83,6 +92,7 @@ export const usePlayer = () => {
 	return {
 		videoRef,
 		toggleVideo,
+		handleProgressClick,
 		toggleFullscreen,
 		videoTools,
 	}

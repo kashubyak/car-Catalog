@@ -11,7 +11,8 @@ import videoPorsche from '/public/img/PromotionPorsche.mp4'
 import prewPorsche from '/public/img/PromotionPorschePrew.jpg'
 
 const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
-	const { videoRef, toggleVideo, toggleFullscreen, videoTools } = usePlayer()
+	const { videoRef, toggleVideo, handleProgressClick, toggleFullscreen, videoTools } =
+		usePlayer()
 	return (
 		<div>
 			{/* @ts-ignore */}
@@ -46,7 +47,7 @@ const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
 							>
 								{videoTools.isPlaying ? <IoPause /> : <IoPlay />}
 							</button>
-							<div className={styles.progressBarPlayer}>
+							<div className={styles.progressBarPlayer} onClick={handleProgressClick}>
 								<div
 									className={styles.progressBar}
 									style={{ width: `${videoTools.progress}%` }}
