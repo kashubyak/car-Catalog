@@ -17,6 +17,8 @@ const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
 		handleProgressClick,
 		toggleFullscreen,
 		videoTools,
+		showControls,
+		hideControls,
 		handleMouseMove,
 	} = usePlayer()
 	return (
@@ -29,10 +31,10 @@ const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
 				<div className={homeStyle.container}>
 					<div
 						onMouseMove={handleMouseMove}
-						onClick={handleMouseMove}
 						className={`${styles.wrapperVideo} ${
 							videoTools.isFullscreen ? styles.fullscreenWrapper : ''
 						}`}
+						style={{ cursor: videoTools.showCursor ? 'auto' : 'none' }}
 					>
 						<video
 							src={videoPorsche}
@@ -42,7 +44,8 @@ const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
 							}`}
 							onClick={toggleVideo}
 							poster={prewPorsche}
-							onPlay={handleMouseMove}
+							onPlay={hideControls}
+							onPause={showControls}
 						/>
 						<div
 							className={`${styles.playerControlls} ${

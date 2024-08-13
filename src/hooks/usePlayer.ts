@@ -3,6 +3,7 @@ import { IVideoElement } from 'types/content.interface'
 
 const usePlayer = () => {
 	const videoRef = useRef<IVideoElement>(null)
+	const controlsTimeoutRef = useRef<number | null>(null)
 	const [videoTools, setVideoTools] = useState({
 		isPlaying: false,
 		currentTime: 0,
@@ -40,6 +41,7 @@ const usePlayer = () => {
 	const toggleFullscreen = () => {
 		setVideoTools(prev => ({ ...prev, isFullscreen: !prev.isFullscreen }))
 	}
+
 	const handleProgressClick = (e: React.MouseEvent) => {
 		const video = videoRef.current
 		if (!video) return
@@ -49,16 +51,29 @@ const usePlayer = () => {
 		const newTime = (clickX / progressBar.offsetWidth) * video.duration
 		video.currentTime = newTime
 	}
+
 	const showControls = useCallback(() => {
+		if (controlsTimeoutRef.current !== null) {
+			clearTimeout(controlsTimeoutRef.current)
+		}
 		setVideoTools(prev => ({ ...prev, showControls: true, showCursor: true }))
 	}, [])
+
 	const hideControls = useCallback(() => {
-		if (videoTools.isPlaying) {
-			setTimeout(() => {
-				setVideoTools(prev => ({ ...prev, showControls: false, showCursor: false }))
-			}, 2000)
+		if (controlsTimeoutRef.current !== null) {
+			clearTimeout(controlsTimeoutRef.current)
 		}
+		controlsTimeoutRef.current = window.setTimeout(() => {
+			if (videoTools.isPlaying) {
+				setVideoTools(prev => ({
+					...prev,
+					showControls: false,
+					showCursor: false,
+				}))
+			}
+		}, 3000)
 	}, [videoTools.isPlaying])
+
 	const handleMouseMove = useCallback(() => {
 		showControls()
 		if (videoTools.isPlaying) {
@@ -78,7 +93,7 @@ const usePlayer = () => {
 		}
 		video.addEventListener('timeupdate', updateProgress)
 		return () => {
-			video.addEventListener('timeupdate', updateProgress)
+			video.removeEventListener('timeupdate', updateProgress)
 		}
 	}, [videoTools.videoTime])
 
@@ -114,6 +129,8 @@ const usePlayer = () => {
 		handleProgressClick,
 		toggleFullscreen,
 		videoTools,
+		showControls,
+		hideControls,
 		handleMouseMove,
 	}
 }
