@@ -11,8 +11,14 @@ import videoPorsche from '/public/img/PromotionPorsche.mp4'
 import prewPorsche from '/public/img/PromotionPorschePrew.jpg'
 
 const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
-	const { videoRef, toggleVideo, handleProgressClick, toggleFullscreen, videoTools } =
-		usePlayer()
+	const {
+		videoRef,
+		toggleVideo,
+		handleProgressClick,
+		toggleFullscreen,
+		videoTools,
+		handleMouseMove,
+	} = usePlayer()
 	return (
 		<div>
 			{/* @ts-ignore */}
@@ -22,6 +28,8 @@ const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
 				<MenuLinks activeMenuItem={activeMenuItem} />
 				<div className={homeStyle.container}>
 					<div
+						onMouseMove={handleMouseMove}
+						onClick={handleMouseMove}
 						className={`${styles.wrapperVideo} ${
 							videoTools.isFullscreen ? styles.fullscreenWrapper : ''
 						}`}
@@ -34,10 +42,13 @@ const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
 							}`}
 							onClick={toggleVideo}
 							poster={prewPorsche}
+							onPlay={handleMouseMove}
 						/>
 						<div
 							className={`${styles.playerControlls} ${
-								videoTools.isPlaying ? styles.hide : ''
+								videoTools.showControls || !videoTools.isPlaying
+									? styles.showControls
+									: styles.hideControls
 							} ${videoTools.isFullscreen ? styles.fullscreenControls : ''}`}
 						>
 							<button

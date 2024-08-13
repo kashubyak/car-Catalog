@@ -36,13 +36,23 @@
 	justify-content: space-between;
 	width: calc(100% - 2.5rem);
 	background-color: #222831;
-	transition: all 0.4s ease-in-out;
+	transition: all 0.2s ease-in-out;
 	border-radius: 0.3125rem;
 	transition-delay: 0s;
 	&.hide {
 		bottom: 0;
 		opacity: 0;
 		transition-delay: 2s;
+	}
+	&.showControls {
+		bottom: 1.25rem;
+		opacity: 1;
+		transition-delay: 0s;
+	}
+	&.hideControls {
+		bottom: 0;
+		opacity: 0;
+		transition-delay: 0s;
 	}
 	* {
 		cursor: pointer;
@@ -80,8 +90,8 @@
 	align-items: center;
 	padding: 0rem 0.625rem;
 	cursor: default;
-}
-.timeControls p {
-	padding: 0rem 0.1875rem;
-	cursor: default;
+	p {
+		padding: 0rem 0.1875rem;
+		cursor: default;
+	}
 }
