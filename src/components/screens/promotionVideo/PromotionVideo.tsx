@@ -46,6 +46,7 @@ const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
 							poster={prewPorsche}
 							onPlay={hideControls}
 							onPause={showControls}
+							onDoubleClick={toggleFullscreen}
 						/>
 						<div
 							className={`${styles.playerControlls} ${

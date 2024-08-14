@@ -101,16 +101,20 @@ const usePlayer = () => {
 		const handleKeyDown = (e: KeyboardEvent) => {
 			switch (e.code) {
 				case 'ArrowRight':
+				case 'KeyL':
 					forward()
 					break
 				case 'ArrowLeft':
+				case 'KeyJ':
 					revert()
 					break
 				case 'Space':
+				case 'KeyK':
 					e.preventDefault()
 					toggleVideo()
 					break
 				case 'KeyF':
+				case 'Escape':
 					toggleFullscreen()
 					break
 				default:
