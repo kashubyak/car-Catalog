@@ -140,16 +140,20 @@ const usePlayer = () => {
 	}
 
 	const toogleMute = () => {
-		if (videoTools.volume > 0) {
-			setVideoTools(prev => ({
-				...prev,
-				volume: 0,
-			}))
-		} else {
-			setVideoTools(prev => ({
-				...prev,
-				volume: videoTools.previouseVolume,
-			}))
+		if (videoRef.current) {
+			if (videoTools.volume > 0) {
+				setVideoTools(prev => ({
+					...prev,
+					volume: 0,
+				}))
+				videoRef.current.volume = 0
+			} else {
+				setVideoTools(prev => ({
+					...prev,
+					volume: videoTools.previouseVolume,
+				}))
+				videoRef.current.volume = videoTools.previouseVolume / 100
+			}
 		}
 	}
 
