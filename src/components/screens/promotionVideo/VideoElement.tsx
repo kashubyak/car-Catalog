@@ -1,7 +1,14 @@
 import { usePlayer } from 'hooks/usePlayer'
 import { AiOutlineFullscreen, AiOutlineFullscreenExit } from 'react-icons/ai'
-import { IoMdVolumeHigh } from 'react-icons/io'
-import { IoPause, IoPlay } from 'react-icons/io5'
+import {
+	IoPause,
+	IoPlay,
+	IoVolumeHigh,
+	IoVolumeLow,
+	IoVolumeMedium,
+	IoVolumeMute,
+	IoVolumeOff,
+} from 'react-icons/io5'
 import styles from './PromotionVideo.module.css'
 import videoPorsche from '/public/img/PromotionPorsche.mp4'
 import prewPorsche from '/public/img/PromotionPorschePrew.jpg'
@@ -19,6 +26,7 @@ const VideoElement = () => {
 		handleVolumeClick,
 		toogleMute,
 	} = usePlayer()
+
 	return (
 		<div
 			onMouseMove={handleMouseMove}
@@ -55,7 +63,21 @@ const VideoElement = () => {
 				</div>
 
 				<div className={`${styles.volumeControl} ${styles.controlsButton}`}>
-					<IoMdVolumeHigh />
+					<div onClick={toogleMute}>
+						{videoTools.volume > 75 ? (
+							<IoVolumeHigh />
+						) : videoTools.volume > 50 ? (
+							<IoVolumeMedium />
+						) : videoTools.volume > 25 ? (
+							<IoVolumeLow />
+						) : videoTools.volume > 0 ? (
+							<IoVolumeOff />
+						) : videoTools.volume === 0 ? (
+							<IoVolumeMute />
+						) : (
+							''
+						)}
+					</div>
 					<div className={styles.volumeBackGr} onMouseDown={handleVolumeClick}>
 						<div className={styles.volumeLavelFull}>
 							<div

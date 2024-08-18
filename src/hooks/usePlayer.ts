@@ -116,7 +116,42 @@ const usePlayer = () => {
 		document.addEventListener('mousemove', handleMouseMove)
 		document.addEventListener('mouseup', handleMouseUp)
 	}, [])
-	const toogleMute = () => {}
+	const louderVolume = () => {
+		if (videoRef.current) {
+			const currentVolume = videoRef.current.volume
+			const newVolume = Math.min(currentVolume + 0.1, 1)
+			videoRef.current.volume = newVolume
+			setVideoTools(prev => ({
+				...prev,
+				volume: Math.round(newVolume * 100),
+			}))
+		}
+	}
+	const lowerVolume = () => {
+		if (videoRef.current) {
+			const currentVolume = videoRef.current.volume
+			const newVolume = Math.max(currentVolume - 0.1, 0)
+			videoRef.current.volume = newVolume
+			setVideoTools(prev => ({
+				...prev,
+				volume: Math.round(newVolume * 100),
+			}))
+		}
+	}
+
+	const toogleMute = () => {
+		if (videoTools.volume > 0) {
+			setVideoTools(prev => ({
+				...prev,
+				volume: 0,
+			}))
+		} else {
+			setVideoTools(prev => ({
+				...prev,
+				volume: videoTools.previouseVolume,
+			}))
+		}
+	}
 
 	useEffect(() => {
 		const video = videoRef.current
@@ -154,6 +189,14 @@ const usePlayer = () => {
 				case 'Escape':
 					toggleFullscreen()
 					break
+				case 'ArrowUp':
+					e.preventDefault()
+					louderVolume()
+					break
+				case 'ArrowDown':
+					e.preventDefault()
+					lowerVolume()
+					break
 				default:
 					return
 			}
@@ -163,7 +206,6 @@ const usePlayer = () => {
 			document.removeEventListener('keydown', handleKeyDown)
 		}
 	}, [toggleVideo])
-
 	return {
 		videoRef,
 		toggleVideo,

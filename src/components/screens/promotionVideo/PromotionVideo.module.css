@@ -102,11 +102,15 @@
 	.volumeBackGr {
 		background-color: transparent;
 		position: absolute;
-		bottom: 110%;
+		bottom: 180%;
 		transform: rotate(-90deg);
 		display: none;
 		width: 9rem;
-		padding: 2rem;
+		padding: 2rem 2rem 2rem 0.5rem;
+	}
+	div {
+		display: flex;
+		align-items: center;
 	}
 	&:hover .volumeBackGr {
 		display: block;
@@ -119,6 +123,6 @@
 	.volumeLavelCurrent {
 		height: 100%;
 		background-color: var(--theme-color);
-		border-radius: 0.625rem;
+		border-radius: 0.8rem;
 	}
 }
