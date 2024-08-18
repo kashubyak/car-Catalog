@@ -4,7 +4,7 @@ import { MenuLinks } from 'components/ui/navBar/menuLinks/MenuLinks'
 import { FC } from 'react'
 import { ISideBarState } from 'types/content.interface'
 import styles from './PromotionVideo.module.css'
-import { VideoElement } from './videoElement/VideoElement'
+import { VideoElement } from './VideoElement'
 
 const PromotionVideo: FC<ISideBarState> = ({ activeMenuItem }) => {
 	return (

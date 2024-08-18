@@ -1,7 +1,8 @@
 import { usePlayer } from 'hooks/usePlayer'
-import { AiOutlineFullscreen } from 'react-icons/ai'
+import { AiOutlineFullscreen, AiOutlineFullscreenExit } from 'react-icons/ai'
+import { IoMdVolumeHigh } from 'react-icons/io'
 import { IoPause, IoPlay } from 'react-icons/io5'
-import styles from '../PromotionVideo.module.css'
+import styles from './PromotionVideo.module.css'
 import videoPorsche from '/public/img/PromotionPorsche.mp4'
 import prewPorsche from '/public/img/PromotionPorschePrew.jpg'
 
@@ -15,6 +16,8 @@ const VideoElement = () => {
 		showControls,
 		hideControls,
 		handleMouseMove,
+		handleVolumeClick,
+		toogleMute,
 	} = usePlayer()
 	return (
 		<div
@@ -41,11 +44,7 @@ const VideoElement = () => {
 						: styles.hideControls
 				} ${videoTools.isFullscreen ? styles.fullscreenControls : ''}`}
 			>
-				<button
-					style={{ paddingLeft: '10px' }}
-					className={styles.controlsButton}
-					onClick={toggleVideo}
-				>
+				<button className={styles.controlsButton} onClick={toggleVideo}>
 					{videoTools.isPlaying ? <IoPause /> : <IoPlay />}
 				</button>
 				<div className={styles.progressBarPlayer} onClick={handleProgressClick}>
@@ -54,6 +53,19 @@ const VideoElement = () => {
 						style={{ width: `${videoTools.progress}%` }}
 					></div>
 				</div>
+
+				<div className={`${styles.volumeControl} ${styles.controlsButton}`}>
+					<IoMdVolumeHigh />
+					<div className={styles.volumeBackGr} onMouseDown={handleVolumeClick}>
+						<div className={styles.volumeLavelFull}>
+							<div
+								className={styles.volumeLavelCurrent}
+								style={{ width: `${videoTools.volume}%` }}
+							></div>
+						</div>
+					</div>
+				</div>
+
 				<div className={styles.timeControls}>
 					<p>
 						{Math.floor(videoTools.currentTime / 60) +
@@ -67,12 +79,12 @@ const VideoElement = () => {
 							('0' + Math.floor(videoTools.videoTime % 60)).slice(-2)}
 					</p>
 				</div>
-				<button
-					style={{ paddingRight: '10px' }}
-					className={styles.controlsButton}
-					onClick={toggleFullscreen}
-				>
-					<AiOutlineFullscreen />
+				<button className={styles.controlsButton} onClick={toggleFullscreen}>
+					{videoTools.isFullscreen ? (
+						<AiOutlineFullscreenExit />
+					) : (
+						<AiOutlineFullscreen />
+					)}
 				</button>
 			</div>
 		</div>

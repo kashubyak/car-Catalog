@@ -12,6 +12,8 @@ const usePlayer = () => {
 		isFullscreen: false,
 		showControls: false,
 		showCursor: true,
+		volume: 100,
+		previouseVolume: 100,
 	})
 
 	useEffect(() => {
@@ -31,10 +33,10 @@ const usePlayer = () => {
 		}
 	}, [videoTools.isPlaying])
 
-	const forward = () => {
+	const forwardVideo = () => {
 		if (videoRef.current) videoRef.current.currentTime += 5
 	}
-	const revert = () => {
+	const revertVideo = () => {
 		if (videoRef.current) videoRef.current.currentTime -= 5
 	}
 
@@ -81,6 +83,41 @@ const usePlayer = () => {
 		}
 	}, [hideControls, showControls, videoTools.isPlaying])
 
+	const handleVolumeClick = useCallback((e: React.MouseEvent) => {
+		const volumeBar = e.currentTarget as HTMLElement
+		const rect = volumeBar.getBoundingClientRect()
+		let currentVolume = videoTools.volume
+
+		const updateVolume = (clientY: number) => {
+			const cursorY = clientY - rect.top
+			const newVolume = Math.max(0, Math.min(100, (1 - cursorY / rect.height) * 100))
+			if (newVolume !== currentVolume) {
+				currentVolume = newVolume
+
+				setVideoTools(prev => ({
+					...prev,
+					volume: newVolume,
+					previouseVolume: newVolume > 0 ? newVolume : prev.previouseVolume,
+				}))
+
+				if (videoRef.current) {
+					videoRef.current.volume = newVolume / 100
+				}
+			}
+		}
+		const handleMouseMove = (moveEvent: MouseEvent) => {
+			updateVolume(moveEvent.clientY)
+		}
+		const handleMouseUp = () => {
+			document.removeEventListener('mousemove', handleMouseMove)
+			document.removeEventListener('mouseup', handleMouseUp)
+		}
+		updateVolume(e.clientY)
+		document.addEventListener('mousemove', handleMouseMove)
+		document.addEventListener('mouseup', handleMouseUp)
+	}, [])
+	const toogleMute = () => {}
+
 	useEffect(() => {
 		const video = videoRef.current
 		if (!video) return
@@ -102,11 +139,11 @@ const usePlayer = () => {
 			switch (e.code) {
 				case 'ArrowRight':
 				case 'KeyL':
-					forward()
+					forwardVideo()
 					break
 				case 'ArrowLeft':
 				case 'KeyJ':
-					revert()
+					revertVideo()
 					break
 				case 'Space':
 				case 'KeyK':
@@ -136,6 +173,8 @@ const usePlayer = () => {
 		showControls,
 		hideControls,
 		handleMouseMove,
+		handleVolumeClick,
+		toogleMute,
 	}
 }
 export { usePlayer }
