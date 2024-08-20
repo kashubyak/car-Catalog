@@ -155,21 +155,17 @@ const usePlayer = () => {
 		}
 	}
 
-	const toogleMute = () => {
+	const toggleMute = () => {
 		if (videoRef.current) {
-			if (videoTools.volume > 0) {
-				setVideoTools(prev => ({
+			setVideoTools(prev => {
+				const newVolume = prev.volume > 0 ? 0 : videoTools.previouseVolume
+				videoRef.current!.volume = newVolume / 100
+				return {
 					...prev,
-					volume: 0,
-				}))
-				videoRef.current.volume = 0
-			} else {
-				setVideoTools(prev => ({
-					...prev,
-					volume: videoTools.previouseVolume,
-				}))
-				videoRef.current.volume = videoTools.previouseVolume / 100
-			}
+					volume: newVolume,
+					previouseVolume: prev.volume > 0 ? prev.volume : prev.previouseVolume,
+				}
+			})
 		}
 	}
 	useEffect(() => {
@@ -216,6 +212,9 @@ const usePlayer = () => {
 					e.preventDefault()
 					lowerVolume()
 					break
+				case 'KeyM':
+					toggleMute()
+					break
 				default:
 					return
 			}
@@ -235,7 +234,7 @@ const usePlayer = () => {
 		hideControls,
 		handleMouseMove,
 		handleVolumeClick,
-		toogleMute,
+		toggleMute,
 	}
 }
 export { usePlayer }

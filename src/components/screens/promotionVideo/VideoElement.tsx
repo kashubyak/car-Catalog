@@ -24,7 +24,7 @@ const VideoElement = () => {
 		hideControls,
 		handleMouseMove,
 		handleVolumeClick,
-		toogleMute,
+		toggleMute,
 	} = usePlayer()
 
 	return (
@@ -63,7 +63,7 @@ const VideoElement = () => {
 				</div>
 
 				<div className={`${styles.volumeControl} ${styles.controlsButton}`}>
-					<div onClick={toogleMute}>
+					<div onClick={toggleMute}>
 						{videoTools.volume > 75 ? (
 							<IoVolumeHigh />
 						) : videoTools.volume > 50 ? (

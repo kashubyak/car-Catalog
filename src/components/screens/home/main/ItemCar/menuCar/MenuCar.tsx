@@ -31,7 +31,7 @@ const MenuCar: FC<{ active: boolean; car: ICar }> = ({ active, car }) => {
 	const isExist = favorites.some((c: ICar) => c.id === car.id)
 	const { addNotification } = useActions()
 
-	const handleToogleFavorite = () => {
+	const handleToggleFavorite = () => {
 		toggleFavorites(car)
 		addNotification({
 			message: isExist ? 'Removed from favorites!' : 'Added to favorites!',
@@ -52,7 +52,7 @@ const MenuCar: FC<{ active: boolean; car: ICar }> = ({ active, car }) => {
 		<div ref={menuRef} className={`${styles.menu} ${menuActive ? styles.active : ''}`}>
 			<div className={styles.activeMenu}>
 				<ul>
-					<li onClick={() => handleToogleFavorite()}>
+					<li onClick={() => handleToggleFavorite()}>
 						<i className={`fa fa-heart${isExist ? '' : '-o'}`} aria-hidden='true'></i>
 						<p className={styles.favorites}>
 							{isExist ? 'Remove favorite' : 'Add favorite'}
