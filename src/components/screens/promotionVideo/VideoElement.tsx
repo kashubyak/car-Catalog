@@ -55,7 +55,7 @@ const VideoElement = () => {
 				<button className={styles.controlsButton} onClick={toggleVideo}>
 					{videoTools.isPlaying ? <IoPause /> : <IoPlay />}
 				</button>
-				<div className={styles.progressBarPlayer} onClick={handleProgressClick}>
+				<div className={styles.progressBarPlayer} onMouseDown={handleProgressClick}>
 					<div
 						className={styles.progressBar}
 						style={{ width: `${videoTools.progress}%` }}

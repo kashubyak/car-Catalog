@@ -102,11 +102,11 @@
 	.volumeBackGr {
 		background-color: transparent;
 		position: absolute;
-		bottom: 180%;
+		bottom: 160%;
 		transform: rotate(-90deg);
 		display: none;
-		width: 9rem;
-		padding: 2rem 2rem 2rem 0.5rem;
+		width: 5.5rem;
+		padding: 1rem 1rem 1rem 0.5rem;
 	}
 	div {
 		display: flex;
@@ -119,7 +119,7 @@
 .volumeLavelFull {
 	background-color: #3c3f43;
 	border-radius: 0.8rem;
-	height: 0.7rem;
+	height: 0.5rem;
 	.volumeLavelCurrent {
 		height: 100%;
 		background-color: var(--theme-color);

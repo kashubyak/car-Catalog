@@ -44,16 +44,6 @@ const usePlayer = () => {
 		setVideoTools(prev => ({ ...prev, isFullscreen: !prev.isFullscreen }))
 	}
 
-	const handleProgressClick = (e: React.MouseEvent) => {
-		const video = videoRef.current
-		if (!video) return
-		const progressBar = e.currentTarget as HTMLElement
-		const rect = progressBar.getBoundingClientRect()
-		const clickX = e.clientX - rect.left
-		const newTime = (clickX / progressBar.offsetWidth) * video.duration
-		video.currentTime = newTime
-	}
-
 	const showControls = useCallback(() => {
 		if (controlsTimeoutRef.current !== null) {
 			clearTimeout(controlsTimeoutRef.current)
@@ -82,6 +72,36 @@ const usePlayer = () => {
 			hideControls()
 		}
 	}, [hideControls, showControls, videoTools.isPlaying])
+
+	const handleProgressClick = useCallback(
+		(e: React.MouseEvent) => {
+			const video = videoRef.current
+			if (!video) return
+			const progressBar = e.currentTarget as HTMLElement
+			const rect = progressBar.getBoundingClientRect()
+			const updateTime = (clientX: number) => {
+				const clickX = Math.max(0, Math.min(clientX - rect.left, rect.width))
+				const newTime = (clickX / rect.width) * video.duration
+				video.currentTime = newTime
+				setVideoTools(prev => ({
+					...prev,
+					currentTime: newTime,
+					progress: (newTime / videoTools.videoTime) * 100,
+				}))
+			}
+			updateTime(e.clientX)
+			const handleMouseMove = (moveEvent: MouseEvent) => {
+				updateTime(moveEvent.clientX)
+			}
+			const handleMouseUp = () => {
+				document.removeEventListener('mousemove', handleMouseMove)
+				document.removeEventListener('mouseup', handleMouseUp)
+			}
+			document.addEventListener('mousemove', handleMouseMove)
+			document.addEventListener('mouseup', handleMouseUp)
+		},
+		[videoTools.videoTime],
+	)
 
 	const handleVolumeClick = useCallback((e: React.MouseEvent) => {
 		const volumeBar = e.currentTarget as HTMLElement
@@ -156,7 +176,6 @@ const usePlayer = () => {
 			}
 		}
 	}
-
 	useEffect(() => {
 		const video = videoRef.current
 		if (!video) return
