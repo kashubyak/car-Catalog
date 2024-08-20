@@ -100,9 +100,10 @@
 	justify-content: center;
 	background-color: #222831;
 	.volumeBackGr {
-		background-color: transparent;
+		background-color: #22283180;
+		border-radius: 0.5rem;
 		position: absolute;
-		bottom: 160%;
+		bottom: 155%;
 		transform: rotate(-90deg);
 		display: none;
 		width: 5.5rem;

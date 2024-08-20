@@ -104,38 +104,34 @@ const usePlayer = () => {
 	)
 
 	const handleVolumeClick = useCallback((e: React.MouseEvent) => {
+		const video = videoRef.current
+		if (!video) return
 		const volumeBar = e.currentTarget as HTMLElement
 		const rect = volumeBar.getBoundingClientRect()
-		let currentVolume = videoTools.volume
-
 		const updateVolume = (clientY: number) => {
 			const cursorY = clientY - rect.top
-			const newVolume = Math.max(0, Math.min(100, (1 - cursorY / rect.height) * 100))
-			if (newVolume !== currentVolume) {
-				currentVolume = newVolume
-
-				setVideoTools(prev => ({
-					...prev,
-					volume: newVolume,
-					previouseVolume: newVolume > 0 ? newVolume : prev.previouseVolume,
-				}))
-
-				if (videoRef.current) {
-					videoRef.current.volume = newVolume / 100
-				}
+			const newVolume = Math.max(0, Math.min(100, 1 - cursorY / rect.height) * 100)
+			if (videoRef.current) {
+				videoRef.current.volume = newVolume / 100
 			}
+			setVideoTools(prev => ({
+				...prev,
+				volume: newVolume,
+				previouseVolume: newVolume > 0 ? newVolume : videoTools.previouseVolume,
+			}))
 		}
-		const handleMouseMove = (moveEvent: MouseEvent) => {
-			updateVolume(moveEvent.clientY)
+		updateVolume(e.clientY)
+		const handleMouseMove = (MouseEvent: MouseEvent) => {
+			updateVolume(MouseEvent.clientY)
 		}
 		const handleMouseUp = () => {
 			document.removeEventListener('mousemove', handleMouseMove)
 			document.removeEventListener('mouseup', handleMouseUp)
 		}
-		updateVolume(e.clientY)
 		document.addEventListener('mousemove', handleMouseMove)
 		document.addEventListener('mouseup', handleMouseUp)
 	}, [])
+
 	const louderVolume = () => {
 		if (videoRef.current) {
 			const currentVolume = videoRef.current.volume
