@@ -33,6 +33,75 @@ const usePlayer = () => {
 		}
 	}, [videoTools.isPlaying])
 
+	const handleDoubleTap = useCallback((e: TouchEvent) => {
+		const video = videoRef.current
+		if (!video) return
+		const ScreenWidth = innerWidth
+		if (ScreenWidth > 1120) return
+		e.preventDefault()
+		const touch = e.changedTouches[0]
+		const videoRect = video.getBoundingClientRect()
+		const touchX = touch.clientX - videoRect.left
+		if (touchX < videoRect.width / 2) {
+			video.currentTime = Math.max(0, video.currentTime - 5)
+		} else {
+			video.currentTime = Math.min(video.duration, video.currentTime + 5)
+		}
+	}, [])
+	useEffect(() => {
+		const video = videoRef.current
+		if (!video) return
+		let lastTap = 0
+		const handleTouchEnd = (e: TouchEvent) => {
+			const currentTime = new Date().getTime()
+			const timeSinceLastTap = currentTime - lastTap
+			if (timeSinceLastTap < 300 && timeSinceLastTap > 0) {
+				handleDoubleTap(e as unknown as TouchEvent)
+			}
+			lastTap = currentTime
+		}
+		video.addEventListener('touchend', handleTouchEnd)
+		return () => {
+			video.removeEventListener('touchend', handleTouchEnd)
+		}
+	}, [handleDoubleTap])
+
+	const handleProgressClick = useCallback(
+		(e: React.MouseEvent) => {
+			const video = videoRef.current
+			if (!video) return
+			const progressBar = e.currentTarget as HTMLElement
+			const rect = progressBar.getBoundingClientRect()
+			const updateTime = (clientX: number) => {
+				const clickX = Math.max(0, Math.min(clientX - rect.left, rect.width))
+				const newTime = (clickX / rect.width) * video.duration
+				video.currentTime = newTime
+				setVideoTools(prev => ({
+					...prev,
+					currentTime: newTime,
+					progress: (newTime / videoTools.videoTime) * 100,
+				}))
+			}
+			updateTime(e.clientX)
+			const handleMouseMove = (moveEvent: MouseEvent) => {
+				updateTime(moveEvent.clientX)
+			}
+			if (!video.paused) {
+				video.pause()
+			}
+			const handleMouseUp = () => {
+				document.removeEventListener('mousemove', handleMouseMove)
+				document.removeEventListener('mouseup', handleMouseUp)
+				if (!video.paused) {
+					video.play()
+				}
+			}
+			document.addEventListener('mousemove', handleMouseMove)
+			document.addEventListener('mouseup', handleMouseUp)
+		},
+		[videoTools.videoTime],
+	)
+
 	const forwardVideo = () => {
 		if (videoRef.current) videoRef.current.currentTime += 5
 	}
@@ -72,36 +141,6 @@ const usePlayer = () => {
 			hideControls()
 		}
 	}, [hideControls, showControls, videoTools.isPlaying])
-
-	const handleProgressClick = useCallback(
-		(e: React.MouseEvent) => {
-			const video = videoRef.current
-			if (!video) return
-			const progressBar = e.currentTarget as HTMLElement
-			const rect = progressBar.getBoundingClientRect()
-			const updateTime = (clientX: number) => {
-				const clickX = Math.max(0, Math.min(clientX - rect.left, rect.width))
-				const newTime = (clickX / rect.width) * video.duration
-				video.currentTime = newTime
-				setVideoTools(prev => ({
-					...prev,
-					currentTime: newTime,
-					progress: (newTime / videoTools.videoTime) * 100,
-				}))
-			}
-			updateTime(e.clientX)
-			const handleMouseMove = (moveEvent: MouseEvent) => {
-				updateTime(moveEvent.clientX)
-			}
-			const handleMouseUp = () => {
-				document.removeEventListener('mousemove', handleMouseMove)
-				document.removeEventListener('mouseup', handleMouseUp)
-			}
-			document.addEventListener('mousemove', handleMouseMove)
-			document.addEventListener('mouseup', handleMouseUp)
-		},
-		[videoTools.videoTime],
-	)
 
 	const handleVolumeClick = useCallback((e: React.MouseEvent) => {
 		const video = videoRef.current

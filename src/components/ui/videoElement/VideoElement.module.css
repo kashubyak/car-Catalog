@@ -1,0 +1,129 @@
+.wrapperVideo {
+	margin: 0.625rem 0.3125rem;
+	position: relative;
+	color: #eee;
+	font-size: 0.875rem;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	margin: 0px auto;
+	.player {
+		width: 100%;
+		height: 100%;
+	}
+}
+.fullscreenWrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	z-index: 1000;
+	margin: 0;
+}
+.fullscreen {
+	width: 100%;
+	height: 100%;
+}
+.playerControlls {
+	padding: 0.3125rem 0;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 1.25rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: calc(100% - 2.5rem);
+	background-color: #222831;
+	transition: all 0.2s ease-in-out;
+	border-radius: 0.3125rem;
+	transition-delay: 0s;
+	&.hide {
+		bottom: 0;
+		opacity: 0;
+		transition-delay: 2s;
+	}
+	&.showControls {
+		bottom: 1.25rem;
+		opacity: 1;
+		transition-delay: 0s;
+	}
+	&.hideControls {
+		bottom: 0;
+		opacity: 0;
+		transition-delay: 0s;
+	}
+	* {
+		cursor: pointer;
+	}
+}
+.fullscreenControls {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.controlsButton {
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+	color: #eee;
+	font-size: 1.4rem;
+	display: flex;
+	align-items: center;
+	padding: 0rem 0.625rem;
+}
+.progressBarPlayer {
+	border-radius: 0.3125rem;
+	height: 0.25rem;
+	width: 100%;
+	overflow: hidden;
+	background-color: #3c3f43;
+	.progressBar {
+		height: 100%;
+		width: 100%;
+		background-color: var(--theme-color);
+	}
+}
+.timeControls {
+	display: flex;
+	align-items: center;
+	cursor: auto;
+	p:nth-child(2) {
+		padding: 0rem 0.375rem;
+		cursor: auto;
+	}
+}
+.volumeControl {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #222831;
+	.volumeBackGr {
+		background-color: #22283180;
+		border-radius: 0.5rem;
+		position: absolute;
+		bottom: 155%;
+		transform: rotate(-90deg);
+		display: none;
+		width: 5.5rem;
+		padding: 1rem 1rem 1rem 0.5rem;
+	}
+	div {
+		display: flex;
+		align-items: center;
+	}
+	&:hover .volumeBackGr {
+		display: block;
+	}
+}
+.volumeLavelFull {
+	background-color: #3c3f43;
+	border-radius: 0.8rem;
+	height: 0.5rem;
+	.volumeLavelCurrent {
+		height: 100%;
+		background-color: var(--theme-color);
+		border-radius: 0.8rem;
+	}
+}
