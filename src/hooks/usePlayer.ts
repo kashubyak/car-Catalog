@@ -36,8 +36,7 @@ const usePlayer = () => {
 	const handleDoubleTap = useCallback((e: TouchEvent) => {
 		const video = videoRef.current
 		if (!video) return
-		const ScreenWidth = innerWidth
-		if (ScreenWidth > 1120) return
+		if (innerWidth > 1120) return
 		e.preventDefault()
 		const touch = e.changedTouches[0]
 		const videoRect = video.getBoundingClientRect()
@@ -51,6 +50,7 @@ const usePlayer = () => {
 	useEffect(() => {
 		const video = videoRef.current
 		if (!video) return
+		if (innerWidth > 1120) return
 		let lastTap = 0
 		const handleTouchEnd = (e: TouchEvent) => {
 			const currentTime = new Date().getTime()
@@ -86,9 +86,7 @@ const usePlayer = () => {
 			const handleMouseMove = (moveEvent: MouseEvent) => {
 				updateTime(moveEvent.clientX)
 			}
-			if (!video.paused) {
-				video.pause()
-			}
+
 			const handleMouseUp = () => {
 				document.removeEventListener('mousemove', handleMouseMove)
 				document.removeEventListener('mouseup', handleMouseUp)

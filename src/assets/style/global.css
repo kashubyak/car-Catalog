@@ -87,3 +87,16 @@ a {
 .BaseInput::placeholder {
 	color: var(--input-color);
 }
+.container {
+	margin-top: 6.25rem;
+	width: 100%;
+	padding: 0rem 0.625rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	gap: 0.625rem;
+}
+@media (max-width: 25rem) {
+	.container {
+		grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+	}
+}

@@ -1,4 +1,3 @@
-import homeStyle from 'components/screens/home/main/ItemCar/CarItem.module.css'
 import { CarItem } from 'components/screens/home/main/ItemCar/СarItem'
 import { FC, useState } from 'react'
 import { ICatalog } from 'types/content.interface'
@@ -9,7 +8,7 @@ const Catalog: FC<ICatalog> = ({ data = [] }) => {
 		setActiveMenuIndex(prevIndex => (prevIndex === index ? null : index))
 	}
 	return (
-		<div className={homeStyle.container}>
+		<div className='container'>
 			{data.length ? (
 				data.map((car, index) => (
 					<CarItem

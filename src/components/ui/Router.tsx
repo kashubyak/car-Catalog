@@ -2,6 +2,7 @@ import { Favorites } from 'components/screens/Favorites/Favorites'
 import { CarDetail } from 'components/screens/carDetail/CarDetail'
 import { CreateCarForm } from 'components/screens/createCarForm/CreateCarForm'
 import { Home } from 'components/screens/home/Home'
+import { MapCar } from 'components/screens/mapCar/MapCar'
 import { PromotionVideo } from 'components/screens/promotionVideo/PromotionVideo'
 import React, { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -37,6 +38,12 @@ const Router: React.FC = () => {
 						/>
 					}
 					path='/promotion-video'
+				/>
+				<Route
+					element={
+						<MapCar setActiveMenuItem={setActiveMenuItem} activeMenuItem='mapCar' />
+					}
+					path='/map-car'
 				/>
 
 				<Route path='*' element={<div>Page is not found! Sorry(</div>} />

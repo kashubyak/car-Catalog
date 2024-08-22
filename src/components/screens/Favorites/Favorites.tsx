@@ -1,4 +1,3 @@
-import homeStyle from 'components/screens/home/main/ItemCar/CarItem.module.css'
 import { CarItem } from 'components/screens/home/main/ItemCar/СarItem'
 import { Header } from 'components/ui/header/Header'
 import { MenuLinks } from 'components/ui/navBar/menuLinks/MenuLinks'
@@ -20,7 +19,7 @@ const Favorites: FC<ISideBarState> = ({ activeMenuItem }) => {
 			<div className={styles.dFlex}>
 				{/* @ts-ignore */}
 				<MenuLinks activeMenuItem={activeMenuItem} />
-				<div className={homeStyle.container}>
+				<div className='container'>
 					{favorites.length ? (
 						favorites.map((car, index) => (
 							<CarItem

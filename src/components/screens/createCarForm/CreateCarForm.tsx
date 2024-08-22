@@ -30,13 +30,13 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 	}
 	const car = watch()
 	return (
-		<div className={styles.container}>
+		<div>
 			{/* @ts-ignore */}
 			<Header />
 			<div className={styles.dFlex}>
 				{/* @ts-ignore */}
 				<MenuLinks activeMenuItem={activeMenuItem} />
-				<div className={styles.containerContent}>
+				<div className='container'>
 					<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 						<span className={styles.inputCon}>
 							<input
