@@ -64,15 +64,6 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 									<span>Promotion</span>
 								</li>
 							</Link>
-							<Link to='/map-car'>
-								<li
-									className={`navItem ${activeItem === 'mapCar' ? styles.active : ''}`}
-									onClick={() => handleItemClick('mapCar')}
-								>
-									<i className='fa fa-map-marker' aria-hidden='true'></i>
-									<span>Map Cars</span>
-								</li>
-							</Link>
 							<a>
 								<li
 									className={`navItem ${activeItem === 'logOut' ? styles.active : ''}`}

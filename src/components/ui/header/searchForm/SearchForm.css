@@ -55,7 +55,7 @@
 	color: #504f52;
 }
 .dFlex .custom-styles__value-container {
-	cursor: text;
+	cursor: pointer;
 	padding: 0;
 }
 
