@@ -2,9 +2,19 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { iUserState } from 'types/slice.interface'
 import { TypeUser } from 'types/user.interface'
 
-const initialState: iUserState = {
-	user: JSON.parse(localStorage.getItem('user') || 'null'),
+const getInitialUserState = () => {
+	try {
+		const user = localStorage.getItem('user')
+		return user ? JSON.parse(user) : null
+	} catch (error) {
+		return null
+	}
 }
+
+const initialState: iUserState = {
+	user: getInitialUserState(),
+}
+
 const UserSlice = createSlice({
 	name: 'user',
 	initialState,
@@ -19,4 +29,5 @@ const UserSlice = createSlice({
 		},
 	},
 })
+
 export const { actions, reducer } = UserSlice

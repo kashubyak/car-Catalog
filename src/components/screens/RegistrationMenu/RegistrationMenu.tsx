@@ -48,7 +48,7 @@ const RegistrationMenu = () => {
 									})}
 								/>
 								{errors?.name?.message && (
-									<div style={{ color: '#f00', fontSize: '20px' }}>
+									<div style={{ color: '#f00', fontSize: '1.25rem' }}>
 										{errors?.name?.message}
 									</div>
 								)}

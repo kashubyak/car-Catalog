@@ -17,7 +17,7 @@
 	background: none;
 	border: none;
 	cursor: pointer;
-	font-size: 28.8px;
+	font-size: 1.8rem;
 	margin: 0rem 1.875rem;
 }
 
@@ -27,7 +27,7 @@
 	left: 0;
 	width: 100%;
 	background-color: var(--body-color);
-	padding: 16px;
+	padding: 1rem;
 	animation: slideIn 0.3s ease forwards;
 }
 
@@ -77,7 +77,7 @@
 
 .dFlex .custom-styles__multi-value {
 	background-color: var(--card-back);
-	border-radius: 8px;
+	border-radius: 0.5rem;
 }
 
 .dFlex .custom-styles__multi-value__label {
@@ -86,7 +86,7 @@
 
 .dFlex .custom-styles__menu {
 	background-color: var(--body-color);
-	border-radius: 8px;
+	border-radius: 0.5rem;
 	animation: animationScaleIn 0.2s ease-in-out;
 }
 

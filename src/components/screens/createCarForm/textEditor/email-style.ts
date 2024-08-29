@@ -12,12 +12,9 @@ export const applyStyle = (type: TStyle, selectedText: string) => {
 	const isWrappedWithTags = (text: string, openTag: string, closeTag: string) =>
 		text.startsWith(openTag) && text.endsWith(closeTag)
 
-	console.log(`Selected Text: "${selectedText}"`)
 	if (isWrappedWithTags(selectedText, open, close)) {
-		console.log(`Removing ${type} tags`)
 		return selectedText.slice(open.length, -close.length)
 	} else {
-		console.log(`Adding ${type} tags`)
 		return open + selectedText + close
 	}
 }

@@ -38,16 +38,16 @@
 	justify-content: space-between;
 	text-wrap: nowrap;
 	h3 {
-		padding: 0px 25px;
+		padding: 0rem 1.5625rem;
 	}
 }
 .descriptionCar {
-	font-size: 17px;
-	word-spacing: 3px;
-	letter-spacing: 0.5px;
-	padding: 10px 15px;
+	font-size: 1.0625rem;
+	word-spacing: 0.1875rem;
+	letter-spacing: 0.0313rem;
+	padding: 0.625rem 0.9375rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 62.5rem) {
 	.contentCar {
 		flex-direction: column;
 	}
@@ -61,19 +61,19 @@
 		flex-direction: row;
 		align-items: center;
 		h3 {
-			padding-top: 10px;
+			padding-top: 0.625rem;
 			&:first-child {
 				padding-bottom: 0;
 			}
 		}
 	}
 }
-@media (max-width: 550px) {
+@media (max-width: 34.375rem) {
 	.textCarHeader {
 		flex-direction: column;
 		align-items: start;
 		h3 {
-			padding-left: 15px;
+			padding-left: 0.9375rem;
 		}
 	}
 }
