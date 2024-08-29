@@ -84,6 +84,15 @@
 		width: 100%;
 		background-color: var(--theme-color);
 	}
+	.timeTooltip {
+		position: absolute;
+		bottom: 1.7rem;
+		transform: translateX(50%);
+		padding: 10px;
+		background-color: #222831cc;
+		border-radius: 10px;
+		pointer-events: none;
+	}
 }
 .timeControls {
 	display: flex;
@@ -100,7 +109,7 @@
 	justify-content: center;
 	background-color: #222831;
 	.volumeBackGr {
-		background-color: #22283180;
+		background-color: #222831cc;
 		border-radius: 0.5rem;
 		position: absolute;
 		bottom: 155%;

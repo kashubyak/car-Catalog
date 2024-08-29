@@ -15,6 +15,10 @@ const usePlayer = () => {
 		volume: 100,
 		previouseVolume: 100,
 	})
+	const [hoverProgressTime, setHoverProgressTime] = useState({
+		time: null as number | null,
+		position: null as number | null,
+	})
 
 	useEffect(() => {
 		const originalDuration = videoRef.current?.duration
@@ -99,7 +103,21 @@ const usePlayer = () => {
 		},
 		[videoTools.videoTime],
 	)
-
+	const handleProgressHover = useCallback(
+		(e: React.MouseEvent) => {
+			if (!videoRef.current) return
+			const progressBar = e.currentTarget as HTMLElement
+			const rect = progressBar.getBoundingClientRect()
+			const hoverX = Math.max(0, Math.min(e.clientX - rect.left, rect.width))
+			const newTime = (hoverX / rect.width) * videoTools.videoTime
+			setHoverProgressTime({ time: newTime, position: hoverX })
+		},
+		[videoTools.videoTime],
+	)
+	const handleProgressLeave = useCallback(() => {
+		if (!videoRef.current) return
+		setHoverProgressTime({ time: null, position: null })
+	}, [videoTools.videoTime])
 	const forwardVideo = () => {
 		if (videoRef.current) videoRef.current.currentTime += 5
 	}
@@ -267,6 +285,9 @@ const usePlayer = () => {
 		handleProgressClick,
 		toggleFullscreen,
 		videoTools,
+		hoverProgressTime,
+		handleProgressHover,
+		handleProgressLeave,
 		showControls,
 		hideControls,
 		handleMouseMove,

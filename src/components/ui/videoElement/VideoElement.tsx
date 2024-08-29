@@ -20,6 +20,9 @@ const VideoElement = () => {
 		handleProgressClick,
 		toggleFullscreen,
 		videoTools,
+		hoverProgressTime,
+		handleProgressHover,
+		handleProgressLeave,
 		showControls,
 		hideControls,
 		handleMouseMove,
@@ -55,11 +58,25 @@ const VideoElement = () => {
 				<button className={styles.controlsButton} onClick={toggleVideo}>
 					{videoTools.isPlaying ? <IoPause /> : <IoPlay />}
 				</button>
-				<div className={styles.progressBarPlayer} onMouseDown={handleProgressClick}>
+				<div
+					className={styles.progressBarPlayer}
+					onMouseDown={handleProgressClick}
+					onMouseMove={handleProgressHover}
+					onMouseLeave={handleProgressLeave}
+				>
 					<div
 						className={styles.progressBar}
 						style={{ width: `${videoTools.progress}%` }}
 					></div>
+					{hoverProgressTime.time !== null && hoverProgressTime.position !== null && (
+						<div
+							className={styles.timeTooltip}
+							style={{ left: `${hoverProgressTime.position}px` }}
+						>
+							{Math.floor(hoverProgressTime.time / 60)}:
+							{('0' + Math.floor(hoverProgressTime.time % 60)).slice(-2)}
+						</div>
+					)}
 				</div>
 
 				<div className={`${styles.volumeControl} ${styles.controlsButton}`}>
