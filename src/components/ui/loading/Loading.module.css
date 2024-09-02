@@ -39,7 +39,7 @@
 .whiteOrbit {
   width: 60px;
   height: 60px;
-  border: 2px solid #ffffff;
+  border: 2px solid #eee;
   animation: spin3D 10s linear 0s infinite;
 }
 

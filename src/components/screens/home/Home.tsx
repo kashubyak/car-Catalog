@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import { RegistrationMenu } from 'components/screens/RegistrationMenu/RegistrationMenu'
 import { Catalog } from 'components/ui/catalog'
 import { Header } from 'components/ui/header/Header'
+import { Loading } from 'components/ui/loading/Loading'
 import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useEffect, useState } from 'react'
 import { CarService } from 'services/car.service'
@@ -17,7 +18,7 @@ const Home = () => {
 	useEffect(() => {
 		if (data) setFilteredData(data)
 	}, [data])
-	if (isLoading) return <p>Loading.....</p>
+	if (isLoading) return <Loading />
 
 	return (
 		<div>

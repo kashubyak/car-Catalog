@@ -11,7 +11,8 @@ import {
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { reducer as burgerReducer } from './burgerSlice/Burger.Slice'
-import { reducer as favoritesReducer } from './favoriteSlice/Favorites.slice'
+import { reducer as favoritesReducer } from './favoriteSlice/Favorites.Slice'
+import { reducer as loadingReducer } from './loadingSlice/Loading.Slice'
 import { reducer as notificationReducer } from './notaficatoinsSlice/Notification.Slice'
 import { reducer as themeReducer } from './themeSlice/Theme.Slice'
 import { reducer as userReducer } from './userSlice/User.Slice'
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
 	theme: themeReducer,
 	burger: burgerReducer,
 	user: userReducer,
+	loading: loadingReducer,
 })
 
 const persistConfig = {
