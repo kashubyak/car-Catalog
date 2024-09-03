@@ -18,7 +18,7 @@ const Home = () => {
 	useEffect(() => {
 		if (data) setFilteredData(data)
 	}, [data])
-	if (isLoading) return <Loading />
+	if (isLoading) return <Loading text={'Loading...'} />
 
 	return (
 		<div>

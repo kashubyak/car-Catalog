@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Router } from 'components/ui/Router'
+import { Loading } from 'components/ui/loading/Loading'
 import { Notification } from 'components/ui/notafication/Notification'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
@@ -21,7 +22,7 @@ if (rootElement) {
 	ReactDOM.createRoot(rootElement).render(
 		<QueryClientProvider client={queryClient}>
 			<Provider store={Store}>
-				<PersistGate loading={null} persistor={persistor}>
+				<PersistGate loading={<Loading text={'Loading...'} />} persistor={persistor}>
 					<Router />
 					<Notification />
 					<ThemeInitializer />

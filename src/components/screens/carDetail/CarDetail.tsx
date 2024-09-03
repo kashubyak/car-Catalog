@@ -33,7 +33,7 @@ const CarDetail = () => {
 		}
 		fetchData()
 	}, [id, startLoading, stopLoading])
-	if (isLoading) return <Loading />
+	if (isLoading) return <Loading text={'Loading...'} />
 	if (!car?.id && loaded) return <p>Car Not Found....</p>
 
 	return (

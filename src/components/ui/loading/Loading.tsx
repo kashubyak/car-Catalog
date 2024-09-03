@@ -1,7 +1,10 @@
 import React from 'react'
 import styles from './Loading.module.css'
 
-const Loading: React.FC = React.memo(() => {
+interface IText {
+	text: string
+}
+const Loading: React.FC<IText> = React.memo(({ text }) => {
 	return (
 		<div className={styles.spinnerBox}>
 			<div className={`${styles.blueOrbit} ${styles.leo}`}></div>
@@ -10,6 +13,7 @@ const Loading: React.FC = React.memo(() => {
 			<div className={`${styles.whiteOrbit} ${styles.w1} ${styles.leo}`}></div>
 			<div className={`${styles.whiteOrbit} ${styles.w2} ${styles.leo}`}></div>
 			<div className={`${styles.whiteOrbit} ${styles.w3} ${styles.leo}`}></div>
+			<div className={styles.message}>{text}</div>
 		</div>
 	)
 })
