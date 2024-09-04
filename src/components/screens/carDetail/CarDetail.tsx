@@ -1,4 +1,5 @@
 import { CarItemPrice } from 'components/screens/home/main/ItemCar/СarItemPrice'
+import { HttpError } from 'components/screens/httpEroor/HttpError'
 import { Loading } from 'components/ui/loading/Loading'
 import { useActions } from 'hooks/useActions'
 import { useTypedSelector } from 'hooks/useTypedSelector'
@@ -24,8 +25,8 @@ const CarDetail = () => {
 			try {
 				const data = await CarService.getById(id)
 				setCar(data)
-			} catch {
-				console.error('Error fetching car data')
+			} catch (error) {
+				throw error
 			} finally {
 				stopLoading()
 				setLoaded(true)
@@ -33,8 +34,9 @@ const CarDetail = () => {
 		}
 		fetchData()
 	}, [id, startLoading, stopLoading])
+
 	if (isLoading) return <Loading text={'Loading...'} />
-	if (!car?.id && loaded) return <p>Car Not Found....</p>
+	if (!car?.id && loaded) return <HttpError code={404} message='404' />
 
 	return (
 		<>

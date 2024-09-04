@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import ErrorBoundary from 'components/screens/httpEroor/ErrorBoundary'
 import { Router } from 'components/ui/Router'
 import { Loading } from 'components/ui/loading/Loading'
 import { Notification } from 'components/ui/notafication/Notification'
@@ -22,11 +23,13 @@ if (rootElement) {
 	ReactDOM.createRoot(rootElement).render(
 		<QueryClientProvider client={queryClient}>
 			<Provider store={Store}>
-				<PersistGate loading={<Loading text={'Loading...'} />} persistor={persistor}>
-					<Router />
-					<Notification />
-					<ThemeInitializer />
-				</PersistGate>
+				<ErrorBoundary>
+					<PersistGate loading={<Loading text={'Loading...'} />} persistor={persistor}>
+						<Router />
+						<Notification />
+						<ThemeInitializer />
+					</PersistGate>
+				</ErrorBoundary>
 			</Provider>
 		</QueryClientProvider>,
 	)
