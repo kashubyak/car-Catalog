@@ -5,8 +5,10 @@
 	justify-content: center;
 	align-items: center;
 	background-color: transparent;
-	min-height: 90vh;
-	margin: 0px auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .leo {
@@ -57,8 +59,12 @@
 	transform: rotate3D(0.5, 1, 2, 90deg);
 }
 .message {
-	margin-top: 100%;
-	font-size: 1.3rem;
+	margin-top: 110%;
+	font-size: 1.1rem;
+	text-align: center;
+	line-height: 30px;
+	letter-spacing: 2px;
+	word-spacing: 2px;
 }
 @keyframes spin3D {
 	from {

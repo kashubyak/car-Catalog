@@ -1,5 +1,6 @@
 import { CarItem } from 'components/screens/home/main/ItemCar/СarItem'
 import { Header } from 'components/ui/header/Header'
+import { Loading } from 'components/ui/loading/Loading'
 import { MenuLinks } from 'components/ui/navBar/menuLinks/MenuLinks'
 import { useFavorites } from 'hooks/useFavorites'
 import { FC, useState } from 'react'
@@ -30,7 +31,7 @@ const Favorites: FC<ISideBarState> = ({ activeMenuItem }) => {
 							/>
 						))
 					) : (
-						<div>There are no items 'Favorite'</div>
+						<Loading text='There are no items "Favorite"' />
 					)}
 				</div>
 			</div>
