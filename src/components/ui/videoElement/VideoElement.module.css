@@ -1,7 +1,7 @@
 .wrapperVideo {
 	margin: 0.625rem 0.3125rem;
 	position: relative;
-	color: #eee;
+	color: #f7f7f7;
 	font-size: 0.875rem;
 	overflow: hidden;
 	width: 100%;
@@ -67,7 +67,7 @@
 	background-color: transparent;
 	border: 0;
 	outline: 0;
-	color: #eee;
+	color: #f7f7f7;
 	font-size: 1.4rem;
 	display: flex;
 	align-items: center;

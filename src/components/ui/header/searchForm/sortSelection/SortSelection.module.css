@@ -1,0 +1,43 @@
+.selectContainer {
+	position: relative;
+	width: 110px;
+}
+
+.selectTrigger {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: transparent;
+	color: #504f52;
+	padding: 5px;
+	font-size: 18px;
+	border-bottom: 1px solid #504f52;
+	cursor: pointer;
+
+}
+
+.options {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	max-height: 200px;
+	overflow-y: auto;
+	background-color: var(--body-color);
+	border-radius: 5px;
+	display: none;
+	z-index: 10;
+}
+
+.options.active {
+	display: block;
+}
+
+.option {
+	padding: 10px;
+	cursor: pointer;
+}
+
+.option:hover {
+	background-color: var(--card-back);
+}

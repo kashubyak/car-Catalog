@@ -3,6 +3,7 @@ import Select, { ActionMeta, MultiValue } from 'react-select'
 import makeAnimated from 'react-select/animated'
 import { IOption, ISearchFormProps } from 'types/content.interface'
 import './SearchForm.css'
+import { SortSelection } from './sortSelection/SortSelection'
 import { Switch } from './switcher/Switch'
 
 const SearchForm: FC<ISearchFormProps> = ({ onFilter, data }) => {
@@ -78,6 +79,9 @@ const SearchForm: FC<ISearchFormProps> = ({ onFilter, data }) => {
 				/>
 			</div>
 			<i className='fa fa-search searchIcon' aria-hidden='true' onClick={toggleSearch} />
+			<div className='sortSelection'>
+				<SortSelection />
+			</div>
 			<div className='switchTheme'>
 				<Switch />
 			</div>

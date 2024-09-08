@@ -21,7 +21,7 @@
 	position: absolute;
 	top: 50%;
 	left: 0.625rem;
-	color: #fff;
+	color: #f7f7f7;
 	transform: translateY(-50%);
 	font-family: 'FontAwesome';
 	font-weight: 900;
@@ -34,7 +34,7 @@
 	line-height: 1.25rem;
 	top: 50%;
 	right: 0.625rem;
-	color: #fff;
+	color: #f7f7f7;
 	transform: translateY(-50%);
 	font-family: 'FontAwesome';
 	font-weight: 900;
@@ -58,7 +58,7 @@
 	width: 1.625rem;
 	right: 0.25rem;
 	bottom: 0.25rem;
-	background-color: #fff;
+	background-color: #f7f7f7;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 	z-index: 3;
