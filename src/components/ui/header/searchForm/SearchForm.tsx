@@ -87,7 +87,7 @@ const SearchForm: FC<ISearchFormProps> = ({ onFilter, data }) => {
 						}),
 					}}
 				/>
-				<SortSelection />
+				<SortSelection onFilter={onFilter} data={data} />
 			</div>
 			<i className='fa fa-search searchIcon' aria-hidden='true' onClick={toggleSearch} />
 			<div className='switchTheme'>
