@@ -76,12 +76,20 @@ const SearchForm: FC<ISearchFormProps> = ({ onFilter, data }) => {
 					options={options}
 					placeholder='Find cars'
 					isMulti
+					styles={{
+						container: provided => ({
+							...provided,
+							width: '100%',
+						}),
+						control: provided => ({
+							...provided,
+							width: '100%',
+						}),
+					}}
 				/>
-			</div>
-			<i className='fa fa-search searchIcon' aria-hidden='true' onClick={toggleSearch} />
-			<div className='sortSelection'>
 				<SortSelection />
 			</div>
+			<i className='fa fa-search searchIcon' aria-hidden='true' onClick={toggleSearch} />
 			<div className='switchTheme'>
 				<Switch />
 			</div>

@@ -9,7 +9,8 @@
 	width: 90%;
 	transition: all 0.3s ease;
 	margin: 0rem 0.625rem;
-	display: block;
+	display: flex;
+	align-items: end;
 }
 
 .searchIcon {
@@ -127,7 +128,8 @@
 		align-items: center;
 	}
 	.searchContainer.active {
-		display: block;
+		display: flex;
+		align-items: end;
 	}
 	.switchTheme {
 		display: none;
