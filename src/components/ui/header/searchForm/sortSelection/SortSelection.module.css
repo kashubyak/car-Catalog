@@ -1,7 +1,7 @@
 .selectContainer {
 	position: relative;
-	width: 130px;
 	margin-left: 10px;
+	width: 200px;
 }
 
 .selectTrigger {
@@ -26,15 +26,19 @@
 	border-radius: 5px;
 	display: none;
 	z-index: 10;
-}
-
-.options.active {
-	display: block;
+	&.active {
+		display: block;
+	}
 }
 
 .option {
-	padding: 5px;
+	padding: 10px;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	span {
+		padding-right: 5px;
+	}
 }
 
 .option:hover {

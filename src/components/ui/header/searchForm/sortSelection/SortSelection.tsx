@@ -12,9 +12,13 @@ const SortSelection: FC<ISearchFormProps> = ({ onFilter, data }) => {
 		let newSortedData = [...data]
 		if (option === 'By name') {
 			newSortedData.sort((a, b) => a.name.localeCompare(b.name))
-		} else if (option === 'By price') {
+		} else if (option === 'Cheaper at first') {
 			newSortedData.sort((a, b) => {
 				return parseFloat(a.price) - parseFloat(b.price)
+			})
+		} else if (option === 'At first, more expensive') {
+			newSortedData.sort((a, b) => {
+				return parseFloat(b.price) - parseFloat(a.price)
 			})
 		}
 		onFilter(newSortedData)
@@ -50,8 +54,14 @@ const SortSelection: FC<ISearchFormProps> = ({ onFilter, data }) => {
 				<div className={styles.option} onClick={() => selectOption('By name')}>
 					By name
 				</div>
-				<div className={styles.option} onClick={() => selectOption('By price')}>
-					By price
+				<div className={styles.option} onClick={() => selectOption('Cheaper at first')}>
+					Cheaper at first
+				</div>
+				<div
+					className={styles.option}
+					onClick={() => selectOption('At first, more expensive')}
+				>
+					At first, more expensive
 				</div>
 			</div>
 		</div>
