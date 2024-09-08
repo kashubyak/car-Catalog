@@ -69,10 +69,10 @@ a {
 	border: 0;
 	outline: 0;
 	font-size: 1rem;
-}
-.btn:hover {
-	transition: 0.3s;
-	color: 1;
+	&:hover {
+		transition: 0.3s;
+		color: 1;
+	}
 }
 .BaseInput {
 	padding: 0.3em;
@@ -83,9 +83,9 @@ a {
 	margin: 0.1875rem;
 	background-color: var(--input-back);
 	color: var(--input-color);
-}
-.BaseInput::placeholder {
-	color: var(--input-color);
+	&::placeholder {
+		color: var(--input-color);
+	}
 }
 .container {
 	margin-top: 6.25rem;

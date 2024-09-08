@@ -61,7 +61,7 @@ const SortSelection: FC<ISearchFormProps> = ({ onFilter, data }) => {
 					className={styles.option}
 					onClick={() => selectOption('At first, more expensive')}
 				>
-					At first, more expensive
+					At first expensive
 				</div>
 			</div>
 		</div>

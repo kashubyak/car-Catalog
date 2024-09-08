@@ -9,15 +9,15 @@
 	justify-content: end;
 	max-width: 100%;
 	margin-left: 0.625rem;
+	img {
+		margin-left: auto;
+		width: 4.375rem;
+		height: 4.375rem;
+		cursor: pointer;
+		border-radius: 0.25rem;
+	}
 }
 
-.profile img {
-	margin-left: auto;
-	width: 4.375rem;
-	height: 4.375rem;
-	cursor: pointer;
-	border-radius: 0.25rem;
-}
 .headerBtn {
 	cursor: pointer;
 }
@@ -34,11 +34,11 @@
 	transform: translateX(-3.125rem);
 	visibility: hidden;
 	transition: 0.1s;
-}
-.menu.active {
-	opacity: 1;
-	transform: translateX(0rem);
-	visibility: visible;
+	&.active {
+		opacity: 1;
+		transform: translateX(0rem);
+		visibility: visible;
+	}
 }
 .profileName {
 	color: var(--search-color);
