@@ -2,6 +2,7 @@ import { Favorites } from 'components/screens/Favorites/Favorites'
 import { CarDetail } from 'components/screens/carDetail/CarDetail'
 import { CreateCarForm } from 'components/screens/createCarForm/CreateCarForm'
 import { Home } from 'components/screens/home/Home'
+import { HttpError } from 'components/screens/httpEroor/HttpError'
 import { PromotionVideo } from 'components/screens/promotionVideo/PromotionVideo'
 import React, { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -39,7 +40,7 @@ const Router: React.FC = () => {
 					path='/promotion-video'
 				/>
 
-				<Route path='*' element={<div>Page is not found! Sorry(</div>} />
+				<Route path='*' element={<HttpError code={404} title='Page is not found' />} />
 			</Routes>
 		</BrowserRouter>
 	)

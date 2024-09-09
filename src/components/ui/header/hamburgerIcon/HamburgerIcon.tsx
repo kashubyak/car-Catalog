@@ -1,16 +1,16 @@
 import { useActions } from 'hooks/useActions'
 import { useTypedSelector } from 'hooks/useTypedSelector'
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import './HamburgerIcon.modules.css'
 const HamburgerIcon = () => {
 	const [active, setActive] = useState(false)
 	const { toggleOpen } = useActions()
 	const open = useTypedSelector(state => state.burger.open)
 
-	const handleActive = () => {
+	const handleActive = useCallback(() => {
 		setActive(!active)
 		toggleOpen()
-	}
+	}, [setActive, toggleOpen])
 	return (
 		<button className={`navTrigger ${open ? 'active' : ''}`} onClick={handleActive}>
 			<svg viewBox='0 0 64 48'>

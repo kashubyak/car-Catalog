@@ -36,7 +36,7 @@ const CarDetail = () => {
 	}, [id, startLoading, stopLoading])
 
 	if (isLoading) return <Loading text={'Loading...'} />
-	if (!car?.id && loaded) return <HttpError code={404} message='404' />
+	if (!car?.id && loaded) return <HttpError code={404} title='404' />
 
 	return (
 		<>

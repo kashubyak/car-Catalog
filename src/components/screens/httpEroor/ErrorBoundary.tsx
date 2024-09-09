@@ -1,5 +1,5 @@
-import React, { Component, ReactNode } from 'react'
-import { HttpError } from './HttpError' // Імплементуйте шлях до вашого компоненту
+import { Component, ReactNode } from 'react'
+import { HttpError } from './HttpError'
 
 interface ErrorBoundaryProps {
 	children: ReactNode
@@ -19,14 +19,9 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 		return { hasError: true }
 	}
 
-	componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-		// Видаліть або закоментуйте цей рядок, щоб уникнути виводу помилок в консоль
-		// console.error('Error occurred:', error, errorInfo)
-	}
-
 	render() {
 		if (this.state.hasError) {
-			return <HttpError code={500} message="Something went wrong" />
+			return <HttpError code={500} title='Something went wrong' />
 		}
 		return this.props.children
 	}

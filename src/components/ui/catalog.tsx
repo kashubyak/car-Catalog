@@ -1,12 +1,12 @@
 import { CarItem } from 'components/screens/home/main/ItemCar/СarItem'
-import { FC, useState } from 'react'
+import { FC, useCallback, useState } from 'react'
 import { ICatalog } from 'types/content.interface'
 
 const Catalog: FC<ICatalog> = ({ data = [] }) => {
 	const [activeMenuIndex, setActiveMenuIndex] = useState<number | null>(null)
-	const handleMenuIndex = (index: number) => {
+	const handleMenuIndex = useCallback((index: number) => {
 		setActiveMenuIndex(prevIndex => (prevIndex === index ? null : index))
-	}
+	}, [])
 	return (
 		<div className='container'>
 			{data.length ? (

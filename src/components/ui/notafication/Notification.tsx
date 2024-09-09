@@ -1,6 +1,6 @@
 import { useActions } from 'hooks/useActions'
 import { useTypedSelector } from 'hooks/useTypedSelector'
-import { FC, useEffect } from 'react'
+import { FC, useEffect, useMemo } from 'react'
 import styles from './Notification.module.css'
 
 const Notification: FC = () => {
@@ -14,21 +14,20 @@ const Notification: FC = () => {
 			}, 3000)
 			return () => clearTimeout(timer)
 		})
-	}, [notifications])
+	}, [notifications, removeNotification])
 
-	return (
-		<div className={styles.notificationContainer}>
-			{notifications.map(notification => (
-				<div
-					key={notification.id}
-					className={styles.notification}
-					style={{ backgroundColor: notification.backgroundColor }}
-				>
-					{notification.message}
-				</div>
-			))}
-		</div>
-	)
+	const renderNotafication = useMemo(() => {
+		return notifications.map(notification => (
+			<div
+				key={notification.id}
+				className={styles.notification}
+				style={{ backgroundColor: notification.backgroundColor }}
+			>
+				{notification.message}
+			</div>
+		))
+	}, [notifications])
+	return <div className={styles.notificationContainer}>{renderNotafication}</div>
 }
 
 export { Notification }
