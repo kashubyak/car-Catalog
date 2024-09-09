@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import ErrorBoundary from 'components/screens/httpEroor/ErrorBoundary'
+import { ErrorBoundary } from 'components/screens/httpEroor/ErrorBoundary'
 import { Router } from 'components/ui/Router'
 import { Loading } from 'components/ui/loading/Loading'
 import { Notification } from 'components/ui/notafication/Notification'

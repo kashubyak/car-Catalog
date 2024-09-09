@@ -5,7 +5,12 @@ import { FC, useEffect, useRef, useState } from 'react'
 import { ICar } from 'types/car.interface'
 import styles from './MenuCar.module.css'
 
-const MenuCar: FC<{ active: boolean; car: ICar }> = ({ active, car }) => {
+interface IMenuCarProps {
+	active: boolean
+	car: ICar
+}
+
+const MenuCar: FC<IMenuCarProps> = ({ active, car }) => {
 	const [menuActive, setMenuActive] = useState(false)
 	const menuRef = useRef<HTMLDivElement>(null)
 
@@ -21,9 +26,7 @@ const MenuCar: FC<{ active: boolean; car: ICar }> = ({ active, car }) => {
 		}
 
 		document.addEventListener('click', handleClickOutside)
-		return () => {
-			document.removeEventListener('click', handleClickOutside)
-		}
+		return () => document.removeEventListener('click', handleClickOutside)
 	}, [menuActive])
 
 	const { favorites } = useFavorites()

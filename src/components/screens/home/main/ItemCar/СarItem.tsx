@@ -28,7 +28,7 @@ const CarItem: FC<ICarItem> = ({ car, active, onToggle }) => {
 						onClick={handleMenuToggle}
 						className='fa fa-ellipsis-horizontal'
 						aria-hidden='true'
-					></i>
+					/>
 					<MenuCar active={active} car={car} />
 				</div>
 				<div className={homeStyle.averageContentCard}>

@@ -9,12 +9,12 @@ import { CarService } from 'services/car.service'
 import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
 
 const Home = () => {
-	const { data, isLoading } = useQuery({
+	const { data = [], isLoading } = useQuery({
 		queryKey: ['cars'],
-		queryFn: () => CarService.getAll(),
+		queryFn: CarService.getAll,
 	})
 	const user = useTypedSelector(state => state.user.user)
-	const [filteredData, setFilteredData] = useState(data || [])
+	const [filteredData, setFilteredData] = useState(data)
 	useEffect(() => {
 		if (data) setFilteredData(data)
 	}, [data])

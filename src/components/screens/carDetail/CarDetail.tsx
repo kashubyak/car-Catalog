@@ -26,7 +26,7 @@ const CarDetail = () => {
 				const data = await CarService.getById(id)
 				setCar(data)
 			} catch (error) {
-				throw error
+				console.error(error)
 			} finally {
 				stopLoading()
 				setLoaded(true)

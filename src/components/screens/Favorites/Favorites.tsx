@@ -3,16 +3,16 @@ import { Header } from 'components/ui/header/Header'
 import { Loading } from 'components/ui/loading/Loading'
 import { MenuLinks } from 'components/ui/navBar/menuLinks/MenuLinks'
 import { useFavorites } from 'hooks/useFavorites'
-import { FC, useState } from 'react'
+import { FC, useCallback, useState } from 'react'
 import { ISideBarState } from 'types/content.interface'
 import styles from './Favorites.module.css'
 
 const Favorites: FC<ISideBarState> = ({ activeMenuItem }) => {
 	const { favorites } = useFavorites()
 	const [activeMenuIndex, setActiveMenuIndex] = useState<number | null>(null)
-	const handleMenuIndex = (index: number) => {
+	const handleMenuIndex = useCallback((index: number) => {
 		setActiveMenuIndex(prevIndex => (prevIndex === index ? null : index))
-	}
+	}, [])
 	return (
 		<div>
 			{/* @ts-ignore */}
