@@ -53,7 +53,7 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 							/>
 							{errors?.name && (
 								<div className={styles.errorMessage}>
-									<i className='fa fa-ban' aria-hidden='true'></i>
+									<i className='fa fa-ban' aria-hidden='true' />
 									<p>{errors?.name?.message}</p>
 								</div>
 							)}
@@ -72,7 +72,7 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 							/>
 							{errors?.model?.message && (
 								<div className={styles.errorMessage}>
-									<i className='fa fa-ban' aria-hidden='true'></i>
+									<i className='fa fa-ban' aria-hidden='true' />
 									<p>{errors?.model?.message}</p>
 								</div>
 							)}
@@ -91,7 +91,7 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 							/>
 							{errors?.price?.message && (
 								<div className={styles.errorMessage}>
-									<i className='fa fa-ban' aria-hidden='true'></i>
+									<i className='fa fa-ban' aria-hidden='true' />
 									<p>{errors?.price?.message}</p>
 								</div>
 							)}
@@ -110,7 +110,7 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 							/>
 							{errors?.image?.message && (
 								<div className={styles.errorMessage}>
-									<i className='fa fa-ban' aria-hidden='true'></i>
+									<i className='fa fa-ban' aria-hidden='true' />
 									<p>{errors?.image?.message}</p>
 								</div>
 							)}

@@ -23,7 +23,7 @@ const HeaderUser = () => {
 	}, [activeMenu])
 
 	return (
-		<Link to='#' className={styles.profile}>
+		<div className={styles.profile}>
 			<img
 				src='./public/img/user.jpg'
 				alt='user-image'
@@ -41,7 +41,7 @@ const HeaderUser = () => {
 					Log Out
 				</Link>
 			</div>
-		</Link>
+		</div>
 	)
 }
 export { HeaderUser }

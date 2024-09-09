@@ -50,16 +50,16 @@ const Editor: FC<IEditorProps> = ({ text, setText }) => {
 			/>
 			<div className={styles.tools}>
 				<button onClick={e => handleButtonClick(e, () => setText(''))}>
-					<i className='fa fa-eraser' aria-hidden='true'></i>
+					<i className='fa fa-eraser' aria-hidden='true' />
 				</button>
 				<button onClick={e => handleButtonClick(e, () => applyFormat('bold'))}>
-					<i className='fa fa-bold' aria-hidden='true'></i>
+					<i className='fa fa-bold' aria-hidden='true' />
 				</button>
 				<button onClick={e => handleButtonClick(e, () => applyFormat('italic'))}>
-					<i className='fa fa-italic' aria-hidden='true'></i>
+					<i className='fa fa-italic' aria-hidden='true' />
 				</button>
 				<button onClick={e => handleButtonClick(e, () => applyFormat('underline'))}>
-					<i className='fa fa-underline' aria-hidden='true'></i>
+					<i className='fa fa-underline' aria-hidden='true' />
 				</button>
 			</div>
 		</div>

@@ -56,13 +56,13 @@ const MenuCar: FC<IMenuCarProps> = ({ active, car }) => {
 			<div className={styles.activeMenu}>
 				<ul>
 					<li onClick={() => handleToggleFavorite()}>
-						<i className={`fa fa-heart${isExist ? '' : '-o'}`} aria-hidden='true'></i>
+						<i className={`fa fa-heart${isExist ? '' : '-o'}`} aria-hidden='true' />
 						<p className={styles.favorites}>
 							{isExist ? 'Remove favorite' : 'Add favorite'}
 						</p>
 					</li>
 					<li onClick={() => handleDelete()}>
-						<i className='fa fa-trash-o' aria-hidden='true'></i>
+						<i className='fa fa-trash-o' aria-hidden='true' />
 						<p className={styles.delete}>Delete</p>
 					</li>
 				</ul>

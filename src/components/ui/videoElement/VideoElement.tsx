@@ -100,7 +100,7 @@ const VideoElement = () => {
 							<div
 								className={styles.volumeLavelCurrent}
 								style={{ width: `${videoTools.volume}%` }}
-							></div>
+							/>
 						</div>
 					</div>
 				</div>

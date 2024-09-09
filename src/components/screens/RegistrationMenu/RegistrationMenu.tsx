@@ -29,9 +29,9 @@ const RegistrationMenu = () => {
 			<form className={styles.formCon} onSubmit={handleSubmit(handleLogin)}>
 				{user ? null : (
 					<div className={styles.ring}>
-						<i></i>
-						<i></i>
-						<i></i>
+						<i />
+						<i />
+						<i />
 						<div className={styles.login}>
 							<h2>Login</h2>
 							<div className={styles.inputBx}>

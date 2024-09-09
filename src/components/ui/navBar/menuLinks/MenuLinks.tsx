@@ -30,7 +30,7 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 									className={`navItem ${activeItem === 'home' ? styles.active : ''}`}
 									onClick={() => handleItemClick('home')}
 								>
-									<i className='fa fa-home' aria-hidden='true'></i> <span>Home</span>
+									<i className='fa fa-home' aria-hidden='true' /> <span>Home</span>
 								</li>
 							</Link>
 							<Link to='/Favourite'>
@@ -39,7 +39,7 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 									className={`navItem ${activeItem === 'favourite' ? styles.active : ''}`}
 									onClick={() => handleItemClick('favourite')}
 								>
-									<i className='fa fa-heart' aria-hidden='true'></i>
+									<i className='fa fa-heart' aria-hidden='true' />
 									<span>Favorite</span>
 									<span className={styles.scoreFav}>{favorites.length}</span>
 								</li>
@@ -49,7 +49,7 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 									className={`navItem ${activeItem === 'createCar' ? styles.active : ''}`}
 									onClick={() => handleItemClick('createCar')}
 								>
-									<i className='fa fa-star' aria-hidden='true'></i>
+									<i className='fa fa-star' aria-hidden='true' />
 									<span>Create Car</span>
 								</li>
 							</Link>
@@ -60,7 +60,7 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 									}`}
 									onClick={() => handleItemClick('promotionVideo')}
 								>
-									<i className='fa fa-video-camera' aria-hidden='true'></i>
+									<i className='fa fa-video-camera' aria-hidden='true' />
 									<span>Promotion</span>
 								</li>
 							</Link>
@@ -73,7 +73,7 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 										navigate('/')
 									}}
 								>
-									<i className='fa fa-sign-out' aria-hidden='true'></i>
+									<i className='fa fa-sign-out' aria-hidden='true' />
 									<span>Log Out</span>
 								</li>
 							</a>
