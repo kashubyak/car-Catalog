@@ -30,6 +30,7 @@ const persistConfig = {
 	key: 'root',
 	storage,
 	whitelist: ['favorites', 'theme', 'burger', 'user'],
+	blackList: ['notification', 'loading'],
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
