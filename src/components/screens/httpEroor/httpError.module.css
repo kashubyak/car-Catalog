@@ -6,8 +6,8 @@
 	align-items: center;
 	justify-content: center;
 	margin: 0;
-	font-size: 96px;
-	letter-spacing: -7px;
+	font-size: 6rem;
+	letter-spacing: -0.4375rem;
 }
 .errorNumber {
 	animation: glitch 1s linear infinite;
@@ -16,11 +16,11 @@
 @keyframes glitch {
 	2%,
 	64% {
-		transform: translate(2px, 0) skew(0deg);
+		transform: translate(0.125rem, 0) skew(0deg);
 	}
 	4%,
 	60% {
-		transform: translate(-2px, 0) skew(0deg);
+		transform: translate(-0.125rem, 0) skew(0deg);
 	}
 	62% {
 		transform: translate(0, 0) skew(5deg);
@@ -43,14 +43,14 @@
 @keyframes glitchTop {
 	2%,
 	64% {
-		transform: translate(2px, -2px);
+		transform: translate(0.125rem, -0.125rem);
 	}
 	4%,
 	60% {
-		transform: translate(-2px, 2px);
+		transform: translate(-0.125rem, 0.125rem);
 	}
 	62% {
-		transform: translate(13px, -1px) skew(-13deg);
+		transform: translate(0.8125rem, -0.0625rem) skew(-13deg);
 	}
 }
 
@@ -63,13 +63,13 @@
 @keyframes glitchBotom {
 	2%,
 	64% {
-		transform: translate(-2px, 0);
+		transform: translate(-0.125rem, 0);
 	}
 	4%,
 	60% {
-		transform: translate(-2px, 0);
+		transform: translate(-0.125rem, 0);
 	}
 	62% {
-		transform: translate(-22px, 5px) skew(21deg);
+		transform: translate(-1.375rem, 0.3125rem) skew(21deg);
 	}
 }
