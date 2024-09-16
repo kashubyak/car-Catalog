@@ -1,5 +1,5 @@
 import parce from 'html-react-parser'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ICarItem } from 'types/car.interface'
 import homeStyle from './CarItem.module.css'
@@ -7,6 +7,7 @@ import { MenuCar } from './menuCar/MenuCar'
 import { CarItemPrice } from './СarItemPrice'
 
 const CarItem: FC<ICarItem> = ({ car, active, onToggle }) => {
+	const [loaded, setLoaded] = useState(false)
 	const handleMenuToggle = (event: React.MouseEvent<HTMLDivElement>) => {
 		event.stopPropagation()
 		onToggle()
@@ -18,7 +19,14 @@ const CarItem: FC<ICarItem> = ({ car, active, onToggle }) => {
 
 	return (
 		<div key={car.id} className={homeStyle.card}>
-			<img src={car.image} alt='Car Image' className={homeStyle.imgFluid} />
+			<div className={homeStyle.imageContainer}>
+				<img
+					src={car.image}
+					alt='Car Image'
+					className={`${homeStyle.imgFluid} ${loaded ? homeStyle.loaded : ''}`}
+					onLoad={() => setLoaded(true)}
+				/>
+			</div>
 			<div className={homeStyle.info}>
 				<div className={`${homeStyle.dFlex} ${homeStyle.topContentCard}`}>
 					<h4 className={homeStyle.carTitle}>
