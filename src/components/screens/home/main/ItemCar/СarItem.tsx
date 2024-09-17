@@ -57,7 +57,7 @@ const CarItem: FC<ICarItem> = ({ car, active, onToggle }) => {
 			<div className={homeStyle.info}>
 				<div className={`${homeStyle.dFlex} ${homeStyle.topContentCard}`}>
 					<h4 className={homeStyle.carTitle}>
-						{car.name ? `${car.name} ${car.model}` : 'There is no name'}
+						{car.name ? `${car.name} ${car.model}` : 'Has no name'}
 					</h4>
 					<i
 						onClick={handleMenuToggle}
@@ -68,7 +68,7 @@ const CarItem: FC<ICarItem> = ({ car, active, onToggle }) => {
 				</div>
 				<div className={homeStyle.averageContentCard}>
 					<p className={homeStyle.descriptionCar}>
-						{parce(truncateText(car.description, 100))}
+						{car.description ? parce(truncateText(car.description, 100)) : '...'}
 					</p>
 				</div>
 				<div className={`${homeStyle.bottomContentCard} ${homeStyle.dFlex}`}>

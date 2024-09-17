@@ -23,7 +23,7 @@
 	color: #db1212;
 	border-radius: 0.3125rem;
 	white-space: nowrap;
-	z-index: 6;
+	z-index: 101;
 	i {
 		margin-right: 0.3125rem;
 		font-size: 1.5625rem;

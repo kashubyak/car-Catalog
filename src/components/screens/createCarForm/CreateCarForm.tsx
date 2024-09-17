@@ -22,6 +22,9 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 	const { createCar } = useCreateCar(reset)
 	const { addNotification } = useActions()
 	const onSubmit = (data: ICarData) => {
+		if (!car.description) {
+			data.description === '...'
+		}
 		createCar(data)
 		addNotification({
 			message: 'The car is created!',
@@ -29,6 +32,7 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 		})
 	}
 	const car = watch()
+
 	return (
 		<div>
 			{/* @ts-ignore */}

@@ -1,52 +1,52 @@
 {
-	"cars": [
-		{
-			"id": "1",
-			"name": "McLaren",
-			"model": "570S 2019",
-			"price": "204999",
-			"image": "https://cdn0.riastatic.com/photosnew/auto/photo/mclaren_570s__504530260hd.webp",
-			"description": "<b>McLaren</b> is a pioneering supercar company. A business with a deep-rooted philosophy of innovation. And a history of exceptional design and engineering You can't be first without first being brave. We may make machines for driving but we are not driven by machines."
-		},
-		{
-			"id": "fc53",
-			"name": "Porsche",
-			"model": "991 Turbo S",
-			"price": "320000",
-			"image": "https://cdn.motor1.com/images/mgl/b3gBj/s1/4x3/porsche-911-turbo-s-by-manhart-is-an-850-horsepower-catapult.webp",
-			"description": "<b>Porsche 911</b> It’s a big year for the 911. The legendary Porsche sportscar is 60 years old in 2023. Here's a handy guide to an automotive icon that continues to define pure driving enjoyment When the dust sheet was pulled back on a brand-new Porsche model at the 1963 Frankfurt International Motor Show, few could have predicted the huge impact it would have on motoring in the decades to come. Its name was the 901. Today it's better known as the legendary 911, its name having been changed before it went on sale. Over the 60 years between 1963 and 2023, over 1.2m 911 sportscars have been made. Each one is evidence of the endless pursuit of innovation by Porsche, particularly when it comes to delivering memorable drive after memorable drive for all who experience it. From its early days to most recognisable models and standout moments, this is a celebration of a true automotive phenomenon."
-		},
-		{
-			"id": "3bce",
-			"name": "Tesla",
-			"model": "Plaid Model S 2021",
-			"price": "86000",
-			"image": "https://cdn3.riastatic.com/photosnew/auto/photo/tesla_model-s__539939728hd.webp",
-			"description": "<b>Tesla, Inc.</b>, American manufacturer of electric automobiles, solar panels, and batteries for cars and home power storage. It was founded in 2003 by American entrepreneurs Martin Eberhard and Marc Tarpenning and was named after Serbian American inventor Nikola Tesla. It quickly became one of the most recognizable car brands in the world."
-		},
-		{
-			"id": "d33a",
-			"name": "Ferrari",
-			"model": "SF90 2022",
-			"price": "649000",
-			"image": "https://cdn0.riastatic.com/photosnew/auto/photo/ferrari_sf90__512275335hd.webp",
-			"description": "<b>Ferrari S.p.A.</b> is an Italian luxury sports car manufacturer based in Maranello. Founded in 1939 by Enzo Ferrari (1898–1988), the company built its first car in 1940, adopted its current name in 1945, and began to produce its current line of road cars in 1947. Ferrari became a public company in 1960, and from 1963 to 2014 it was a subsidiary of Fiat S.p.A. It was spun off from Fiat's successor entity, Fiat Chrysler Automobiles, in 2016. The company currently offers a large model range which includes several supercars, grand tourers, and one SUV. Many early Ferraris, dating to the 1950s and 1960s, count among the most expensive cars ever sold at auction. Throughout its history, the company has been noted for its continued participation in racing, especially in Formula One, where its team, Scuderia Ferrari, is the series' single oldest and most successful. Scuderia Ferrari has raced since 1929, first in Grand Prix events and later in Formula One, where since 1952 it has fielded fifteen champion drivers, won sixteen Constructors' Championships, and accumulated more race victories, 1–2 finishes, podiums, pole positions, fastest laps and points than any other team in F1 history.[6][7] Historically, Ferrari was also highly active in sports car racing, where its cars took many wins in races such as the Mille Miglia, Targa Florio and 24 Hours of Le Mans, as well as several overall victories in the World Sportscar Championship. Scuderia Ferrari fans, commonly called tifosi, are known for their passion and loyalty to the team."
-		},
-		{
-			"id": "c390",
-			"name": "Mersedes",
-			"model": "Benz 2021",
-			"price": "140000",
-			"image": "https://cdn2.riastatic.com/photosnew/auto/photo/mercedes-benz_g-class__491283587f.jpg",
-			"description": "<b>Mercedes-Benz G-Class</b>, colloquially known as the G-Wagen[3] (as an abbreviation of Geländewagen), is a four-wheel drive automobile manufactured by Magna Steyr (formerly Steyr-Daimler-Puch) in Austria and sold by Mercedes-Benz. Originally developed as a military off-roader, later more luxurious models were added to the line. In certain markets, it was sold under the Puch name as Puch G until 2000. The G-Wagen is characterised by its boxy styling and body-on-frame construction. It uses three fully locking differentials, one of the few passenger car vehicles to have such a feature. Despite the introduction of an intended replacement, the unibody SUV Mercedes-Benz GL-Class in 2006, the G-Class is still in production and is one of the longest-produced vehicles in Daimler's history, with a span of 44 years. Only the Unimog surpasses it.[4] In 2018, Mercedes-Benz introduced the second-generation W463 with heavily revised chassis, powertrain, body, and interior. In 2023, Mercedes-Benz announced plans to launch a smaller version of the G-Class, named 'little G'—though no definitive date was given for the launch.[5]"
-		},
-		{
-			"id": "0f88",
-			"name": "Porsche",
-			"model": "Taycan 2024",
-			"price": "144119",
-			"image": "https://cdn.riastatic.com/photosnewr/auto/new_auto_storage/porsche-taycan__2582398-1280x960x90.webp",
-			"description": "<b>Porsche Taycan</b> is a battery electric luxury sports sedan and shooting brake car produced by German automobile manufacturer Porsche. The concept version of the Taycan named the Porsche Mission E, debuted at the 2015 Frankfurt Motor Show.[6] Four years later, the production Taycan was revealed at the 2019 Frankfurt Motor Show.[5] As Porsche's first series production electric car,[6] it is sold in several variants at different performance levels, and may spawn further derivatives in future models.[7] It is built on the J1 electric car platform shared with the similarly shaped Audi e-tron GT. The name 'Taycan' (/taɪ-kan/[8]) is a reference to the steed on the coat of Arms of the city of Stuttgart, found on the Porsche crest. In Turkish, tay means colt or young horse, and can means lively.[9][10] The 'Turbo' name used in the higher trims is purely for branding purposes as the vehicles, being electrically powered, do not actually have turbochargers.[11]"
-		}
-	]
+  "cars": [
+    {
+      "id": "1",
+      "name": "McLaren",
+      "model": "570S 2019",
+      "price": "204999",
+      "image": "https://cdn0.riastatic.com/photosnew/auto/photo/mclaren_570s__504530260hd.webp",
+      "description": "<b>McLaren</b> is a pioneering supercar company. A business with a deep-rooted philosophy of innovation. And a history of exceptional design and engineering You can't be first without first being brave. We may make machines for driving but we are not driven by machines."
+    },
+    {
+      "id": "fc53",
+      "name": "Porsche",
+      "model": "991 Turbo S",
+      "price": "320000",
+      "image": "https://cdn.motor1.com/images/mgl/b3gBj/s1/4x3/porsche-911-turbo-s-by-manhart-is-an-850-horsepower-catapult.webp",
+      "description": "<b>Porsche 911</b> It’s a big year for the 911. The legendary Porsche sportscar is 60 years old in 2023. Here's a handy guide to an automotive icon that continues to define pure driving enjoyment When the dust sheet was pulled back on a brand-new Porsche model at the 1963 Frankfurt International Motor Show, few could have predicted the huge impact it would have on motoring in the decades to come. Its name was the 901. Today it's better known as the legendary 911, its name having been changed before it went on sale. Over the 60 years between 1963 and 2023, over 1.2m 911 sportscars have been made. Each one is evidence of the endless pursuit of innovation by Porsche, particularly when it comes to delivering memorable drive after memorable drive for all who experience it. From its early days to most recognisable models and standout moments, this is a celebration of a true automotive phenomenon."
+    },
+    {
+      "id": "3bce",
+      "name": "Tesla",
+      "model": "Plaid Model S 2021",
+      "price": "86000",
+      "image": "https://cdn3.riastatic.com/photosnew/auto/photo/tesla_model-s__539939728hd.webp",
+      "description": "<b>Tesla, Inc.</b>, American manufacturer of electric automobiles, solar panels, and batteries for cars and home power storage. It was founded in 2003 by American entrepreneurs Martin Eberhard and Marc Tarpenning and was named after Serbian American inventor Nikola Tesla. It quickly became one of the most recognizable car brands in the world."
+    },
+    {
+      "id": "d33a",
+      "name": "Ferrari",
+      "model": "SF90 2022",
+      "price": "649000",
+      "image": "https://cdn0.riastatic.com/photosnew/auto/photo/ferrari_sf90__512275335hd.webp",
+      "description": "<b>Ferrari S.p.A.</b> is an Italian luxury sports car manufacturer based in Maranello. Founded in 1939 by Enzo Ferrari (1898–1988), the company built its first car in 1940, adopted its current name in 1945, and began to produce its current line of road cars in 1947. Ferrari became a public company in 1960, and from 1963 to 2014 it was a subsidiary of Fiat S.p.A. It was spun off from Fiat's successor entity, Fiat Chrysler Automobiles, in 2016. The company currently offers a large model range which includes several supercars, grand tourers, and one SUV. Many early Ferraris, dating to the 1950s and 1960s, count among the most expensive cars ever sold at auction. Throughout its history, the company has been noted for its continued participation in racing, especially in Formula One, where its team, Scuderia Ferrari, is the series' single oldest and most successful. Scuderia Ferrari has raced since 1929, first in Grand Prix events and later in Formula One, where since 1952 it has fielded fifteen champion drivers, won sixteen Constructors' Championships, and accumulated more race victories, 1–2 finishes, podiums, pole positions, fastest laps and points than any other team in F1 history.[6][7] Historically, Ferrari was also highly active in sports car racing, where its cars took many wins in races such as the Mille Miglia, Targa Florio and 24 Hours of Le Mans, as well as several overall victories in the World Sportscar Championship. Scuderia Ferrari fans, commonly called tifosi, are known for their passion and loyalty to the team."
+    },
+    {
+      "id": "c390",
+      "name": "Mersedes",
+      "model": "Benz 2021",
+      "price": "140000",
+      "image": "https://cdn2.riastatic.com/photosnew/auto/photo/mercedes-benz_g-class__491283587f.jpg",
+      "description": "<b>Mercedes-Benz G-Class</b>, colloquially known as the G-Wagen[3] (as an abbreviation of Geländewagen), is a four-wheel drive automobile manufactured by Magna Steyr (formerly Steyr-Daimler-Puch) in Austria and sold by Mercedes-Benz. Originally developed as a military off-roader, later more luxurious models were added to the line. In certain markets, it was sold under the Puch name as Puch G until 2000. The G-Wagen is characterised by its boxy styling and body-on-frame construction. It uses three fully locking differentials, one of the few passenger car vehicles to have such a feature. Despite the introduction of an intended replacement, the unibody SUV Mercedes-Benz GL-Class in 2006, the G-Class is still in production and is one of the longest-produced vehicles in Daimler's history, with a span of 44 years. Only the Unimog surpasses it.[4] In 2018, Mercedes-Benz introduced the second-generation W463 with heavily revised chassis, powertrain, body, and interior. In 2023, Mercedes-Benz announced plans to launch a smaller version of the G-Class, named 'little G'—though no definitive date was given for the launch.[5]"
+    },
+    {
+      "id": "0f88",
+      "name": "Porsche",
+      "model": "Taycan 2024",
+      "price": "144119",
+      "image": "https://cdn.riastatic.com/photosnewr/auto/new_auto_storage/porsche-taycan__2582398-1280x960x90.webp",
+      "description": "<b>Porsche Taycan</b> is a battery electric luxury sports sedan and shooting brake car produced by German automobile manufacturer Porsche. The concept version of the Taycan named the Porsche Mission E, debuted at the 2015 Frankfurt Motor Show.[6] Four years later, the production Taycan was revealed at the 2019 Frankfurt Motor Show.[5] As Porsche's first series production electric car,[6] it is sold in several variants at different performance levels, and may spawn further derivatives in future models.[7] It is built on the J1 electric car platform shared with the similarly shaped Audi e-tron GT. The name 'Taycan' (/taɪ-kan/[8]) is a reference to the steed on the coat of Arms of the city of Stuttgart, found on the Porsche crest. In Turkish, tay means colt or young horse, and can means lively.[9][10] The 'Turbo' name used in the higher trims is purely for branding purposes as the vehicles, being electrically powered, do not actually have turbochargers.[11]"
+    }
+  ]
 }

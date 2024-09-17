@@ -43,7 +43,7 @@ const MenuCar: FC<IMenuCarProps> = ({ active, car }) => {
 	}
 	const { deleteCar } = useDeleteCar()
 	const handleDelete = () => {
-		if (confirm('Ви впевнені в своїх діях?')) {
+		if (confirm('You are confident in your actions?')) {
 			deleteCar(car.id)
 			addNotification({
 				message: 'Your car is delete!',
