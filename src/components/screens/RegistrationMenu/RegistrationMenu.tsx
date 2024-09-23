@@ -1,4 +1,4 @@
-import { Switch } from 'components/ui/header/searchForm/switcher/Switch'
+import { Switch } from 'components/ui/Header/SearchForm/Switch/Switch'
 import { useActions } from 'hooks/useActions'
 import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useForm } from 'react-hook-form'

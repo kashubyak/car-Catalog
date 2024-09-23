@@ -1,12 +1,12 @@
 import { bindActionCreators } from '@reduxjs/toolkit'
 import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
-import { actions as burgerActions } from 'store/burgerSlice/Burger.Slice'
-import { actions as favoritesActions } from 'store/favoriteSlice/Favorites.Slice'
-import { actions as loadingActions } from 'store/loadingSlice/Loading.Slice'
-import { actions as notificationActions } from 'store/notaficatoinsSlice/Notification.Slice'
-import { actions as themeActions } from 'store/themeSlice/Theme.Slice'
-import { actions as userActions } from 'store/userSlice/User.Slice'
+import { actions as burgerActions } from 'store/BurgerSlice/Burger.Slice'
+import { actions as favoritesActions } from 'store/FavoriteSlice/Favorites.Slice'
+import { actions as loadingActions } from 'store/LoadingSlice/Loading.Slice'
+import { actions as notificationActions } from 'store/NotificationSlice/Notification.Slice'
+import { actions as themeActions } from 'store/ThemeSlice/Theme.Slice'
+import { actions as userActions } from 'store/UserSlice/User.Slice'
 
 const rootActions = {
 	...favoritesActions,

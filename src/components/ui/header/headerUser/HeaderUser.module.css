@@ -18,9 +18,12 @@
 	}
 }
 
-.headerBtn {
-	cursor: pointer;
+.btnUser {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
+
 .menu {
 	position: absolute;
 	top: 100%;

@@ -13,7 +13,7 @@ const usePlayer = () => {
 		showControls: false,
 		showCursor: true,
 		volume: 100,
-		previouseVolume: 100,
+		previousVolume: 100,
 	})
 	const [hoverProgressTime, setHoverProgressTime] = useState({
 		time: null as number | null,
@@ -172,7 +172,7 @@ const usePlayer = () => {
 			setVideoTools(prev => ({
 				...prev,
 				volume: newVolume,
-				previouseVolume: newVolume > 0 ? newVolume : videoTools.previouseVolume,
+				previousVolume: newVolume > 0 ? newVolume : videoTools.previousVolume,
 			}))
 		}
 		updateVolume(e.clientY)
@@ -213,12 +213,12 @@ const usePlayer = () => {
 	const toggleMute = () => {
 		if (videoRef.current) {
 			setVideoTools(prev => {
-				const newVolume = prev.volume > 0 ? 0 : videoTools.previouseVolume
+				const newVolume = prev.volume > 0 ? 0 : videoTools.previousVolume
 				videoRef.current!.volume = newVolume / 100
 				return {
 					...prev,
 					volume: newVolume,
-					previouseVolume: prev.volume > 0 ? prev.volume : prev.previouseVolume,
+					previousVolume: prev.volume > 0 ? prev.volume : prev.previousVolume,
 				}
 			})
 		}

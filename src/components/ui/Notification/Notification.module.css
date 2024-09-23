@@ -1,0 +1,40 @@
+.notificationContainer {
+	position: fixed;
+	bottom: 1.25rem;
+	left: 1.875rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+	z-index: 999;
+}
+
+.notification {
+	padding: 0.9375rem;
+	font-weight: bold;
+	border-radius: 0.9375rem;
+	color: #f7f7f7;
+	opacity: 0;
+	animation: slideIn 0.5s forwards, slideOut 0.5s forwards 2.5s;
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideOut {
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+}

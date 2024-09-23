@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
 import { ISearchFormProps } from 'types/content.interface'
+import { HamburgerIcon } from './HamburgerIcon/HamburgerIcon'
 import styles from './Header.module.css'
-import { HamburgerIcon } from './hamburgerIcon/HamburgerIcon'
-import { HeaderUser } from './headerUser/HeaderUser'
-import { SearchForm } from './searchForm/SearchForm'
+import { HeaderUser } from './HeaderUser/HeaderUser'
+import { SearchForm } from './SearchForm/SearchForm'
 
 const Header: FC<ISearchFormProps> = ({ onFilter, data }) => {
 	return (

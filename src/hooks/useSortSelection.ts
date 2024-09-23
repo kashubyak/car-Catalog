@@ -24,7 +24,7 @@ const useSortSelection = ({ onFilter, data }: ISearchFormProps) => {
 		},
 		[data, onFilter],
 	)
-	const toogleOptions = useCallback(() => {
+	const toggleOptions = useCallback(() => {
 		setIsOpen(prev => !prev)
 	}, [])
 
@@ -50,7 +50,7 @@ const useSortSelection = ({ onFilter, data }: ISearchFormProps) => {
 	return {
 		selectedOptions,
 		containerRef,
-		toogleOptions,
+		toggleOptions,
 		selectOption,
 		isOpen,
 	}

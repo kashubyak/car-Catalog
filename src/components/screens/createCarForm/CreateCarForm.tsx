@@ -1,14 +1,14 @@
-import { CarItem } from 'components/screens/home/main/ItemCar/СarItem'
-import { Header } from 'components/ui/header/Header'
-import { MenuLinks } from 'components/ui/navBar/menuLinks/MenuLinks'
+import { CarItem } from 'components/screens/Home/Main/ItemCar/СarItem'
+import { Header } from 'components/ui/Header/Header'
+import { MenuLinks } from 'components/ui/NavBar/MenuLinks/MenuLinks'
 import { useActions } from 'hooks/useActions'
 import { useCreateCar } from 'hooks/useCreateCar'
 import { FC } from 'react'
 import { useForm } from 'react-hook-form'
 import { ICar, ICarData } from 'types/car.interface'
 import { ISideBarState } from 'types/content.interface'
-import { Editor } from './textEditor/Editor'
-import styles from './СreateCarForm.module.css'
+import styles from './CreateCarForm.module.css'
+import { Editor } from './TextEditor/Editor'
 
 const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 	const {

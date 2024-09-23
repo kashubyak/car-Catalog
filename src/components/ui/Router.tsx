@@ -1,9 +1,9 @@
+import { CarDetail } from 'components/screens/CarDetail/CarDetail'
+import { CreateCarForm } from 'components/screens/CreateCarForm/CreateCarForm'
 import { Favorites } from 'components/screens/Favorites/Favorites'
-import { CarDetail } from 'components/screens/carDetail/CarDetail'
-import { CreateCarForm } from 'components/screens/createCarForm/CreateCarForm'
-import { Home } from 'components/screens/home/Home'
-import { HttpError } from 'components/screens/httpEroor/HttpError'
-import { PromotionVideo } from 'components/screens/promotionVideo/PromotionVideo'
+import { Home } from 'components/screens/Home/Home'
+import { HttpError } from 'components/screens/HttpError/HttpError'
+import { PromotionVideo } from 'components/screens/PromotionVideo/PromotionVideo'
 import React, { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
@@ -26,9 +26,9 @@ const Router: React.FC = () => {
 				/>
 				<Route
 					element={
-						<Favorites setActiveMenuItem={setActiveMenuItem} activeMenuItem='favourite' />
+						<Favorites setActiveMenuItem={setActiveMenuItem} activeMenuItem='favorite' />
 					}
-					path='/favourite'
+					path='/favorite'
 				/>
 				<Route
 					element={

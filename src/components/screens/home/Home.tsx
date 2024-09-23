@@ -1,12 +1,12 @@
 import { useQuery } from '@tanstack/react-query'
 import { RegistrationMenu } from 'components/screens/RegistrationMenu/RegistrationMenu'
 import { Catalog } from 'components/ui/catalog'
-import { Header } from 'components/ui/header/Header'
-import { Loading } from 'components/ui/loading/Loading'
+import { Header } from 'components/ui/Header/Header'
+import { Loading } from 'components/ui/Loading/Loading'
 import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useEffect, useState } from 'react'
 import { CarService } from 'services/car.service'
-import { MenuLinks } from '../../ui/navBar/menuLinks/MenuLinks'
+import { MenuLinks } from '../../ui/NavBar/MenuLinks/MenuLinks'
 
 const Home = () => {
 	const { data = [], isLoading } = useQuery({

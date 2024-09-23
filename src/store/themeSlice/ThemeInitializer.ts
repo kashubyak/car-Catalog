@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { actions } from 'store/themeSlice/Theme.Slice'
+import { actions } from 'store/ThemeSlice/Theme.Slice'
 
 const ThemeInitializer = () => {
 	const dispatch = useDispatch()

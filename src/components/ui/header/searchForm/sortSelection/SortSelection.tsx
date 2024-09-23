@@ -5,12 +5,12 @@ import { ISearchFormProps } from 'types/content.interface'
 import styles from './SortSelection.module.css'
 
 const SortSelection: FC<ISearchFormProps> = ({ onFilter, data }) => {
-	const { selectedOptions, containerRef, toogleOptions, selectOption, isOpen } =
+	const { selectedOptions, containerRef, toggleOptions, selectOption, isOpen } =
 		useSortSelection({ onFilter, data })
 
 	return (
 		<div className={styles.selectContainer} ref={containerRef}>
-			<div className={styles.selectTrigger} onClick={toogleOptions}>
+			<div className={styles.selectTrigger} onClick={toggleOptions}>
 				<span>{selectedOptions}</span>
 				<IoIosArrowDown />
 			</div>

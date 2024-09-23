@@ -1,4 +1,4 @@
-import { CarItem } from 'components/screens/home/main/ItemCar/СarItem'
+import { CarItem } from 'components/screens/Home/Main/ItemCar/СarItem'
 import { FC, useCallback, useState } from 'react'
 import { ICatalog } from 'types/content.interface'
 

@@ -3,8 +3,8 @@ import { FC } from 'react'
 import Select from 'react-select'
 import { ISearchFormProps } from 'types/content.interface'
 import './SearchForm.css'
-import { SortSelection } from './sortSelection/SortSelection'
-import { Switch } from './switcher/Switch'
+import { SortSelection } from './SortSelection/SortSelection'
+import { Switch } from './Switch/Switch'
 
 const SearchForm: FC<ISearchFormProps> = ({ onFilter, data }) => {
 	const {

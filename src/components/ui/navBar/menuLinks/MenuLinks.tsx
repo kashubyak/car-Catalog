@@ -1,4 +1,4 @@
-import { Switch } from 'components/ui/header/searchForm/switcher/Switch'
+import { Switch } from 'components/ui/Header/SearchForm/Switch/Switch'
 import { useActions } from 'hooks/useActions'
 import { useFavorites } from 'hooks/useFavorites'
 import { useTypedSelector } from 'hooks/useTypedSelector'
@@ -33,11 +33,11 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 									<i className='fa fa-home' aria-hidden='true' /> <span>Home</span>
 								</li>
 							</Link>
-							<Link to='/Favourite'>
+							<Link to='/favorite'>
 								<li
 									style={{ position: 'relative' }}
-									className={`navItem ${activeItem === 'favourite' ? styles.active : ''}`}
-									onClick={() => handleItemClick('favourite')}
+									className={`navItem ${activeItem === 'favorite' ? styles.active : ''}`}
+									onClick={() => handleItemClick('favorite')}
 								>
 									<i className='fa fa-heart' aria-hidden='true' />
 									<span>Favorite</span>

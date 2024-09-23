@@ -11,7 +11,7 @@ import {
 } from 'react-icons/io5'
 import styles from './VideoElement.module.css'
 import videoPorsche from '/public/img/PromotionPorsche.mp4'
-import prewPorsche from '/public/img/PromotionPorschePrew.jpg'
+import prewPorsche from '/public/img/PromotionPorscheprew.jpg'
 
 const VideoElement = () => {
 	const {
@@ -49,7 +49,7 @@ const VideoElement = () => {
 				onDoubleClick={toggleFullscreen}
 			/>
 			<div
-				className={`${styles.playerControlls} ${
+				className={`${styles.playerControls} ${
 					videoTools.showControls || !videoTools.isPlaying
 						? styles.showControls
 						: styles.hideControls
@@ -96,9 +96,9 @@ const VideoElement = () => {
 						)}
 					</div>
 					<div className={styles.volumeBackGr} onMouseDown={handleVolumeClick}>
-						<div className={styles.volumeLavelFull}>
+						<div className={styles.volumeLevelFull}>
 							<div
-								className={styles.volumeLavelCurrent}
+								className={styles.volumeLevelCurrent}
 								style={{ width: `${videoTools.volume}%` }}
 							/>
 						</div>

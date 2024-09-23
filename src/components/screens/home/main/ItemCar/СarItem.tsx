@@ -3,7 +3,7 @@ import { FC, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ICarItem } from 'types/car.interface'
 import homeStyle from './CarItem.module.css'
-import { MenuCar } from './menuCar/MenuCar'
+import { MenuCar } from './MenuCar/MenuCar'
 import { CarItemPrice } from './СarItemPrice'
 
 const CarItem: FC<ICarItem> = ({ car, active, onToggle }) => {
