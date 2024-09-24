@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { CarService } from 'services/car.service'
 import { ICar } from 'types/car.interface'
-import styles from './carDetail.module.css'
+import styles from './CarDetail.module.css'
 
 const CarDetail = () => {
 	const { id } = useParams()
