@@ -1,0 +1,25 @@
+.dFlex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.navbar {
+	padding: 0.9375rem;
+	width: 100%;
+	position: fixed;
+	background-color: var(--body-color);
+	margin: 0rem auto;
+	z-index: 100;
+	.navbarBrand {
+		font-size: 1.625rem;
+		line-height: 1.875rem;
+		font-weight: 500;
+		color: var(--white-color);
+		&:hover {
+			color: var(--white-color);
+		}
+	}
+}
+.headerContent {
+	width: 100%;
+}

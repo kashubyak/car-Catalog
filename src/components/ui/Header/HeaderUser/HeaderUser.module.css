@@ -1,0 +1,49 @@
+.profile {
+	position: relative;
+	font-size: 1.125rem;
+	text-decoration: none;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	max-width: 100%;
+	margin-left: 0.625rem;
+	img {
+		margin-left: auto;
+		width: 4.375rem;
+		height: 4.375rem;
+		cursor: pointer;
+		border-radius: 0.25rem;
+	}
+}
+
+.btnUser {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.menu {
+	position: absolute;
+	top: 100%;
+	max-width: 19.6875rem;
+	padding: 0.625rem;
+	border-radius: 0.625rem;
+	color: var(--white-color);
+	background-color: var(--card-back);
+	text-align: center;
+	opacity: 0;
+	transform: translateX(-3.125rem);
+	visibility: hidden;
+	transition: 0.1s;
+	&.active {
+		opacity: 1;
+		transform: translateX(0rem);
+		visibility: visible;
+	}
+}
+.profileName {
+	color: var(--search-color);
+	margin-bottom: 0.625rem;
+}

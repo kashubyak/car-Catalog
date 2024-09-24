@@ -1,0 +1,136 @@
+.dFlex {
+	display: flex;
+	align-items: end;
+	justify-content: center;
+	width: 100%;
+}
+
+.searchContainer {
+	width: 90%;
+	transition: all 0.3s ease;
+	margin: 0rem 0.625rem;
+	display: flex;
+	align-items: end;
+	&.active {
+		position: absolute;
+		top: 5.625rem;
+		left: 0;
+		width: 100%;
+		background-color: var(--body-color);
+		padding: 1rem;
+		animation: slideIn 0.3s ease forwards;
+	}
+}
+
+.searchIcon {
+	display: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 1.8rem;
+	margin: 0rem 1.875rem;
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.dFlex .custom-styles__control {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border-radius: 0;
+	border-bottom: 0.0625rem solid #504f52;
+	box-shadow: none;
+}
+.dFlex .custom-styles__placeholder {
+	font-size: 1.25rem;
+	color: #504f52;
+}
+.dFlex .custom-styles__value-container {
+	cursor: pointer;
+	padding: 0;
+}
+
+.dFlex .custom-styles__input-container {
+	color: var(--white-color);
+}
+
+.dFlex .custom-styles__indicator-separator {
+	display: none;
+}
+
+.dFlex .custom-styles__indicators {
+	cursor: pointer;
+}
+
+.dFlex .custom-styles__indicator {
+	color: #504f52;
+}
+
+.dFlex .custom-styles__multi-value {
+	background-color: var(--card-back);
+	border-radius: 0.5rem;
+}
+
+.dFlex .custom-styles__multi-value__label {
+	color: var(--white-color);
+}
+
+.dFlex .custom-styles__menu {
+	background-color: var(--body-color);
+	border-radius: 0.5rem;
+	animation: animationScaleIn 0.2s ease-in-out;
+}
+
+@keyframes animationScaleIn {
+	0% {
+		opacity: 0;
+		transform: translateY(-3.125rem);
+	}
+	50% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.dFlex .custom-styles__option {
+	cursor: pointer;
+}
+
+.dFlex .custom-styles__option--is-focused {
+	background-color: var(--card-back);
+	opacity: 0.7;
+}
+
+@media (max-width: 37.5rem) {
+	.dFlex {
+		justify-content: flex-end;
+	}
+	.searchContainer {
+		display: none;
+		margin: 0;
+	}
+	.searchIcon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.searchContainer.active {
+		display: flex;
+		align-items: end;
+	}
+	.switchTheme {
+		display: none;
+	}
+}
