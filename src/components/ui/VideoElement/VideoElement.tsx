@@ -11,7 +11,7 @@ import {
 } from 'react-icons/io5'
 import styles from './VideoElement.module.css'
 import videoPorsche from '/public/img/PromotionPorsche.mp4'
-import prewPorsche from '/public/img/PromotionPorscheprew.jpg'
+import prewPorsche from '/public/img/PromotionPorschePrew.jpg'
 
 const VideoElement = () => {
 	const {
