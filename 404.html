@@ -8,11 +8,11 @@
 		<script type="module">
 			import { createElement } from 'https://cdn.skypack.dev/react'
 			import { render } from 'https://cdn.skypack.dev/react-dom'
-			import HttpError from 'components/screens/HttpError/HttpError.tsx'
+			import HttpError from '/src/components/screens/HttpError/HttpError'
 
 			const rootElement = document.getElementById('root')
 			render(
-				createElement(HttpError, { code: 404, title: 'Page Not Found' }),
+				React.createElement(HttpError, { code: 404, title: 'Page Not Found' }),
 				rootElement,
 			)
 		</script>
