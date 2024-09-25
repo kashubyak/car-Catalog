@@ -6,7 +6,7 @@ const CarItemPrice: FC<{ price: string }> = ({ price }) => {
 			{new Intl.NumberFormat('ru-RU', {
 				style: 'currency',
 				currency: 'USD',
-			}).format(+price)}
+			}).format(price ? +price : 0)}
 		</p>
 	)
 }

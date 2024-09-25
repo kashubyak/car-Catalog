@@ -57,7 +57,7 @@ const CarItem: FC<ICarItem> = ({ car, active, onToggle }) => {
 			<div className={homeStyle.info}>
 				<div className={`${homeStyle.dFlex} ${homeStyle.topContentCard}`}>
 					<h4 className={homeStyle.carTitle}>
-						{car.name ? `${car.name} ${car.model}` : 'Has no name'}
+						{car.name ? `${car.name} ${car.model}` : 'Car name and model'}
 					</h4>
 					<i
 						onClick={handleMenuToggle}
