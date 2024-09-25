@@ -3,6 +3,7 @@ import { useTypedSelector } from 'hooks/useTypedSelector'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './HeaderUser.module.css'
+import UserImg from '/public/img/user.jpg'
 
 const HeaderUser = () => {
 	const { setUser } = useActions()
@@ -24,11 +25,7 @@ const HeaderUser = () => {
 
 	return (
 		<div className={styles.profile}>
-			<img
-				src='./public/img/user.jpg'
-				alt='user-image'
-				onClick={() => setActiveMenu(!activeMenu)}
-			/>
+			<img src={UserImg} alt='user-image' onClick={() => setActiveMenu(!activeMenu)} />
 			<div className={`${styles.menu} ${activeMenu ? styles.active : ''}`}>
 				<p className={styles.profileName}>{user?.name}</p>
 				<Link

@@ -14,4 +14,5 @@ export default defineConfig({
 			store: '/src/store/',
 		},
 	},
+	base: '/car-Catalog',
 })

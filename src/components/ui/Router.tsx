@@ -11,7 +11,7 @@ const Router: React.FC = () => {
 	const [activeMenuItem, setActiveMenuItem] = useState<string>('home')
 
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename={import.meta.env.BASE_URL}>
 			<Routes>
 				<Route element={<Home />} path='/' />
 				<Route element={<CarDetail />} path='/car/:id' />
