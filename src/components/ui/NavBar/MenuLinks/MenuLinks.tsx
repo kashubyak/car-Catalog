@@ -2,7 +2,7 @@ import { Switch } from 'components/ui/Header/SearchForm/Switch/Switch'
 import { useActions } from 'hooks/useActions'
 import { useFavorites } from 'hooks/useFavorites'
 import { useTypedSelector } from 'hooks/useTypedSelector'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Transition } from 'react-transition-group'
 import { ISideBarState } from 'types/content.interface'
@@ -14,8 +14,28 @@ const MenuLinks: React.FC<ISideBarState> = ({ activeMenuItem }) => {
 		setActiveItem(item)
 	}
 	const open = useTypedSelector(state => state.burger.open)
-	const { setUser } = useActions()
+	const { setUser, setClose } = useActions()
 	const navigate = useNavigate()
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (window.innerWidth < 600) {
+				if (
+					open &&
+					!(event.target as HTMLElement).closest(`.${styles.containerLinks}`) &&
+					!(event.target as HTMLElement).closest('.navTrigger')
+				) {
+					setClose()
+				}
+			}
+		}
+
+		document.addEventListener('click', handleClickOutside)
+
+		return () => {
+			document.removeEventListener('click', handleClickOutside)
+		}
+	}, [open, setClose])
 
 	const { favorites } = useFavorites()
 

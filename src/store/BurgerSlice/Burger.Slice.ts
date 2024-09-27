@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 import { IBurgerState } from 'types/slice.interface'
 
 const initialState: IBurgerState = {
@@ -8,8 +8,8 @@ const BurgerSlice = createSlice({
 	name: 'burger',
 	initialState,
 	reducers: {
-		setOpen: (state, action: PayloadAction<boolean>) => {
-			state.open = action.payload
+		setClose: state => {
+			state.open = false
 		},
 		toggleOpen: state => {
 			state.open = !state.open
