@@ -50,7 +50,7 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 									pattern: {
 										value:
 											/^[А-ЯІЇЄҐа-яіїєґA-Za-z0-9\s-]+(['’][А-ЯІЇЄҐа-яіїєґA-Za-z0-9\s-]+)?$/,
-										message: '',
+										message: 'Please enter a valid name',
 									},
 								})}
 								placeholder='Name car'
@@ -69,12 +69,12 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 									required: 'Please enter a valid model',
 									pattern: {
 										value: /^[A-Za-z0-9\s-]+$/,
-										message: '',
+										message: 'Please enter a valid mode',
 									},
 								})}
 								placeholder='Model'
 							/>
-							{errors?.model?.message && (
+							{errors?.model && (
 								<div className={styles.errorMessage}>
 									<i className='fa fa-ban' aria-hidden='true' />
 									<p>{errors?.model?.message}</p>
@@ -88,12 +88,12 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 									required: 'Please enter a valid price',
 									pattern: {
 										value: /^[0-9]+(\.[0-9]{1,2})?$/,
-										message: '',
+										message: 'Please enter a valid price',
 									},
 								})}
 								placeholder='Price'
 							/>
-							{errors?.price?.message && (
+							{errors?.price && (
 								<div className={styles.errorMessage}>
 									<i className='fa fa-ban' aria-hidden='true' />
 									<p>{errors?.price?.message}</p>
@@ -107,12 +107,12 @@ const CreateCarForm: FC<ISideBarState> = ({ activeMenuItem }) => {
 									required: 'Please enter a valid URL',
 									pattern: {
 										value: /^(https?:\/\/)([\w-]+(\.[\w-]+)+)(\/[\w-./?%&=]*)?$/,
-										message: '',
+										message: 'Please enter a valid URL',
 									},
 								})}
 								placeholder='Image (URL)'
 							/>
-							{errors?.image?.message && (
+							{errors?.image && (
 								<div className={styles.errorMessage}>
 									<i className='fa fa-ban' aria-hidden='true' />
 									<p>{errors?.image?.message}</p>
