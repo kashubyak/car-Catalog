@@ -33,15 +33,13 @@ const VideoElement = () => {
 	return (
 		<div
 			onMouseMove={handleMouseMove}
-			className={`${styles.wrapperVideo} ${
-				videoTools.isFullscreen ? styles.fullscreenWrapper : ''
-			}`}
+			className={styles.wrapperVideo}
 			style={{ cursor: videoTools.showCursor ? 'auto' : 'none' }}
 		>
 			<video
 				src={videoPorsche}
 				ref={videoRef}
-				className={`${styles.player} ${videoTools.isFullscreen ? styles.fullscreen : ''}`}
+				className={styles.player}
 				onClick={toggleVideo}
 				poster={prewPorsche}
 				onPlay={hideControls}
