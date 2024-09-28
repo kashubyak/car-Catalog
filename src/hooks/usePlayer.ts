@@ -125,9 +125,22 @@ const usePlayer = () => {
 		if (videoRef.current) videoRef.current.currentTime -= 5
 	}
 
-	const toggleFullscreen = () => {
-		setVideoTools(prev => ({ ...prev, isFullscreen: !prev.isFullscreen }))
-	}
+	const toggleFullscreen = useCallback(() => {
+		const video = videoRef.current
+		if (!video) return
+
+		if (!document.fullscreenElement) {
+			if (video.parentElement) {
+				video.parentElement.requestFullscreen()
+				setVideoTools(prev => ({ ...prev, isFullscreen: true }))
+			}
+		} else {
+			if (document.exitFullscreen) {
+				document.exitFullscreen()
+				setVideoTools(prev => ({ ...prev, isFullscreen: false }))
+			}
+		}
+	}, [])
 
 	const showControls = useCallback(() => {
 		if (controlsTimeoutRef.current !== null) {
@@ -256,7 +269,6 @@ const usePlayer = () => {
 					toggleVideo()
 					break
 				case 'KeyF':
-				case 'Escape':
 					toggleFullscreen()
 					break
 				case 'ArrowUp':
