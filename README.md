@@ -41,7 +41,8 @@ https://kashubyak.github.io/car-Catalog/
 | React                  | JSON Server | ESLint          |
 | Vite                   |             | Concurrently    |
 | TypeScript             |             | gh-pages        |
-| React Router           |             |                 |
+| TypeScript             |             | gh-pages        |
+| React Router           |             | yarn            |
 | React Hook Form        |             |                 |
 | React Query            |             |                 |
 | Redux Toolkit          |             |                 |
