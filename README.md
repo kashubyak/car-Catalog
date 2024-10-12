@@ -34,6 +34,23 @@ https://kashubyak.github.io/car-Catalog/
 
    This will start the JSON server on port 4200 and use the db.json file as the database and start the React development server and open the app in your browser.
 
+## Technologies and Libraries
+
+| Frontend               | Backend     | Developer Tools |
+| ---------------------- | ----------- | --------------- |
+| React                  | JSON Server | ESLint          |
+| Vite                   |             | Concurrently    |
+| TypeScript             |             | gh-pages        |
+| React Router           |             | yarn            |
+| React Hook Form        |             |                 |
+| React Query            |             |                 |
+| Redux Toolkit          |             |                 |
+| Redux Persist          |             |                 |
+| Axios                  |             |                 |
+| React Select           |             |                 |
+| React Icons            |             |                 |
+| react-transition-group |             |                 |
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
